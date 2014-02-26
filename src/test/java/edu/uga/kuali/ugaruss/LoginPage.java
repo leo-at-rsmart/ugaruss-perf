@@ -47,15 +47,10 @@ public class LoginPage extends Page {
         WebDriverWait waitForUser = new WebDriverWait(driver, 30);
         waitForUser.until(ExpectedConditions.visibilityOfElementLocated(By.name("__login_user"))); 
 
-        final WebElement repeatTextElement = driver.findElement(By.name("__login_user"));
-        repeatTextElement.sendKeys(userName);
+        driver.findElement(By.name("__login_user")).sendKeys(userName);
 
-        final WebElement button = driver.findElement(By.xpath("//input[@value=\"Login\"]"));
-        button.click();
+        driver.findElement(By.xpath("//input[@value=\"Login\"]")).click();
         
-        WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//strong[text()[contains(., '" + userName + "')]]"))); 
-       
         return new PortalPage(driver);
     }
 }

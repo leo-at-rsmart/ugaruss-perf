@@ -146,23 +146,6 @@ public class UgarussTest {
 
         System.out.println("Got document Number " + documentNumber);
 
-        /*
-        final WebElement message = driver.findElement(By.xpath("//*[text()[contains(., 'Document was successfully submitted.')]]"));
-        assertNotNull(message);
-        clickMainMenu().clickOffCampusEquipmentRequestSearch();
-
-        driver.switchTo().defaultContent();
-        switchToIFramePortlet();
-        waitFor(By.name("methodToCall.search"));
-
-        getElementByName("rangeLowerBoundKeyPrefix_dateCreated", true).sendKeys("07/01/2013");
-        
-        getElementByName("methodToCall.search", true).click();
-        
-        final WebElement documentLink1 = driver.findElement(By.xpath("//a[text()[contains(., '" + documentNumber + "')]]"));
-        System.out.println(documentLink1);
-        */
-        
         final String parentHandle = driver.getWindowHandle(); // get the current window handle
 
         loginAs("hschrams").searchFor(documentNumber).approve();
@@ -198,23 +181,6 @@ public class UgarussTest {
         catch (org.openqa.selenium.NoSuchElementException e) { }
         System.out.println("Got document Number " + documentNumber);
 
-        /*
-        final WebElement message = driver.findElement(By.xpath("//*[text()[contains(., 'Document was successfully submitted.')]]"));
-        assertNotNull(message);
-        clickMainMenu().clickOffCampusEquipmentRequestSearch();
-
-        driver.switchTo().defaultContent();
-        switchToIFramePortlet();
-        waitFor(By.name("methodToCall.search"));
-
-        getElementByName("rangeLowerBoundKeyPrefix_dateCreated", true).sendKeys("07/01/2013");
-        
-        getElementByName("methodToCall.search", true).click();
-        
-        final WebElement documentLink1 = driver.findElement(By.xpath("//a[text()[contains(., '" + documentNumber + "')]]"));
-        System.out.println(documentLink1);
-        */
-        
         final String parentHandle = driver.getWindowHandle(); // get the current window handle
         
         loginAs("slthelen").searchFor(documentNumber).approve();
@@ -230,7 +196,7 @@ public class UgarussTest {
         driver.switchTo().window(parentHandle);
     }
 
-    // @Test
+    @Test
     @Category(IntegrationTests.class)
     public void testOffCampusEquipmentRequestSearch() {
         loginAs("slthelen");
