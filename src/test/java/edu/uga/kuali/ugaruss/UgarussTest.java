@@ -571,7 +571,7 @@ public class UgarussTest {
         waitFor(By.xpath(logoutExpression));
         driver.findElement(By.xpath(logoutExpression)).click();
 
-        return new PortalPage(driver);
+        return new LoginPage(driver).loginAs(user);
     }
 
     protected PortalPage clickMainMenu() {

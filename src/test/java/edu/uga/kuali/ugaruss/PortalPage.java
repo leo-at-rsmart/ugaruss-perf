@@ -45,26 +45,26 @@ public class PortalPage extends Page {
     }
 
     public OffCampusEquipmentRequestDocumentPage clickOffCampusEquipmentRequest() {
-        final WebElement link = driver.findElement(By.linkText("Off-Campus Equipment Request"));
-        link.click();
+        waitFor(By.linkText("Off-Campus Equipment Request"));
 
-        driver.switchTo().frame(driver.findElements(By.tagName("iframe")).get(0));
-        
-        // System.out.println("Page is " + driver.getPageSource());
+        driver.findElement(By.linkText("Off-Campus Equipment Request")).click();
 
-        driver.switchTo().frame("iframeportlet");
+        driver.switchTo().defaultContent();
+        switchToIFramePortlet();
 
-        // System.out.println("Page is " + driver.getPageSource());
-
-        WebDriverWait wait = new WebDriverWait(driver, 40);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("document.newMaintainableObject.dataObject.inventoryNumber")));        
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("document.newMaintainableObject.dataObject.inventoryNumber")));
 
         return new OffCampusEquipmentRequestDocumentPage(driver);
     }
 
     public OffCampusEquipmentRequestSearchPage clickOffCampusEquipmentRequestSearch() {
-        final WebElement button = driver.findElement(By.linkText("Document Search: Off-Campus Equipment Request/Renew"));
-        button.click();
+        waitFor(By.linkText("Off-Campus Equipment Request"));
+        driver.findElement(By.linkText("Document Search: Off-Campus Equipment Request/Renew")).click();
+
+        driver.switchTo().defaultContent();
+        switchToIFramePortlet();
+
         return new OffCampusEquipmentRequestSearchPage(driver);
     }
 
