@@ -83,21 +83,19 @@ public class UgarussTest {
     protected static WebDriver driver;
     protected static Wait<WebDriver> wait;
     /*
-      new FirefoxProfile() {{
-      setPreference("network.proxy.type", 1);
-      setPreference("network.proxy.http", "localhost");
-      setPreference("network.proxy.http_port", 8090);
-      setPreference("network.proxy.ssl", "localhost");
-      setPreference("network.proxy.ssl_port", 8090);
-      setPreference("network.proxy.no_proxies_on", "");
-      setPreference("javascript.options.strict", false);
-      }}*/          
+      */          
 
     @BeforeClass
     public static void createDriver() {
         final DesiredCapabilities dc = new DesiredCapabilities();
         dc.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR,UnexpectedAlertBehaviour.ACCEPT);
-        driver = new FirefoxDriver();
+        driver = new FirefoxDriver(null, new FirefoxProfile() {{
+            setPreference("network.proxy.type", 1);
+            setPreference("network.proxy.http", "localhost");
+            setPreference("network.proxy.http_port", 8090);
+            setPreference("network.proxy.no_proxies_on", "");
+            setPreference("javascript.options.strict", false);
+        }}, dc);
         wait = new WebDriverWait(driver, 30);
     }
 
@@ -113,11 +111,11 @@ public class UgarussTest {
     @Test
     @Category(IntegrationTests.class)
     public void testLogin() {
-        driver.get("https://ptriceapp02.stage.uga.edu/kr-dev/portal.do");
+        driver.get("http://ptriceapp02.stage.uga.edu/kr-dev/portal.do");
         final LoginPage login = new LoginPage(driver);
         final PortalPage portal = login.loginAs("slthelen");
 
-        driver.get("https://ptriceapp02.stage.uga.edu/ugaruss/portal.do");
+        driver.get("http://ptriceapp02.stage.uga.edu/ugaruss/portal.do");
         login.loginAs("slthelen");
     }
 
