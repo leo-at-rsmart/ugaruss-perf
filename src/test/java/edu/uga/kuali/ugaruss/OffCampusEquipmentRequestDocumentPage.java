@@ -40,11 +40,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  *
  * @author Leo Przybylski
  */
-public class OffCampusEquipmentRequestDocumentPage {
-    private final WebDriver driver;
+public class OffCampusEquipmentRequestDocumentPage extends Page {
 
     public OffCampusEquipmentRequestDocumentPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public OffCampusEquipmentRequestDocumentPage setInventoryNumber(final String inventoryNumber) {
@@ -104,9 +103,23 @@ public class OffCampusEquipmentRequestDocumentPage {
         return this;
     }
 
+    public OffCampusEquipmentRequestDocumentPage approve() {
+        final String expression = "//button[text()[contains(., 'approve')]]";
+        waitFor(By.xpath(expression));
+        driver.findElement(By.xpath(expression)).click();
+        return this;
+    }
+
+
     public PortalPage clickMainMenu() {
         final WebElement button = driver.findElement(By.linkText("Main Menu"));
         button.click();
         return new PortalPage(driver);
+    }
+
+    public String getDocumentNumber() {
+        final String expression = "//*[@data-label='Document Number']/span[1]";
+        waitFor(By.xpath(expression));
+        return driver.findElement(By.xpath(expression)).getText().trim();
     }
 }

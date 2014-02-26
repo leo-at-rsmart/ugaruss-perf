@@ -50,11 +50,13 @@ import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -78,8 +80,8 @@ import static org.junit.Assert.*;
  * @author Leo Przybylski
  */
 public class UgarussTest {
-    protected WebDriver driver;
-    protected Wait<WebDriver> wait;
+    protected static WebDriver driver;
+    protected static Wait<WebDriver> wait;
     /*
       new FirefoxProfile() {{
       setPreference("network.proxy.type", 1);
@@ -91,14 +93,20 @@ public class UgarussTest {
       setPreference("javascript.options.strict", false);
       }}*/          
 
-    @Before
-    public void setup() {
+    @BeforeClass
+    public static void createDriver() {
+        final DesiredCapabilities dc = new DesiredCapabilities();
+        dc.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR,UnexpectedAlertBehaviour.ACCEPT);
         driver = new FirefoxDriver();
         wait = new WebDriverWait(driver, 30);
     }
 
-    @After
-    public void quitDriver() {
+    @Before
+    public void setup() {
+    }
+
+    @AfterClass
+    public static void quitDriver() {
         driver.quit();
     }    
 
@@ -108,77 +116,136 @@ public class UgarussTest {
         driver.get("https://ptriceapp02.stage.uga.edu/kr-dev/portal.do");
         final LoginPage login = new LoginPage(driver);
         final PortalPage portal = login.loginAs("slthelen");
+
+        driver.get("https://ptriceapp02.stage.uga.edu/ugaruss/portal.do");
+        login.loginAs("slthelen");
     }
 
     @Test
     @Category(IntegrationTests.class)
     public void testOffCampusEquipmentRequest() {
+        loginAs("slthelen");
+        final PortalPage portal = new PortalPage(driver);
+        final OffCampusEquipmentRequestDocumentPage documentPage = portal.clickOffCampusEquipmentRequest();
+        documentPage.setInventoryNumber("595534")
+            .setInventoryDescription("Websphere server")
+            .setInventoryDepartment("552")
+            .setRequestedDate("04/21/2014")
+            .setExpireDate("05/31/2014")
+            .setPurpose("Testing")
+            .setSensitive(false)
+            .submit();
 
-        driver.get("https://ptriceapp02.stage.uga.edu/kr-dev/portal.do");
-        final LoginPage login = new LoginPage(driver);
-        final PortalPage portal = login.loginAs("slthelen");
+        String documentNumber = documentPage.getDocumentNumber();
+        
+        try {
+            final WebElement errorMessage = driver.findElement(By.xpath("//li[text()[contains(., 'locked by')]]/a"));
+            documentNumber = errorMessage.getText().substring(1);
+        }
+        catch (org.openqa.selenium.NoSuchElementException e) { }
 
-        driver.get("https://ptriceapp02.stage.uga.edu/ugaruss/portal.do");
-        login.loginAs("slthelen");
+        System.out.println("Got document Number " + documentNumber);
 
         /*
-          final OffCampusEquipmentRequestDocumentPage documentPage = portal.clickOffCampusEquipmentRequest();
-          documentPage.setInventoryNumber("526744")
-          .setInventoryDescription("Websphere server")
-          .setInventoryDepartment("552")
-          .setRequestedDate("04/21/2014")
-          .setExpireDate("05/31/2014")
-          .setPurpose("Testing")
-          .setSensitive(false)
-          .submit();
+        final WebElement message = driver.findElement(By.xpath("//*[text()[contains(., 'Document was successfully submitted.')]]"));
+        assertNotNull(message);
+        clickMainMenu().clickOffCampusEquipmentRequestSearch();
 
-          driver.switchTo().defaultContent();
+        driver.switchTo().defaultContent();
+        switchToIFramePortlet();
+        waitFor(By.name("methodToCall.search"));
+
+        getElementByName("rangeLowerBoundKeyPrefix_dateCreated", true).sendKeys("07/01/2013");
         
-          driver.switchTo().frame(driver.findElements(By.tagName("iframe")).get(0));
+        getElementByName("methodToCall.search", true).click();
         
-          driver.switchTo().frame("iframeportlet");
-
-          final WebElement message = driver.findElement(By.xpath("//*[text()[contains(., 'Document was successfully submitted.')]]"));
-          assertNotNull(message);
-      
-          driver.switchTo().defaultContent();
-
-          documentPage.clickMainMenu();
+        final WebElement documentLink1 = driver.findElement(By.xpath("//a[text()[contains(., '" + documentNumber + "')]]"));
+        System.out.println(documentLink1);
         */
+        
+        final String parentHandle = driver.getWindowHandle(); // get the current window handle
 
+        loginAs("hschrams").searchFor(documentNumber).approve();
+        driver.close();
+        driver.switchTo().window(parentHandle);
+        
+        loginAs("slthelen").searchFor(documentNumber).approve();
+        driver.close();
+        driver.switchTo().window(parentHandle);
+    }
+    
+    @Test
+    @Category(IntegrationTests.class)
+    public void testOffCampusEquipmentRequest2() {
+        loginAs("vswain");
+        final PortalPage portal = new PortalPage(driver);
+        final OffCampusEquipmentRequestDocumentPage documentPage = portal.clickOffCampusEquipmentRequest();
+        documentPage.setInventoryNumber("595534")
+            .setInventoryDescription("Websphere server")
+            .setInventoryDepartment("552")
+            .setRequestedDate("04/21/2014")
+            .setExpireDate("05/31/2014")
+            .setPurpose("Testing")
+            .setSensitive(false)
+            .submit();
+
+        String documentNumber = documentPage.getDocumentNumber();
+        
+        try {
+            final WebElement errorMessage = driver.findElement(By.xpath("//li[text()[contains(., 'locked by')]]/a"));
+            documentNumber = errorMessage.getText().substring(1);
+        }
+        catch (org.openqa.selenium.NoSuchElementException e) { }
+        System.out.println("Got document Number " + documentNumber);
+
+        /*
+        final WebElement message = driver.findElement(By.xpath("//*[text()[contains(., 'Document was successfully submitted.')]]"));
+        assertNotNull(message);
+        clickMainMenu().clickOffCampusEquipmentRequestSearch();
+
+        driver.switchTo().defaultContent();
+        switchToIFramePortlet();
+        waitFor(By.name("methodToCall.search"));
+
+        getElementByName("rangeLowerBoundKeyPrefix_dateCreated", true).sendKeys("07/01/2013");
+        
+        getElementByName("methodToCall.search", true).click();
+        
+        final WebElement documentLink1 = driver.findElement(By.xpath("//a[text()[contains(., '" + documentNumber + "')]]"));
+        System.out.println(documentLink1);
+        */
+        
+        final String parentHandle = driver.getWindowHandle(); // get the current window handle
+        
+        loginAs("slthelen").searchFor(documentNumber).approve();
+        driver.close();
+        driver.switchTo().window(parentHandle);
+
+        loginAs("hschrams").searchFor(documentNumber).approve();
+        driver.close();
+        driver.switchTo().window(parentHandle);
+
+        loginAs("slthelen").searchFor(documentNumber).approve();
+        driver.close();
+        driver.switchTo().window(parentHandle);
+    }
+
+    // @Test
+    @Category(IntegrationTests.class)
+    public void testOffCampusEquipmentRequestSearch() {
+        loginAs("slthelen");
+        final PortalPage portal = new PortalPage(driver);
         final OffCampusEquipmentRequestSearchPage searchPage = portal.clickOffCampusEquipmentRequestSearch();
         driver.switchTo().defaultContent();
         switchToIFramePortlet();
-
         waitFor(By.name("methodToCall.search"));
+
+        final WebElement fromDateField = getElementByName("rangeLowerBoundKeyPrefix_dateCreated", true);
+        fromDateField.sendKeys("07/01/2013");
         
         final WebElement button = getElementByName("methodToCall.search", true);
-        button.click();
-
-        //searchPage.clickSearch();
-
-        /*
-          driver.switchTo().defaultContent();
-
-          driver.switchTo().frame(driver.findElements(By.tagName("iframe")).get(0));
+        button.click();        
         
-          driver.switchTo().frame("iframeportlet");
-
-          System.out.println(driver.getPageSource());
-
-        */
-
-        /*
-          final WebElement message = driver.findElement(By.xpath("//*[text()[contains(., 'Document was successfully submitted.')]]"));
-          assertNotNull(message);
-        */
-        
-        try {
-            Thread.sleep(100000);
-        }
-        catch(Exception e) {
-            
-        }
     }
 
     protected void waitForFormLoad() {
@@ -235,6 +302,17 @@ public class UgarussTest {
         }
         
         return elements;
+    }
+
+    protected WebElement getElementByXpath(final String expression) {
+        WebElement element = null;
+        
+        List<WebElement> elements = driver.findElements(By.xpath(expression));
+        if (!elements.isEmpty()) {
+            element = elements.get(0);
+        }
+        
+        return element;
     }
 
     protected List<WebElement> getActiveElementsByName(final String name, final boolean exact) {
@@ -465,5 +543,43 @@ public class UgarussTest {
                     return null;
                 }
             });
+    }
+
+    protected void searchFor(final PortalPage portal, final String documentNumber) {
+        final OffCampusEquipmentRequestSearchPage searchPage = portal.clickOffCampusEquipmentRequestSearch();
+        driver.switchTo().defaultContent();
+        switchToIFramePortlet();
+        waitFor(By.name("methodToCall.search"));
+
+        final WebElement fromDateField = getElementByName("rangeLowerBoundKeyPrefix_dateCreated", true);
+        fromDateField.sendKeys("07/01/2013");
+        
+        final WebElement button = getElementByName("methodToCall.search", true);
+        button.click();
+        
+        final WebElement documentLink = driver.findElement(By.xpath("//a[text()[contains(., '" + documentNumber + "')]]"));
+        documentLink.click();
+    }
+
+    protected PortalPage loginAs(final String user) {
+        clickMainMenu();
+
+        driver.switchTo().defaultContent();
+
+        final String logoutExpression = "//*[@value='Logout']";
+
+        waitFor(By.xpath(logoutExpression));
+        driver.findElement(By.xpath(logoutExpression)).click();
+
+        return new PortalPage(driver);
+    }
+
+    protected PortalPage clickMainMenu() {
+        driver.switchTo().defaultContent();
+
+        waitFor(By.linkText("Main Menu"));
+        driver.findElement(By.linkText("Main Menu")).click();
+
+        return new PortalPage(driver);
     }
 }

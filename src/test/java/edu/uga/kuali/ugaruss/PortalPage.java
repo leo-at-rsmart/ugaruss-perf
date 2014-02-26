@@ -68,11 +68,28 @@ public class PortalPage extends Page {
         return new OffCampusEquipmentRequestSearchPage(driver);
     }
 
-    public PortalPage clickMainMenu() {
-        driver.switchTo().defaultContent();
+    protected OffCampusEquipmentRequestDocumentPage searchFor(final String documentNumber) {
+        final String documentNumberXpath = "//a[text()[contains(., '" + documentNumber + "')]]";
 
-        final WebElement button = driver.findElement(By.linkText("Main Menu"));
-        button.click();
-        return this;
+        clickMainMenu().clickOffCampusEquipmentRequestSearch();
+
+        driver.switchTo().defaultContent();
+        switchToIFramePortlet();
+        waitFor(By.name("methodToCall.search"));
+
+        getElementByName("rangeLowerBoundKeyPrefix_dateCreated", true).sendKeys("07/01/2013");
+        
+        getElementByName("methodToCall.search", true).click();
+        
+        waitFor(By.xpath(documentNumberXpath));
+
+        driver.findElement(By.xpath(documentNumberXpath)).click();
+
+        for (final String winHandle : driver.getWindowHandles()) {
+            System.out.println("Switching... to " + winHandle);
+            driver.switchTo().window(winHandle);
+        }
+            
+        return new OffCampusEquipmentRequestDocumentPage(driver);
     }
 }
