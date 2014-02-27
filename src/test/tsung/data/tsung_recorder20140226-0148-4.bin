@@ -1,0 +1,126 @@
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="viewId"
+
+OffCampusEquipment-CreateNewView
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="formKey"
+
+%%_form_key%%
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="view.applyDirtyCheck"
+
+true
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="renderedInLightBox"
+
+false
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="document.documentHeader.documentDescription"
+
+Create Off-Campus Equipment Authorization
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="document.documentHeader.explanation"
+
+
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="document.documentHeader.organizationDocumentNumber"
+
+
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="document.newMaintainableObject.dataObject.inventoryNumber"
+
+595534
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="document.newMaintainableObject.dataObject.equipmentInventory.inventoryDescription"
+
+SERVER POWEREDGE 2950                                       DELL 222-3390
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="document.newMaintainableObject.dataObject.equipmentInventory.department"
+
+552
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="document.newMaintainableObject.dataObject.requestedDate"
+
+04/21/2014
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="document.newMaintainableObject.dataObject.expireDate"
+
+05/31/2014
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="document.newMaintainableObject.dataObject.purpose"
+
+Testing
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="document.newMaintainableObject.dataObject.sensitiveData"
+
+no
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="newCollectionLines['document.notes'].noteText"
+
+
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="attachmentFile"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="newCollectionLines['document.adHocRoutePersons'].actionRequested"
+
+A
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="newCollectionLines['document.adHocRoutePersons'].name"
+
+
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="newCollectionLines['document.adHocRoutePersons'].id"
+
+
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="newCollectionLines['document.adHocRouteWorkgroups'].actionRequested"
+
+A
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="newCollectionLines['document.adHocRouteWorkgroups'].recipientNamespaceCode"
+
+
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="newCollectionLines['document.adHocRouteWorkgroups'].recipientName"
+
+
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="newCollectionLines['document.adHocRouteWorkgroups'].id"
+
+
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="view.currentPageId"
+
+u100001
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="view.currentPage.header.headerText"
+
+
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="formHistory.historyParameterString"
+
+null%5E%24%5Enull%5E%24%5EHome%5E%24%5Ehttp%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do%5E%24%5Enull%24%5E%24OffCampusEquipment-CreateNewView%5E%24%5Enull%5E%24%5EOff-Campus+Equipment+Maintenance+Create+New%5E%24%5Ehttp%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fkr-krad%2Fmaintenance%3FmethodToCall%3Dstart%26hideReturnLink%3Dtrue%26viewName%3DOffCampusEquipmentCreateNew%26dataObjectClassName%3Dedu.uga.busfin.ugaruss.bo.OffCampusEquipment%26returnLocation%3Dhttp%253A%252F%252Fptriceapp02.stage.uga.edu%252Fugaruss%252Fportal.do%26formKey%3D7640028c-310c-4055-98b5-09e1f7fdcbe0%26showHome%3Dfalse%5E%24%5E7640028c-310c-4055-98b5-09e1f7fdcbe0
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="methodToCall"
+
+route
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="showHistory"
+
+false
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="focusId"
+
+u100016
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="showHome"
+
+false
+-----------------------------10916471491360836922885307504
+Content-Disposition: form-data; name="jumpToId"
+
+u100016
+-----------------------------10916471491360836922885307504--

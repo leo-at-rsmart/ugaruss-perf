@@ -118,7 +118,7 @@ public class OffCampusEquipmentRequestDocumentPage extends Page {
     }
 
     public String getDocumentNumber() {
-        final String expression = "//*[@data-label='Document Number']/span[1]";
+        final String expression = "//*[@data-label='Document Number']/span[1][normalize-space()]";
         waitFor(By.xpath(expression));
         return driver.findElement(By.xpath(expression)).getText().trim();
     }

@@ -89,6 +89,7 @@ public class UgarussTest {
     public static void createDriver() {
         final DesiredCapabilities dc = new DesiredCapabilities();
         dc.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR,UnexpectedAlertBehaviour.ACCEPT);
+        /*
         driver = new FirefoxDriver(null, new FirefoxProfile() {{
             setPreference("network.proxy.type", 1);
             setPreference("network.proxy.http", "localhost");
@@ -96,6 +97,8 @@ public class UgarussTest {
             setPreference("network.proxy.no_proxies_on", "");
             setPreference("javascript.options.strict", false);
         }}, dc);
+        */
+        driver = new FirefoxDriver(dc);
         wait = new WebDriverWait(driver, 30);
     }
 

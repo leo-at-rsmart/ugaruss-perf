@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<!DOCTYPE tsung SYSTEM "/opt/local/share/tsung/tsung-1.0.dtd">
+<tsung version="1.0" dumptraffic="true" loglevel="notice">
+  <clients>
+    <client use_controller_vm="true" host="localhost"/>
+  </clients>
+  <servers>
+    <server port="80" type="tcp" host="tst.kfs.uconn.edu"/>
+  </servers>
+  <load>
+    <arrivalphase phase="1" duration="10" unit="minute">
+      <users arrivalrate="20" unit="minute"/>
+    </arrivalphase>
+  </load>
+  <options>
+    <option name="user_agent" type="ts_http">
+      <user_agent probability="100">
+        Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:8.0.1) Gecko/20100101 Firefox/8.0.1
+      </user_agent>
+    </option>
+  </options>
+  <sessions>
+    <session name="stress" probability="50" type="ts_http">
+      <transaction name="login">
+        <request subst="false">
+          <dyn_variable name="redir" re="Location: (.*)" />
+          <http version="1.1" url="http://tst.kfs.uconn.edu/kfs-dev/portal.do" method="GET"/>
+        </request>
+        <request subst="true">
+          <dyn_variable name="lt" xpath="//input[@name='lt']/@value"/>
+          <dyn_variable name="execution" xpath="//input[@name='execution']/@value"/>
+          <http version="1.1" url="%%_redir%%" method="GET"/>
+        </request>
+        <request subst="true">
+          <dyn_variable name="ticket" re="Location: .*ticket=(.*)" />
+          <http version="1.1" content_type="application/x-www-form-urlencoded" contents="lt=%%_lt%%&amp;execution=%%_execution%%&amp;username=lep12004&amp;password=Television_evening_completely_larger.&amp;_eventId=submit" url="https://login.uconn.edu/cas/login?service=http%3A%2F%2Ftst.kfs.uconn.edu%2Fkfs-dev%2Fportal.do" method="POST"/>
+        </request>
+        <request subst="true">
+          <dyn_variable name="redir" re="Location: (.*)" />
+          <http version="1.1" url="http://tst.kfs.uconn.edu/kfs-dev/portal.do?ticket=%%_ticket%%" method="GET"/>
+        </request>
+        <request subst="true">
+          <http version="1.1" url="%%_redir%%" method="GET"/>
+        </request>
+
+        <request><http url='/kfs-dev/backdoorlogin.do' version='1.1'  contents='backdoorId=btp98001&amp;imageField=Login&amp;methodToCall=login' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+        <request><http url='/kfs-dev/index.jsp' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/portal.jsp' version='1.1' method='GET'></http></request>
+      </transaction>
+      <transaction name="therest">
+<request><http url='/kfs-dev/portal.do?selectedTab=administration' version='1.1' method='GET'></http></request>
+
+<thinktime random='true' value='5'/>
+
+<request><http url='/kfs-dev/portal.do?channelTitle=Role&amp;channelUrl=http://tst.kfs.uconn.edu/kr-dev/kr/lookup.do?methodToCall=start&amp;businessObjectClassName=org.kuali.rice.kim.bo.impl.RoleImpl&amp;docFormKey=88888888&amp;returnLocation=http://tst.kfs.uconn.edu/kfs-dev/portal.do&amp;hideReturnLink=true' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/kr/lookup.do?methodToCall=start&amp;businessObjectClassName=org.kuali.rice.kim.bo.impl.RoleImpl&amp;docFormKey=88888888&amp;returnLocation=http://tst.kfs.uconn.edu/kfs-dev/portal.do&amp;hideReturnLink=true' version='1.1' method='GET'></http></request>
+
+<thinktime random='true' value='3'/>
+
+<request><http url='/kr-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/dwr/interface/DocumentTypeService.js' version='1.1' method='GET'></http></request>
+
+<thinktime random='true' value='9'/>
+
+<request><http url='/kr-dev/kr/lookup.do' version='1.1'  contents='methodToCall.search.x=0&amp;methodToCall.search.y=0&amp;backLocation=http%3A%2F%2Ftst.kfs.uconn.edu%2Fkfs-dev%2Fportal.do&amp;formKey=88888888&amp;lookupableImplServiceName=roleLookupable&amp;businessObjectClassName=org.kuali.rice.kim.bo.impl.RoleImpl&amp;conversionFields=&amp;hideReturnLink=Yes&amp;suppressActions=No&amp;multipleValues=No&amp;lookupAnchor=&amp;readOnlyFields=&amp;referencesToRefresh=&amp;hasReturnableRow=No&amp;docNum=&amp;showMaintenanceLinks=Yes&amp;headerBarEnabled=Yes&amp;fieldNameToFocusOnAfterSubmit=&amp;roleId=54&amp;roleName=&amp;kimTypeId=&amp;namespaceCode=&amp;principalName=&amp;groupNamespaceCode=&amp;groupName=&amp;permNamespaceCode=&amp;permName=&amp;permTmplNamespaceCode=&amp;permTmplName=&amp;respNamespaceCode=&amp;respName=&amp;respTmplNamespaceCode=&amp;respTmplName=&amp;active=Y&amp;tabStatesSize=18&amp;actionEditablePropertiesGuid=889430A3-0ACA-F8F7-D9C1-763C3D447AD1' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+
+<thinktime random='true' value='3'/>
+
+<request><http url='/kr-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/dwr/interface/DocumentTypeService.js' version='1.1' method='GET'></http></request>
+
+<thinktime random='true' value='3'/>
+
+<request><http url='/kr-dev/kim/identityManagementRoleInquiry.do?methodToCall=inquiry&amp;roleId=54' version='1.1' method='GET'></http></request>
+
+<thinktime random='true' value='5'/>
+
+<request><http url='/kfs-dev/portal.do?channelTitle=Document%20Search&amp;channelUrl=http://tst.kfs.uconn.edu/kfs-dev/kr/lookup.do?methodToCall=start&amp;businessObjectClassName=org.kuali.rice.kew.docsearch.DocSearchCriteriaDTO&amp;docFormKey=88888888&amp;returnLocation=http://tst.kfs.uconn.edu/kfs-dev/portal.do&amp;hideReturnLink=true&amp;backdoorId=lep12004' version='1.1' method='GET'></http></request>
+<request><http url='/kfs-dev/kr/lookup.do?methodToCall=start&amp;businessObjectClassName=org.kuali.rice.kew.docsearch.DocSearchCriteriaDTO&amp;docFormKey=88888888&amp;returnLocation=http://tst.kfs.uconn.edu/kfs-dev/portal.do&amp;hideReturnLink=true&amp;backdoorId=lep12004' version='1.1' method='GET'></http></request>
+<request><http url='/kfs-dev/dwr/engine.js' version='1.1' if_modified_since='Sun, 05 Aug 2012 22:07:34 GMT' method='GET'></http></request>
+<request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+<request><http url='/kfs-dev/dwr/util.js' version='1.1' if_modified_since='Sun, 05 Aug 2012 22:07:34 GMT' method='GET'></http></request>
+<request><http url='/kfs-dev/dwr/interface/DocumentTypeService.js' version='1.1' method='GET'></http></request>
+
+<thinktime random='true' value='3'/>
+
+<request><http url='/kfs-dev/kr/lookup.do' version='1.1'  contents='methodToCall.search.x=0&amp;methodToCall.search.y=0&amp;backLocation=http%3A%2F%2Ftst.kfs.uconn.edu%2Fkfs-dev%2Fportal.do&amp;formKey=88888888&amp;lookupableImplServiceName=docSearchCriteriaDTOLookupable&amp;businessObjectClassName=org.kuali.rice.kew.docsearch.DocSearchCriteriaDTO&amp;conversionFields=&amp;hideReturnLink=Yes&amp;suppressActions=No&amp;multipleValues=No&amp;lookupAnchor=&amp;readOnlyFields=&amp;referencesToRefresh=&amp;hasReturnableRow=No&amp;docNum=&amp;showMaintenanceLinks=Yes&amp;headerBarEnabled=Yes&amp;fieldNameToFocusOnAfterSubmit=&amp;savedSearchName=&amp;docTypeFullName=PCDO&amp;initiator=&amp;routeHeaderId=&amp;fromDateCreated=&amp;toDateCreated=&amp;namedSearch=&amp;isAdvancedSearch=NO&amp;superUserSearch=NO&amp;tabStatesSize=7&amp;actionEditablePropertiesGuid=C79BA561-4BFE-1BE1-A79C-25C101CC9025' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+<request><http url='/kfs-dev/dwr/interface/DocumentTypeService.js' version='1.1' method='GET'></http></request>
+<request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+<thinktime random='true' value='3'/>
+
+<request><http url='/kfs-dev/kr/lookup.do' version='1.1'  contents='methodToCall.search.x=0&amp;methodToCall.search.y=0&amp;backLocation=http%3A%2F%2Ftst.kfs.uconn.edu%2Fkfs-dev%2Fportal.do&amp;formKey=88888888&amp;lookupableImplServiceName=docSearchCriteriaDTOLookupable&amp;businessObjectClassName=org.kuali.rice.kew.docsearch.DocSearchCriteriaDTO&amp;conversionFields=&amp;hideReturnLink=Yes&amp;suppressActions=No&amp;multipleValues=No&amp;lookupAnchor=&amp;readOnlyFields=&amp;referencesToRefresh=&amp;hasReturnableRow=No&amp;docNum=&amp;showMaintenanceLinks=Yes&amp;headerBarEnabled=Yes&amp;fieldNameToFocusOnAfterSubmit=&amp;savedSearchName=&amp;docTypeFullName=PCDO&amp;initiator=&amp;routeHeaderId=&amp;fromDateCreated=06%2F06%2F2012&amp;toDateCreated=&amp;documentDescription=&amp;organizationDocumentNumber=&amp;chartOfAccountsCode=&amp;accountNumber=&amp;organizationCode=&amp;financialDocumentTypeCode=&amp;financialDocumentTotalAmount=&amp;displayType=document&amp;namedSearch=&amp;isAdvancedSearch=NO&amp;superUserSearch=NO&amp;tabStatesSize=17&amp;actionEditablePropertiesGuid=49FA02D3-60F7-0D28-8B3C-B566AB30CC4B' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+
+<thinktime random='true' value='6'/>
+
+<request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+<request><http url='/kfs-dev/dwr/interface/DocumentTypeService.js' version='1.1' method='GET'></http></request>
+
+<thinktime random='true' value='5'/>
+
+<request><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=149969' version='1.1' method='GET'></http></request>
+
+<thinktime random='true' value='2'/>
+
+<request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+<thinktime random='true' value='3'/>
+
+<request><http url='/kfs-dev/kr/lookup.do' version='1.1'  contents='methodToCall.search.x=0&amp;methodToCall.search.y=0&amp;backLocation=http%3A%2F%2Ftst.kfs.uconn.edu%2Fkfs-dev%2Fportal.do&amp;formKey=88888888&amp;lookupableImplServiceName=docSearchCriteriaDTOLookupable&amp;businessObjectClassName=org.kuali.rice.kew.docsearch.DocSearchCriteriaDTO&amp;conversionFields=&amp;hideReturnLink=Yes&amp;suppressActions=No&amp;multipleValues=No&amp;lookupAnchor=&amp;readOnlyFields=&amp;referencesToRefresh=&amp;hasReturnableRow=Yes&amp;docNum=&amp;showMaintenanceLinks=Yes&amp;headerBarEnabled=Yes&amp;fieldNameToFocusOnAfterSubmit=&amp;savedSearchName=&amp;docTypeFullName=PO&amp;initiator=&amp;routeHeaderId=&amp;fromDateCreated=06%2F06%2F2012&amp;toDateCreated=&amp;documentDescription=&amp;organizationDocumentNumber=&amp;chartOfAccountsCode=&amp;accountNumber=&amp;organizationCode=&amp;financialDocumentTypeCode=&amp;financialDocumentTotalAmount=&amp;displayType=document&amp;namedSearch=&amp;isAdvancedSearch=NO&amp;superUserSearch=NO&amp;tabStatesSize=17&amp;actionEditablePropertiesGuid=3AFAB8C2-DE9D-0F42-92A5-7BC441DCEF20' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+
+<thinktime random='true' value='4'/>
+
+<request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+<request><http url='/kfs-dev/dwr/interface/DocumentTypeService.js' version='1.1' method='GET'></http></request>
+
+<thinktime random='true' value='5'/>
+
+<request><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=149748' version='1.1' method='GET'></http></request>
+
+<thinktime random='true' value='1'/>
+
+<request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+<thinktime random='true' value='9'/>
+
+<request><http url='/kr-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+<request><http url='/kfs-dev/kr/lookup.do' version='1.1'  contents='methodToCall.search.x=0&amp;methodToCall.search.y=0&amp;backLocation=http%3A%2F%2Ftst.kfs.uconn.edu%2Fkfs-dev%2Fportal.do&amp;formKey=88888888&amp;lookupableImplServiceName=docSearchCriteriaDTOLookupable&amp;businessObjectClassName=org.kuali.rice.kew.docsearch.DocSearchCriteriaDTO&amp;conversionFields=&amp;hideReturnLink=Yes&amp;suppressActions=No&amp;multipleValues=No&amp;lookupAnchor=&amp;readOnlyFields=&amp;referencesToRefresh=&amp;hasReturnableRow=Yes&amp;docNum=&amp;showMaintenanceLinks=Yes&amp;headerBarEnabled=Yes&amp;fieldNameToFocusOnAfterSubmit=&amp;savedSearchName=&amp;docTypeFullName=REQS&amp;initiator=&amp;routeHeaderId=&amp;fromDateCreated=06%2F06%2F2012&amp;toDateCreated=&amp;documentDescription=&amp;organizationDocumentNumber=&amp;purapDocumentIdentifier=&amp;requisitionIdentifier=&amp;purchaseOrderTypeCode=&amp;vendorNumber=&amp;documentChartOfAccountsCodeForSearching=&amp;documentOrganizationCodeForSearching=&amp;requestorPersonName=&amp;assignedUserPrincipalName=&amp;deliveryCampusCodeForSearch=&amp;contractManagerCode=&amp;purchaseOrderPreviousIdentifier=&amp;rangeLowerBoundKeyPrefix_purchaseOrderLastTransmitTimestamp=&amp;purchaseOrderLastTransmitTimestamp=&amp;rangeLowerBoundKeyPrefix_deliveryRequiredDate=&amp;deliveryRequiredDate=&amp;deliveryRequiredDateReasonCode=&amp;receivingDocumentRequiredIndicatorForSearching=&amp;paymentRequestPositiveApprovalIndicatorForSearching=&amp;purchaseOrderCurrentIndicatorForSearching=&amp;batchId=&amp;chartOfAccountsCode=&amp;accountNumber=&amp;organizationCode=&amp;financialDocumentTypeCode=&amp;financialDocumentTotalAmount=&amp;displayType=document&amp;namedSearch=&amp;sensitive=&amp;statusDescription=&amp;contractManagerName=&amp;chartAndOrgCodeForResult=&amp;vendorName=&amp;postingYear=&amp;documentTitleForResult=&amp;isAdvancedSearch=NO&amp;superUserSearch=NO&amp;tabStatesSize=54&amp;actionEditablePropertiesGuid=ED586ABD-607A-91A8-DDF3-038FB417DFA2' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+
+<thinktime random='true' value='4'/>
+
+<request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+<request><http url='/kfs-dev/dwr/interface/DocumentTypeService.js' version='1.1' method='GET'></http></request>
+
+<thinktime random='true' value='1554'/>
+
+<request><http url='http://safebrowsing.clients.google.com/safebrowsing/downloads?client=navclient-auto-ffox&amp;appver=14.0.1&amp;pver=2.2&amp;wrkey=AKEgNisP4EAdB46StBHdxNBr3RZfmaIWjywOdFfXMoDW_7NPUIsZHWOLrcObiHIAnkkyckQGZPv7VGcedxV-ToMjMXGstGzZ8Q==' version='1.1'  contents='goog-malware-shavar;a:79642-87261:s:84481-92187:mac
+goog-phish-shavar;a:218199-227921:s:102639-107345:mac
+' content_type='text/plain' method='POST'></http></request>
+<request><http url='http://safebrowsing-cache.google.com/safebrowsing/rd/ChNnb29nLW1hbHdhcmUtc2hhdmFyEAEYldAFIKjQBSoGH2gBAP8DMgYVaAEA_wM' version='1.1' method='GET'></http></request>
+<request><http url='/safebrowsing/rd/ChNnb29nLW1hbHdhcmUtc2hhdmFyEAAYyakFIPCpBSoH4VQBAP__ADIIyVQBAP___wA' version='1.1' method='GET'></http></request>
+<request><http url='/safebrowsing/rd/ChFnb29nLXBoaXNoLXNoYXZhchABGM3GBiDgxgYqBlijAQD_ATIGTaMBAP8H' version='1.1' method='GET'></http></request>
+<request><http url='/safebrowsing/rd/ChFnb29nLXBoaXNoLXNoYXZhchAAGNH0DSCg9Q0qDVp6AwD__________38yBlF6AwD_AQ' version='1.1' method='GET'></http></request>
+      </transaction>
+    </session>
+  </sessions>
+</tsung>

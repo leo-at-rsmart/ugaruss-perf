@@ -1,0 +1,126 @@
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="viewId"
+
+OffCampusEquipment-CreateNewView
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="formKey"
+
+c1bd6ba9-417b-4889-83d4-92d6a04022cb
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="view.applyDirtyCheck"
+
+true
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="renderedInLightBox"
+
+false
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="document.documentHeader.documentDescription"
+
+Create Off-Campus Equipment Authorization
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="document.documentHeader.explanation"
+
+
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="document.documentHeader.organizationDocumentNumber"
+
+
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="document.newMaintainableObject.dataObject.inventoryNumber"
+
+595534
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="document.newMaintainableObject.dataObject.equipmentInventory.inventoryDescription"
+
+SERVER POWEREDGE 2950                                       DELL 222-3390
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="document.newMaintainableObject.dataObject.equipmentInventory.department"
+
+552
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="document.newMaintainableObject.dataObject.requestedDate"
+
+03/21/2014
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="document.newMaintainableObject.dataObject.expireDate"
+
+04/21/2014
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="document.newMaintainableObject.dataObject.purpose"
+
+test
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="document.newMaintainableObject.dataObject.sensitiveData"
+
+no
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="newCollectionLines['document.notes'].noteText"
+
+
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="attachmentFile"; filename=""
+Content-Type: application/octet-stream
+
+
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="newCollectionLines['document.adHocRoutePersons'].actionRequested"
+
+A
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="newCollectionLines['document.adHocRoutePersons'].name"
+
+
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="newCollectionLines['document.adHocRoutePersons'].id"
+
+
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="newCollectionLines['document.adHocRouteWorkgroups'].actionRequested"
+
+A
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="newCollectionLines['document.adHocRouteWorkgroups'].recipientNamespaceCode"
+
+
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="newCollectionLines['document.adHocRouteWorkgroups'].recipientName"
+
+
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="newCollectionLines['document.adHocRouteWorkgroups'].id"
+
+
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="view.currentPageId"
+
+u100001
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="view.currentPage.header.headerText"
+
+
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="formHistory.historyParameterString"
+
+null%5E%24%5Enull%5E%24%5EHome%5E%24%5Ehttp%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do%5E%24%5Enull%24%5E%24OffCampusEquipment-CreateNewView%5E%24%5Enull%5E%24%5EOff-Campus+Equipment+Maintenance+Create+New%5E%24%5Ehttp%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fkr-krad%2Fmaintenance%3FmethodToCall%3Dstart%26hideReturnLink%3Dtrue%26viewName%3DOffCampusEquipmentCreateNew%26dataObjectClassName%3Dedu.uga.busfin.ugaruss.bo.OffCampusEquipment%26returnLocation%3Dhttp%253A%252F%252Fptriceapp02.stage.uga.edu%252Fugaruss%252Fportal.do%26formKey%3Dc1bd6ba9-417b-4889-83d4-92d6a04022cb%26showHome%3Dfalse%5E%24%5Ec1bd6ba9-417b-4889-83d4-92d6a04022cb
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="methodToCall"
+
+save
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="showHistory"
+
+false
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="focusId"
+
+FIRST
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="showHome"
+
+false
+------WebKitFormBoundary5tUMBjoj4hFXZLNO
+Content-Disposition: form-data; name="jumpToId"
+
+TOP
+------WebKitFormBoundary5tUMBjoj4hFXZLNO--

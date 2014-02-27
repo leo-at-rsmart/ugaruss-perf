@@ -1,0 +1,114 @@
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="viewId"
+
+OffCampusEquipment-MaintenanceView
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="formKey"
+
+%%_form_key%%
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="view.applyDirtyCheck"
+
+true
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="renderedInLightBox"
+
+false
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="document.documentHeader.documentDescription"
+
+Create Off-Campus Equipment Authorization
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="document.documentHeader.explanation"
+
+
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="document.documentHeader.organizationDocumentNumber"
+
+
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="document.newMaintainableObject.dataObject.purpose"
+
+Testing
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="document.newMaintainableObject.dataObject.requestedDate"
+
+04/21/2014
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="document.newMaintainableObject.dataObject.expireDate"
+
+05/31/2014
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="document.newMaintainableObject.dataObject.sensitiveData"
+
+no
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="newCollectionLines['document.notes'].noteText"
+
+
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="attachmentFile"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="newCollectionLines['document.adHocRoutePersons'].actionRequested"
+
+A
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="newCollectionLines['document.adHocRoutePersons'].name"
+
+
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="newCollectionLines['document.adHocRoutePersons'].id"
+
+
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="newCollectionLines['document.adHocRouteWorkgroups'].actionRequested"
+
+A
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="newCollectionLines['document.adHocRouteWorkgroups'].recipientNamespaceCode"
+
+
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="newCollectionLines['document.adHocRouteWorkgroups'].recipientName"
+
+
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="newCollectionLines['document.adHocRouteWorkgroups'].id"
+
+
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="view.currentPageId"
+
+u100001
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="view.currentPage.header.headerText"
+
+
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="formHistory.historyParameterString"
+
+null%5E%24%5Enull%5E%24%5EHome%5E%24%5Ehttp%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do%5E%24%5Enull%24%5E%24OffCampusEquipment-MaintenanceView%5E%24%5Enull%5E%24%5EOff-Campus+Equipment+Maintenance%5E%24%5Ehttp%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fkr-krad%2Fmaintenance%3FmethodToCall%3DdocHandler%26command%3DdisplayDocSearchView%26docId%3D5924%26dataObjectClassName%3Dedu.uga.busfin.ugaruss.bo.OffCampusEquipment%26formKey%3D44e23ff8-c2e0-49d2-915e-5528e853ccc3%26showHome%3Dfalse%5E%24%5E44e23ff8-c2e0-49d2-915e-5528e853ccc3
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="methodToCall"
+
+approve
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="showHistory"
+
+false
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="focusId"
+
+u100019
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="showHome"
+
+false
+-----------------------------10789378913572187691559057218
+Content-Disposition: form-data; name="jumpToId"
+
+u100019
+-----------------------------10789378913572187691559057218--
