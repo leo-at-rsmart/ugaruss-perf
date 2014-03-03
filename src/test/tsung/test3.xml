@@ -2,23 +2,23 @@
 <!DOCTYPE tsung SYSTEM "/opt/local/share/tsung/tsung-1.0.dtd">
 <tsung version="1.0" dumptraffic="true" loglevel="notice">
   <clients>
-    <client use_controller_vm="true" host="localhost" maxusers="40" />
+    <client use_controller_vm="true" host="localhost"/>
   </clients>
   <servers>
     <server port="80" type="tcp" host="ptriceapp02.stage.uga.edu"/>
   </servers>
   <load>
-    <!--
     <arrivalphase phase="1" duration="10" unit="minute">
       <users maxnumber="1" interarrival="1" unit="second" />
     </arrivalphase>
-  -->
+    <!--
     <arrivalphase phase="1" duration="2" unit="minute">
-      <users maxnumber="10" interarrival="1" unit="second"/>
+      <users maxnumber="100" interarrival="1" unit="second"/>
     </arrivalphase>
     <arrivalphase phase="2" duration="150" unit="minute">
-      <users maxnumber="40" interarrival="1" unit="minute"/>
+      <users interarrival="5" unit="second"/>
     </arrivalphase>
+-->
   </load>
  <options>
     <option name="user_agent" type="ts_http">

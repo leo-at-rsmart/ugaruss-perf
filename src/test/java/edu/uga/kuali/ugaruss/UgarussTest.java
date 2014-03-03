@@ -49,6 +49,9 @@ import org.junit.Rule;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
@@ -82,6 +85,7 @@ import static org.junit.Assert.*;
 public class UgarussTest {
     protected static WebDriver driver;
     protected static Wait<WebDriver> wait;
+    protected static Logger logger;
     /*
       */          
 
@@ -100,6 +104,7 @@ public class UgarussTest {
         */
         driver = new FirefoxDriver(dc);
         wait = new WebDriverWait(driver, 30);
+        logger = LoggerFactory.getLogger(UgarussTest.class);
     }
 
     @Before
@@ -145,7 +150,7 @@ public class UgarussTest {
         }
         catch (org.openqa.selenium.NoSuchElementException e) { }
 
-        System.out.println("Got document Number " + documentNumber);
+        logger.debug("Got document Number {}", documentNumber);
 
         final String parentHandle = driver.getWindowHandle(); // get the current window handle
 
@@ -158,7 +163,7 @@ public class UgarussTest {
         driver.switchTo().window(parentHandle);
     }
     
-    @Test
+    // @Test
     @Category(IntegrationTests.class)
     public void testOffCampusEquipmentRequest2() {
         loginAs("vswain");
@@ -180,7 +185,7 @@ public class UgarussTest {
             documentNumber = errorMessage.getText().substring(1);
         }
         catch (org.openqa.selenium.NoSuchElementException e) { }
-        System.out.println("Got document Number " + documentNumber);
+        logger.debug("Got document Number {}", documentNumber);
 
         final String parentHandle = driver.getWindowHandle(); // get the current window handle
         
@@ -197,7 +202,7 @@ public class UgarussTest {
         driver.switchTo().window(parentHandle);
     }
 
-    @Test
+    // @Test
     @Category(IntegrationTests.class)
     public void testOffCampusEquipmentRequestSearch() {
         loginAs("slthelen");

@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!DOCTYPE tsung SYSTEM "/opt/local/share/tsung/tsung-1.0.dtd">
+<tsung version="1.0" dumptraffic="true" loglevel="notice">
+  <clients>
+    <client use_controller_vm="true" host="localhost"/>
+  </clients>
+  <servers>
+    <server port="80" type="tcp" host="ptriceapp02.stage.uga.edu"/>
+  </servers>
+  <load>
+    <arrivalphase phase="1" duration="2" unit="minute">
+      <users maxnumber="100" interarrival="1" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="2" duration="300" unit="minute">
+      <users interarrival="5" unit="second"/>
+    </arrivalphase>
+  </load>
+ <options>
+    <option name="user_agent" type="ts_http">
+      <user_agent probability="100">
+        Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:8.0.1) Gecko/20100101 Firefox/8.0.1
+      </user_agent>
+    </option>
+ </options>
+ <sessions>
+<session name='offcampusequipmentrequest' probability='100'  type='ts_http'>
+	<transaction name="">
+<request><http url='http://ptriceapp02.stage.uga.edu/kr-dev/portal.do' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/rice-portal/css/portal.css' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/krad/plugins/fancybox/jquery.fancybox.css' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/krad/plugins/rice/textpopout/popoutTextarea.css' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/krad/plugins/jgrowl/jquery.jgrowl.css' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/krad/plugins/jquery/jquery-1.8.3.js' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/krad/plugins/scrollto/jquery.scrollTo-1.4.3-min.js' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/krad/plugins/cookie/jquery.cookie.js' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/krad/plugins/blockUI/jquery.blockUI.js' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/kr/scripts/my_common.js' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/krad/plugins/fancybox/jquery.fancybox.pack.js' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/krad/plugins/easing/jquery.easing-1.3.pack.js' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/rice-portal/scripts/portal.initialize.js' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/krad/plugins/jgrowl/jquery.jgrowl.js' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/rice-portal/scripts/easyXDM/easyXDM.js' version='1.1' method='GET'></http></request>
+
+<thinktime random='true' value='3'/>
+
+<request><http url='/kr-dev/rice-portal/images/os-guy.gif' version='1.1' method='GET'></http></request>
+<request><http url='/favicon.ico' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/portal.do' version='1.1'  contents='__login_user=slthelen' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+<request><http url='/favicon.ico' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/rice-portal/images/icon-port-actionlist.gif' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/rice-portal/images/icon-port-docsearch.gif' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/rice-portal/images/headerback.gif' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/rice-portal/images/logo-krice.png' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/rice-portal/images/left-red.gif' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/rice-portal/images/right-red.gif' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/rice-portal/images/left-tan.gif' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/rice-portal/images/right-tan.gif' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/rice-portal/images/head2-back.gif' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/rice-portal/images/header2-left-focus.gif' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/rice-portal/images/leftback-focus.gif' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/rice-portal/images/bl-bevel-focus.gif' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/rice-portal/images/chanhead-back.gif' version='1.1' method='GET'></http></request>
+<request><http url='/kr-dev/rice-portal/images/searchback.gif' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/portal.do' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/rice-portal/css/portal.css' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/krad/plugins/fancybox/jquery.fancybox.css' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/krad/plugins/rice/textpopout/popoutTextarea.css' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/krad/plugins/jgrowl/jquery.jgrowl.css' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/krad/plugins/cookie/jquery.cookie.js' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/krad/plugins/jquery/jquery-1.8.3.js' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/krad/plugins/scrollto/jquery.scrollTo-1.4.3-min.js' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/krad/plugins/blockUI/jquery.blockUI.js' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/kr/scripts/my_common.js' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/krad/plugins/fancybox/jquery.fancybox.pack.js' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/krad/plugins/easing/jquery.easing-1.3.pack.js' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/rice-portal/scripts/portal.initialize.js' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/krad/plugins/jgrowl/jquery.jgrowl.js' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/rice-portal/scripts/easyXDM/easyXDM.js' version='1.1' method='GET'></http></request>
+
+<thinktime random='true' value='1'/>
+
+<request><http url='/ugaruss/rice-portal/images/os-guy.gif' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/portal.do' version='1.1'  contents='__login_user=slthelen' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+
+<thinktime random='true' value='2'/>
+
+<request><http url='/ugaruss/rice-portal/images/icon-port-actionlist.gif' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/rice-portal/images/headerback.gif' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/rice-portal/images/ugaruss_arch.png' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/rice-portal/images/left-red.gif' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/rice-portal/images/right-red.gif' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/rice-portal/images/left-tan.gif' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/rice-portal/images/right-tan.gif' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/rice-portal/images/head2-back.gif' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/rice-portal/images/header2-left-focus.gif' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/rice-portal/images/searchback.gif' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/rice-portal/images/leftback-focus.gif' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/rice-portal/images/bl-bevel-focus.gif' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/rice-portal/images/chanhead-back.gif' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/portal.do?selectedTab=main' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/logout.do' version='1.1'  contents='imageField=Logout' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+<request><http url='/ugaruss/portal.do' version='1.1' method='GET'></http></request>
+<request><http url='/ugaruss/portal.do' version='1.1'  contents='__login_user=slthelen' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+	</transaction></session>
+</sessions>
+</tsung>

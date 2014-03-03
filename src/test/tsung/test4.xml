@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!DOCTYPE tsung SYSTEM "/opt/local/share/tsung/tsung-1.0.dtd">
+<tsung version="1.0" dumptraffic="true" loglevel="notice">
+  <clients>
+    <client use_controller_vm="true" host="localhost"/>
+  </clients>
+  <servers>
+    <server port="80" type="tcp" host="ptriceapp02.stage.uga.edu"/>
+  </servers>
+  <load>
+    <arrivalphase phase="1" duration="10" unit="minute">
+      <users maxnumber="1" interarrival="1" unit="second" />
+    </arrivalphase>
+    <!--
+    <arrivalphase phase="1" duration="2" unit="minute">
+      <users maxnumber="100" interarrival="1" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="2" duration="150" unit="minute">
+      <users interarrival="5" unit="second"/>
+    </arrivalphase>
+-->
+  </load>
+ <options>
+    <option name="user_agent" type="ts_http">
+      <user_agent probability="100">
+        Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36
+      </user_agent>
+    </option>
+ </options>
+ <sessions>
+<session name='offcampusequipmentrequest' probability='100'  type='ts_http'>
+	<transaction name="routeoffcampusequipmentrequest">
+    <request><http url='/kr-dev/portal.do' version='1.1'  contents='__login_user=slthelen' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+    <request><http url='/ugaruss/portal.do' version='1.1'  contents='__login_user=slthelen' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+<request>
+    <dyn_variable name="docid" xpath="//div[@data-label='Document Number']/span[@class='uif-readOnlyContent']/text()" />
+    <dyn_variable name="form_key" xpath="//input[@name='formKey']/@value" />
+    <!--
+    <setdynvars sourcetype="erlang" callback="string:strip(dn, both)">
+      <var name="document_number" />
+  </setdynvars>
+-->
+  <http url='/ugaruss/kr-krad/maintenance?viewName=OffCampusEquipmentCreateNew&amp;methodToCall=start&amp;dataObjectClassName=edu.uga.busfin.ugaruss.bo.OffCampusEquipment&amp;returnLocation=http://ptriceapp02.stage.uga.edu/ugaruss/portal.do&amp;hideReturnLink=true' version='1.1' method='GET'></http>
+</request>
+      <setdynvars sourcetype="eval"
+                  code='fun({Pid,DynVars})->
+                           {ok,Val}=ts_dynvars:lookup(docid,DynVars),
+                            re:replace(Val, "\\s+", "", [global,{return,list}]) end.'>
+        <var name="document_number" />
+      </setdynvars>
+<request subst="true">
+    <http url='/ugaruss/kr-krad/maintenance' version='1.1'  contents_from_file='/home/leo/tsung/data/tsung_recorder20140226-0148-1.bin' content_type='multipart/form-data; boundary=---------------------------15323541721652673980938091562' method='POST'></http>
+</request>
+<request><http url='/ugaruss/logout.do' version='1.1'  contents='imageField=Logout' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+<request><http url='/kr-dev/logout.do' version='1.1'  contents='imageField=Logout' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+<thinktime random='true' value='5'/>
+<request>
+    <dyn_variable name="ugasess" re="Set-Cookie: JSESSIONID=([A-Z0-9]*)" />
+    <http url='/ugaruss/portal.do?selectedTab=main' version='1.1' method='GET'></http>
+</request>
+<request><http url='/ugaruss/portal.do' version='1.1'  contents='__login_user=hschrams' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+<thinktime random='true' value='5'/>
+<request>
+    <dyn_variable name="krsess" re="Set-Cookie: JSESSIONID=([A-Z0-9]*)" />
+    <http url='/kr-dev/portal.do?selectedTab=main' version='1.1' method='GET'></http>
+</request>
+<request><http url='/kr-dev/portal.do' version='1.1'  contents='__login_user=hschrams' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+<request subst="true">
+    <http url='/ugaruss/portal.do?channelTitle=Document%20Search:%20Off-Campus%20Equipment%20Request/Renew&amp;channelUrl=http://ptriceapp02.stage.uga.edu/kr-dev/kew/DocumentSearch.do?docFormKey=88888888&amp;returnLocation=http://ptriceapp02.stage.uga.edu/ugaruss/portal.do&amp;hideReturnLink=true&amp;documentTypeName=OffCampusEquipmentRequestDocType' version='1.1' method='GET'>
+          <add_cookie key="JSESSIONID"  value="%%_ugasess%%"/>
+    </http>
+</request>
+<request>
+    <http url='/kr-dev/kew/DocumentSearch.do?docFormKey=88888888&amp;returnLocation=http://ptriceapp02.stage.uga.edu/ugaruss/portal.do&amp;hideReturnLink=true&amp;documentTypeName=OffCampusEquipmentRequestDocType' version='1.1' method='GET'></http>
+</request>
+<request subst="true">
+    <dyn_variable name="redir" re="Location: (.*)" />
+    <http url='/kr-dev/kew/DocHandler.do?command=displayDocSearchView&amp;docId=6455' version='1.1' method='GET'></http>
+</request>
+<thinktime random='true' value='5'/>
+<request subst="true">
+    <dyn_variable name="form_key" xpath="//input[@name='formKey']/@value" />
+    <http url='%%_redir%%' version='1.1' method='GET'>
+      <add_cookie key="JSESSIONID"  value="%%_ugasess%%"/>
+    </http>
+</request>
+<thinktime random='true' value='5'/>
+<!--
+<request subst="true">
+    <dyn_variable name="form_key" xpath="//input[@name='formKey']/@value" />
+    <http url='/ugaruss/kr-krad/maintenance?methodToCall=docHandler&amp;dataObjectClassName=edu.uga.busfin.ugaruss.bo.OffCampusEquipment&amp;docId=6455&amp;command=displayDocSearchView' version='1.1'  contents='__login_user=hschrams' content_type='application/x-www-form-urlencoded' method='POST'></http>
+</request>
+-->
+<thinktime random='true' value='5'/>
+<request subst="true">
+    <http url='/ugaruss/kr-krad/maintenance' version='1.1'  contents_from_file='/home/leo/tsung/data/tsung_recorder20140226-0148-2.bin' content_type='multipart/form-data; boundary=---------------------------18274299073033275552047522554' method='POST'>
+      <add_cookie key="JSESSIONID"  value="%%_ugasess%%"/>
+  </http>
+</request>
+
+<thinktime random='true' value='5'/>
+	</transaction></session>
+</sessions>
+</tsung>
