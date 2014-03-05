@@ -1,0 +1,290 @@
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="tabStates(DocumentOverview)"
+
+OPEN
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.documentHeader.documentNumber"
+
+%%_document_number
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.documentHeader.documentDescription"
+
+Duplicating
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.documentHeader.explanation"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.documentHeader.organizationDocumentNumber"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.documentFundingSourceCode"
+
+INST
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="checkboxToReset"
+
+document.receivingDocumentRequiredIndicator
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.accountDistributionMethod"
+
+P
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="tabStates(Delivery)"
+
+OPEN
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.deliveryToName"
+
+Kristin M Allen
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.deliveryToPhoneNumber"
+
+860-486-0970
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.deliveryToEmailAddress"
+
+kristin.allen@uconn.edu
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.deliveryBuildingLine2Address"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.deliveryBuildingRoomNumber"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="tabStates(Vendor)"
+
+OPEN
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="tabStates(Items)"
+
+OPEN
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.item[0].itemQuantity"
+
+50.00
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.item[0].itemUnitOfMeasure.itemUnitOfMeasureDescription"
+
+Dozen
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.item[0].purchasingCommodityCode"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.item[0].commodityCode.commodityDescription"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="hideDetails"
+
+No
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.item[0].newSourceLine.chartOfAccountsCode"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.item[0].newSourceLine.accountNumber"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.item[0].newSourceLine.subAccountNumber"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.item[0].newSourceLine.financialObjectCode"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.item[0].newSourceLine.financialSubObjectCode"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.item[0].newSourceLine.projectCode"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.item[0].newSourceLine.organizationReferenceId"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.item[0].newSourceLine.accountLinePercent"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.item[0].newSourceLine.amount"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="tabStates(CapitalAsset)"
+
+CLOSE
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.capitalAssetSystemTypeCode"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.capitalAssetSystemStateCode"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="tabStates(PaymentInfo)"
+
+CLOSE
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="tabStates(AdditionalInstitutionalInfo)"
+
+OPEN
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.requestorPersonName"
+
+Kristin M Allen
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.requestorPersonPhoneNumber"
+
+860-486-0970
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.institutionContactName"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.requestorPersonEmailAddress"
+
+kristin.allen@uconn.edu
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.institutionContactPhoneNumber"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.requisitionOrganizationReference1Text"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.institutionContactEmailAddress"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.requisitionOrganizationReference2Text"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.requisitionOrganizationReference3Text"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="tabStates(AccountSummary)"
+
+CLOSE
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="tabStates(ViewRelatedDocuments)"
+
+CLOSE
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="tabStates(ViewPaymentHistory)"
+
+CLOSE
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="tabStates(NotesandAttachments)"
+
+OPEN
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="newNote.noteTypeCode"
+
+BO
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="newNote.noteText"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="attachmentFile"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.documentBusinessObject.boNote[0].adHocRouteRecipient.id"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="document.documentBusinessObject.boNote[0].adHocRouteRecipient.name"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="tabStates(AdHocRecipients)"
+
+CLOSE
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="newAdHocRoutePerson.type"
+
+0
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="newAdHocRoutePerson.actionRequested"
+
+A
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="newAdHocRoutePerson.id"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="newAdHocRoutePerson.name"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="newAdHocRouteWorkgroup.type"
+
+1
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="newAdHocRouteWorkgroup.actionRequested"
+
+A
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="newAdHocRouteWorkgroup.recipientNamespaceCode"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="newAdHocRouteWorkgroup.recipientName"
+
+
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="tabStates(RouteLog)"
+
+CLOSE
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="methodToCall.save.x"
+
+21
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="methodToCall.save.y"
+
+9
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="tabStatesSize"
+
+40
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="returnToActionList"
+
+No
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="documentWebScope"
+
+session
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="formKey"
+
+7
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="docFormKey"
+
+7
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="docNum"
+
+%%_document_number
+-----------------------------1583749331075260298824938981
+Content-Disposition: form-data; name="actionEditablePropertiesGuid"
+
+D362D7C9-63A5-405B-E955-EF938F06E195
+-----------------------------1583749331075260298824938981--

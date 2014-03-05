@@ -1,0 +1,1133 @@
+<?xml version="1.0"?><tsung version="1.0" dumptraffic="true" loglevel="notice">
+  <clients>
+    <client use_controller_vm="true" host="localhost" maxusers="40"/>
+  </clients>
+  <servers>
+    <server port="80" type="tcp" host="ptriceapp02.stage.uga.edu"/>
+  </servers>
+  <load>
+    <arrivalphase phase="1" duration="2" unit="minute">
+      <users maxnumber="10" interarrival="1" unit="second"/>
+    </arrivalphase>
+    <arrivalphase phase="2" duration="150" unit="minute">
+      <users maxnumber="40" interarrival="1" unit="minute"/>
+    </arrivalphase>
+  </load>
+ <options>
+    <option name="user_agent" type="ts_http">
+      <user_agent probability="100">
+        Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36
+      </user_agent>
+    </option>
+ </options>
+ <sessions>
+<session name="offcampusequipmentrequest" probability="100" type="ts_http">
+  <transaction name="routeoffcampusequipmentrequest">
+
+<request>
+  <dyn_variable name="krsess" re="Set-Cookie: JSESSIONID=([A-Z0-9]*)"/>
+  <http url="http://ptriceapp02.stage.uga.edu/kr-dev/portal.do" version="1.1" method="GET"/>
+</request>
+<request><http url="/kr-dev/rice-portal/css/portal.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/fancybox/jquery.fancybox.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/rice/textpopout/popoutTextarea.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/jgrowl/jquery.jgrowl.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/jquery/jquery-1.8.3.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/scrollto/jquery.scrollTo-1.4.3-min.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/cookie/jquery.cookie.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/blockUI/jquery.blockUI.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/scripts/my_common.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/fancybox/jquery.fancybox.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/easing/jquery.easing-1.3.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/scripts/portal.initialize.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/jgrowl/jquery.jgrowl.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/scripts/easyXDM/easyXDM.js" version="1.1" method="GET"/></request>
+<thinktime random="true" value="3"/>
+<request><http url="/kr-dev/rice-portal/images/os-guy.gif" version="1.1" method="GET"/></request>
+<request><http url="/favicon.ico" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/portal.do" version="1.1" contents="__login_user=slthelen" content_type="application/x-www-form-urlencoded" method="POST"/></request>
+<request><http url="/favicon.ico" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/icon-port-actionlist.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/icon-port-docsearch.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/headerback.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/logo-krice.png" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/left-red.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/right-red.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/left-tan.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/right-tan.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/head2-back.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/header2-left-focus.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/leftback-focus.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/bl-bevel-focus.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/chanhead-back.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/searchback.gif" version="1.1" method="GET"/></request>
+<request>
+  <dyn_variable name="ugasess" re="Set-Cookie: JSESSIONID=([A-Z0-9]*)"/>
+  <http url="/ugaruss/portal.do" version="1.1" method="GET"/>
+</request>
+<request><http url="/ugaruss/rice-portal/css/portal.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/fancybox/jquery.fancybox.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/textpopout/popoutTextarea.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jgrowl/jquery.jgrowl.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/cookie/jquery.cookie.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jquery/jquery-1.8.3.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/scrollto/jquery.scrollTo-1.4.3-min.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/blockUI/jquery.blockUI.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/kr/scripts/my_common.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/fancybox/jquery.fancybox.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/easing/jquery.easing-1.3.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/rice-portal/scripts/portal.initialize.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jgrowl/jquery.jgrowl.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/rice-portal/scripts/easyXDM/easyXDM.js" version="1.1" method="GET"/></request>
+
+<thinktime random="true" value="1"/>
+
+<request><http url="/ugaruss/rice-portal/images/os-guy.gif" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/portal.do" version="1.1" contents="__login_user=slthelen" content_type="application/x-www-form-urlencoded" method="POST"/></request>
+
+<thinktime random="true" value="6"/>
+
+<request>
+    <http url="/ugaruss/portal.do?channelTitle=Off-Campus%20Equipment%20Request&amp;channelUrl=http://ptriceapp02.stage.uga.edu/ugaruss/kr-krad/maintenance?viewName=OffCampusEquipmentCreateNew&amp;methodToCall=start&amp;dataObjectClassName=edu.uga.busfin.ugaruss.bo.OffCampusEquipment&amp;returnLocation=http://ptriceapp02.stage.uga.edu/ugaruss/portal.do&amp;hideReturnLink=true" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+    </http>
+</request>
+<request><http url="/ugaruss/rice-portal/scripts/easyXDM/resize_intermediate.html?url=%2Fugaruss%2Fkr-krad%2Fmaintenance%3FviewName%3DOffCampusEquipmentCreateNew%26methodToCall%3Dstart%26dataObjectClassName%3Dedu.uga.busfin.ugaruss.bo.OffCampusEquipment%26returnLocation%3Dhttp%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do%26hideReturnLink%3Dtrue&amp;xdm_e=http%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do&amp;xdm_c=default1360&amp;xdm_p=4" version="1.1" method="GET"/></request>
+<request>
+    <dyn_variable name="docid" xpath="//div[@data-label='Document Number']/span[@class='uif-readOnlyContent']/text()"/>
+    <dyn_variable name="form_key" xpath="//input[@name='formKey']/@value"/>
+    <http url="/ugaruss/kr-krad/maintenance?viewName=OffCampusEquipmentCreateNew&amp;methodToCall=start&amp;dataObjectClassName=edu.uga.busfin.ugaruss.bo.OffCampusEquipment&amp;returnLocation=http://ptriceapp02.stage.uga.edu/ugaruss/portal.do&amp;hideReturnLink=true" version="1.1" method="GET">
+              <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+  </http>
+</request>
+          <setdynvars sourcetype="eval" code="fun({Pid,DynVars})->                            {ok,Val}=ts_dynvars:lookup(docid,DynVars),                             re:replace(Val, &quot;\\s+&quot;, &quot;&quot;, [global,{return,list}]) end.">
+        <var name="document_number"/>
+      </setdynvars>
+
+<thinktime random="true" value="6"/>
+
+<request><http url="/ugaruss/krad/css/global/fss-reset.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/css/global/fss-layout.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/css/global/fss-text.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jqueryUI/jquery-ui-1.9.2.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/datatables/jquery.dataTables.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/datatables/TableTools.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/menu/tabs.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/tooltip/jquery.bubblepopup.v2.3.1.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/prettify/prettify.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/css/global/base.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/css/kns/theme-kns.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jqueryUI/jquery-ui-1.9.2.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jqueryUI/jquery.ui.autocomplete.html.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/color/jquery.color.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/watermark/jquery.watermark.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/validate/jquery.validate.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/tooltip/jquery.bubblepopup.v2.3.1.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/menu/krad.navigationMenu.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/textpopout/krad.textareaPopout.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/dirtyform/jquery.dirtyform.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/menu/krad.tabMenu.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/datatables/jquery.dataTables.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/datatables/ZeroClipboard.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/datatables/TableTools.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/datatables/jquery.dataTables.rowGrouping.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jstree/jquery.jstree.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/json/jquery.json-2.2.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/infusion/infusion-1.4.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/validate/additional_validations.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jqform/jquery.form.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/infusion/infusion.reorderer.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/prettify/prettify.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/globalize/globalize.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/scripts/krad.message.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/scripts/krad.widget.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/scripts/krad.variables.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/scripts/krad.utility.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/scripts/krad.initialize.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/scripts/krad.request.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/easydrag/jquery.easydrag.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/scripts/krad.actions.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/scripts/krad.validate.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/scripts/krad.response.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/css/global/fss-reset-global.css" version="1.1" method="GET"/></request>
+
+<thinktime random="true" value="4"/>
+<request><http url="/ugaruss/krad/images/searchicon.gif" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/book_open.png" version="1.1" method="GET"/></request>
+<request subst="true">
+  <http url="/kr-dev/kew/RouteLog.do?documentId=%%_document_number%%" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+  </http>
+</request>
+<request><http url="/ugaruss/krad/images/kns/masthead1.png" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/css/kns/fonts/oswald-regular-webfont.woff" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/css/kuali.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/scripts/jscalendar-1.0/calendar-win2k-1.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/scripts/core.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/scripts/dhtml.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/scripts/jscalendar-1.0/calendar.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/scripts/jscalendar-1.0/lang/calendar-en.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/scripts/jscalendar-1.0/calendar-setup.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/dwr/engine.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/dwr/interface/PersonService.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/scripts/objectInfo.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/dwr/util.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tinybutton-refresh.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/pixel_clear.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/tab-topright.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/tab-topleft.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/tab-topleft1.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kew/images/tinybutton-show.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/tab-topright1.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tinybutton-show.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tinybutton-hide.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/tinybutton-hide.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/masthead1.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tab-back.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tab-bevel2.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tab-rightback.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tab-sideright1.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/th-back.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tab-bevel3.gif" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/h2_expand.png" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/kns/cal.gif" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/h3_expand-back-kns.png" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/h2_collapse.png" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/h3_collapse-back-kns.png" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tabfoot-left.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tabfoot-right.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tabfoot-back.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tab-rightback1.gif" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/details_close.png" version="1.1" method="GET"/></request>
+<request subst="true">
+    <http url="/ugaruss/kr-krad/maintenance?methodToCall=performFieldQuery&amp;ajaxRequest=true&amp;ajaxReturnType=update-none&amp;formKey=%%_form_key%%&amp;queryFieldId=u137&amp;queryParameter.inventoryNumber=595534" version="1.1" method="GET">
+                <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+    </http>
+  </request>
+<request><http url="/ugaruss/krad/images/validation/error.png" version="1.1" method="GET"/></request>
+
+<thinktime random="true" value="3"/>
+
+<request><http url="/ugaruss/krad/images/loading.gif" version="1.1" method="GET"/></request>
+
+<thinktime random="true" value="3"/>
+
+<request subst="true">
+    <http url="/ugaruss/kr-krad/maintenance" version="1.1" contents_from_file="/home/leo/tsung/data/tsung_recorder20140226-0148-1.bin" content_type="multipart/form-data; boundary=---------------------------15323541721652673980938091562" method="POST">
+          <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+    </http>
+</request>
+<thinktime random="true" value="3"/>
+<request><http url="/ugaruss/logout.do" version="1.1" contents="imageField=Logout" content_type="application/x-www-form-urlencoded" method="POST"/></request>
+<thinktime random="true" value="3"/>
+
+<request>
+    <dyn_variable name="krsess" re="Set-Cookie: JSESSIONID=([A-Z0-9]*)"/>
+    <http url="http://ptriceapp02.stage.uga.edu/kr-dev/portal.do" version="1.1" method="GET"/>
+</request>
+<request><http url="/kr-dev/rice-portal/css/portal.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/fancybox/jquery.fancybox.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/rice/textpopout/popoutTextarea.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/jgrowl/jquery.jgrowl.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/jquery/jquery-1.8.3.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/scrollto/jquery.scrollTo-1.4.3-min.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/cookie/jquery.cookie.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/blockUI/jquery.blockUI.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/scripts/my_common.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/fancybox/jquery.fancybox.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/easing/jquery.easing-1.3.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/scripts/portal.initialize.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/jgrowl/jquery.jgrowl.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/scripts/easyXDM/easyXDM.js" version="1.1" method="GET"/></request>
+<thinktime random="true" value="3"/>
+<request><http url="/kr-dev/rice-portal/images/os-guy.gif" version="1.1" method="GET"/></request>
+<request><http url="/favicon.ico" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/portal.do" version="1.1" contents="__login_user=hschrams" content_type="application/x-www-form-urlencoded" method="POST"/></request>
+<request><http url="/favicon.ico" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/icon-port-actionlist.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/icon-port-docsearch.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/headerback.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/logo-krice.png" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/left-red.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/right-red.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/left-tan.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/right-tan.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/head2-back.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/header2-left-focus.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/leftback-focus.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/bl-bevel-focus.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/chanhead-back.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/searchback.gif" version="1.1" method="GET"/></request>
+<request>
+  <dyn_variable name="ugasess" re="Set-Cookie: JSESSIONID=([A-Z0-9]*)"/>
+  <http url="/ugaruss/portal.do" version="1.1" method="GET"/>
+</request>
+<request><http url="/ugaruss/rice-portal/css/portal.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/fancybox/jquery.fancybox.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/textpopout/popoutTextarea.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jgrowl/jquery.jgrowl.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/cookie/jquery.cookie.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jquery/jquery-1.8.3.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/scrollto/jquery.scrollTo-1.4.3-min.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/blockUI/jquery.blockUI.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/kr/scripts/my_common.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/fancybox/jquery.fancybox.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/easing/jquery.easing-1.3.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/rice-portal/scripts/portal.initialize.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jgrowl/jquery.jgrowl.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/rice-portal/scripts/easyXDM/easyXDM.js" version="1.1" method="GET"/></request>
+
+<thinktime random="true" value="1"/>
+
+<request><http url="/ugaruss/rice-portal/images/os-guy.gif" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/portal.do" version="1.1" contents="__login_user=hschrams" content_type="application/x-www-form-urlencoded" method="POST"/></request>
+<thinktime random="true" value="6"/>
+
+<request subst="true">
+  <http url="/kr-dev/kew/RouteLog.do?documentId=%%_document_number%%" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+  </http>
+</request>
+<request><http url="/ugaruss/krad/images/validation/normal-stripe.png" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/validation/info.png" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/validation/info-stripe.png" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kew/images/pixel_clear.gif" version="1.1" method="GET"/></request>
+<request subst="true"><http url="/kr-dev/dwr/call/plaincall/__System.pageLoaded.dwr" version="1.1" contents="callCount=1 windowName= c0-scriptName=__System c0-methodName=pageLoaded c0-id=0 batchId=0 instanceId=0 page=%2Fkr-dev%2Fkew%2FRouteLog.do%3FdocumentId%3D%%_document_number%% scriptSessionId=XtzLQ5JdrdSY5Sk2OlNkh68ZIhk/TG0ZIhk-LW8F3wHQ " content_type="text/plain; charset=UTF-8" method="POST"/></request>
+<request subst="true">
+  <http url="/ugaruss/portal.do?selectedTab=main" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+  </http>
+</request>
+<request subst="true">
+  <http url="/ugaruss/portal.do?channelTitle=Document%20Search:%20Off-Campus%20Equipment%20Request/Renew&amp;channelUrl=http://ptriceapp02.stage.uga.edu/kr-dev/kew/DocumentSearch.do?docFormKey=88888888&amp;returnLocation=http://ptriceapp02.stage.uga.edu/ugaruss/portal.do&amp;hideReturnLink=true&amp;documentTypeName=OffCampusEquipmentRequestDocType" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+  </http>
+</request>
+<request><http url="/kr-dev/rice-portal/scripts/easyXDM/resize_intermediate.html?url=%2Fkr-dev%2Fkew%2FDocumentSearch.do%3FdocFormKey%3D88888888%26returnLocation%3Dhttp%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do%26hideReturnLink%3Dtrue%26documentTypeName%3DOffCampusEquipmentRequestDocType&amp;xdm_e=http%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do&amp;xdm_c=default809&amp;xdm_p=4" version="1.1" method="GET"/></request>
+<request subst="true">
+  <http url="/kr-dev/kew/DocumentSearch.do?docFormKey=88888888&amp;returnLocation=http://ptriceapp02.stage.uga.edu/ugaruss/portal.do&amp;hideReturnLink=true&amp;documentTypeName=OffCampusEquipmentRequestDocType" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+  </http>
+</request>
+<request><http url="/kr-dev/kr/scripts/lookup.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/dwr/call/plaincall/__System.pageLoaded.dwr" version="1.1" contents="callCount=1 windowName=iframeportlet c0-scriptName=__System c0-methodName=pageLoaded c0-id=0 batchId=0 instanceId=0 page=%2Fkr-dev%2Fkew%2FDocumentSearch.do%3FdocFormKey%3D88888888%26returnLocation%3Dhttp%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do%26hideReturnLink%3Dtrue%26documentTypeName%3DOffCampusEquipmentRequestDocType scriptSessionId=XtzLQ5JdrdSY5Sk2OlNkh68ZIhk/HEaZIhk-AFYSggszx " content_type="text/plain; charset=UTF-8" method="POST"/></request>
+<request><http url="/kr-dev/dwr/interface/DocumentTypeService.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/my_cp_inf.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/cal.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/buttonsmall_cancel.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kew/images/tinybutton-detailedsearch.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kew/images/tinybutton-superusersearch.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kew/images/tinybutton-clearsavedsearch.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/searchicon.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/book_open.png" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/buttonsmall_search.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/buttonsmall_clear.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/th-back1.gif" version="1.1" method="GET"/></request>
+
+<request subst="true">
+  <http url="/kr-dev/kr/lookup.do" version="1.1" contents="backLocation=http%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do&amp;formKey=88888888&amp;lookupableImplServiceName=documentSearchCriteriaBoLookupable&amp;businessObjectClassName=org.kuali.rice.kew.impl.document.search.DocumentSearchCriteriaBo&amp;conversionFields=&amp;hideReturnLink=Yes&amp;suppressActions=No&amp;multipleValues=No&amp;lookupAnchor=&amp;readOnlyFields=&amp;referencesToRefresh=&amp;hasReturnableRow=No&amp;docNum=&amp;showMaintenanceLinks=Yes&amp;headerBarEnabled=Yes&amp;fieldNameToFocusOnAfterSubmit=&amp;savedSearchToLoadAndExecute=&amp;documentTypeName=OffCampusEquipmentRequestDocType&amp;initiatorPrincipalName=&amp;documentId=&amp;rangeLowerBoundKeyPrefix_dateCreated=07%2F01%2F2013&amp;dateCreated=&amp;documentAttribute.inventoryNumber=&amp;documentAttribute.equipmentInventory.department=&amp;saveName=&amp;isAdvancedSearch=NO&amp;superUserSearch=NO&amp;resetSavedSearch=NO&amp;methodToCall.search.x=0&amp;methodToCall.search.y=0&amp;tabStatesSize=10&amp;actionEditablePropertiesGuid=37fd0632-7a5f-42c7-8589-4ff42d367475&amp;oldDocTypeFieldName=OffCampusEquipmentRequestDocType" content_type="application/x-www-form-urlencoded" method="POST">
+          <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+  </http>
+</request>
+
+<thinktime random="true" value="3"/>
+<request><http url="/kr-dev/dwr/call/plaincall/__System.pageLoaded.dwr" version="1.1" contents="callCount=1 windowName=iframeportlet c0-scriptName=__System c0-methodName=pageLoaded c0-id=0 batchId=0 instanceId=0 page=%2Fkr-dev%2Fkr%2Flookup.do scriptSessionId=XtzLQ5JdrdSY5Sk2OlNkh68ZIhk/UtbZIhk-DvMyfqtki " content_type="text/plain; charset=UTF-8" method="POST"/></request>
+<request><http url="/kr-dev/kr/images/my_route_log.gif" version="1.1" method="GET"/></request>
+<request subst="true">
+    <dyn_variable name="redir" re="Location: (.*)"/>
+    <http url="/kr-dev/kew/DocHandler.do?command=displayDocSearchView&amp;docId=%%_document_number%%" version="1.1" method="GET">
+              <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+    </http>
+</request>
+<thinktime random="true" value="5"/>
+<request subst="true">
+    <dyn_variable name="form_key" xpath="//input[@name='formKey']/@value"/>
+    <http url="%%_redir%%" version="1.1" method="GET">
+      <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+    </http>
+</request>
+
+<thinktime random="true" value="3"/>
+
+<request subst="true">
+  <http url="/kr-dev/kew/RouteLog.do?documentId=%%_document_number%%" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+  </http>
+</request>
+
+<request subst="true">
+  <http url="/ugaruss/kr-krad/maintenance" version="1.1" contents_from_file="/home/leo/tsung/data/tsung_recorder20140226-0148-2.bin" content_type="multipart/form-data; boundary=---------------------------18274299073033275552047522554" method="POST">
+  </http>
+</request>
+
+<request><http url="/ugaruss/logout.do" version="1.1" contents="imageField=Logout" content_type="application/x-www-form-urlencoded" method="POST"/></request>
+<thinktime random="true" value="3"/>
+
+<request>
+    <dyn_variable name="krsess" re="Set-Cookie: JSESSIONID=([A-Z0-9]*)"/>
+    <http url="http://ptriceapp02.stage.uga.edu/kr-dev/portal.do" version="1.1" method="GET"/>
+</request>
+<request><http url="/kr-dev/rice-portal/css/portal.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/fancybox/jquery.fancybox.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/rice/textpopout/popoutTextarea.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/jgrowl/jquery.jgrowl.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/jquery/jquery-1.8.3.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/scrollto/jquery.scrollTo-1.4.3-min.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/cookie/jquery.cookie.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/blockUI/jquery.blockUI.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/scripts/my_common.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/fancybox/jquery.fancybox.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/easing/jquery.easing-1.3.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/scripts/portal.initialize.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/jgrowl/jquery.jgrowl.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/scripts/easyXDM/easyXDM.js" version="1.1" method="GET"/></request>
+<thinktime random="true" value="3"/>
+<request><http url="/kr-dev/rice-portal/images/os-guy.gif" version="1.1" method="GET"/></request>
+<request><http url="/favicon.ico" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/portal.do" version="1.1" contents="__login_user=slthelen" content_type="application/x-www-form-urlencoded" method="POST"/></request>
+<request><http url="/favicon.ico" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/icon-port-actionlist.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/icon-port-docsearch.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/headerback.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/logo-krice.png" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/left-red.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/right-red.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/left-tan.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/right-tan.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/head2-back.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/header2-left-focus.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/leftback-focus.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/bl-bevel-focus.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/chanhead-back.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/searchback.gif" version="1.1" method="GET"/></request>
+<request>
+  <dyn_variable name="ugasess" re="Set-Cookie: JSESSIONID=([A-Z0-9]*)"/>
+  <http url="/ugaruss/portal.do" version="1.1" method="GET"/>
+</request>
+<request><http url="/ugaruss/rice-portal/css/portal.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/fancybox/jquery.fancybox.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/textpopout/popoutTextarea.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jgrowl/jquery.jgrowl.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/cookie/jquery.cookie.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jquery/jquery-1.8.3.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/scrollto/jquery.scrollTo-1.4.3-min.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/blockUI/jquery.blockUI.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/kr/scripts/my_common.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/fancybox/jquery.fancybox.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/easing/jquery.easing-1.3.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/rice-portal/scripts/portal.initialize.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jgrowl/jquery.jgrowl.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/rice-portal/scripts/easyXDM/easyXDM.js" version="1.1" method="GET"/></request>
+
+<thinktime random="true" value="1"/>
+
+<request><http url="/ugaruss/rice-portal/images/os-guy.gif" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/portal.do" version="1.1" contents="__login_user=slthelen" content_type="application/x-www-form-urlencoded" method="POST"/></request>
+<thinktime random="true" value="6"/>
+
+<request subst="true">
+  <http url="/kr-dev/kew/RouteLog.do?documentId=%%_document_number%%" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+  </http>
+</request>
+<request><http url="/ugaruss/krad/images/validation/normal-stripe.png" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/validation/info.png" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/validation/info-stripe.png" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kew/images/pixel_clear.gif" version="1.1" method="GET"/></request>
+<request subst="true"><http url="/kr-dev/dwr/call/plaincall/__System.pageLoaded.dwr" version="1.1" contents="callCount=1 windowName= c0-scriptName=__System c0-methodName=pageLoaded c0-id=0 batchId=0 instanceId=0 page=%2Fkr-dev%2Fkew%2FRouteLog.do%3FdocumentId%3D%%_document_number%% scriptSessionId=XtzLQ5JdrdSY5Sk2OlNkh68ZIhk/TG0ZIhk-LW8F3wHQ " content_type="text/plain; charset=UTF-8" method="POST"/></request>
+<request subst="true">
+  <http url="/ugaruss/portal.do?selectedTab=main" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+  </http>
+</request>
+<request subst="true">
+  <http url="/ugaruss/portal.do?channelTitle=Document%20Search:%20Off-Campus%20Equipment%20Request/Renew&amp;channelUrl=http://ptriceapp02.stage.uga.edu/kr-dev/kew/DocumentSearch.do?docFormKey=88888888&amp;returnLocation=http://ptriceapp02.stage.uga.edu/ugaruss/portal.do&amp;hideReturnLink=true&amp;documentTypeName=OffCampusEquipmentRequestDocType" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+  </http>
+</request>
+<request><http url="/kr-dev/rice-portal/scripts/easyXDM/resize_intermediate.html?url=%2Fkr-dev%2Fkew%2FDocumentSearch.do%3FdocFormKey%3D88888888%26returnLocation%3Dhttp%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do%26hideReturnLink%3Dtrue%26documentTypeName%3DOffCampusEquipmentRequestDocType&amp;xdm_e=http%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do&amp;xdm_c=default809&amp;xdm_p=4" version="1.1" method="GET"/></request>
+<request subst="true">
+  <http url="/kr-dev/kew/DocumentSearch.do?docFormKey=88888888&amp;returnLocation=http://ptriceapp02.stage.uga.edu/ugaruss/portal.do&amp;hideReturnLink=true&amp;documentTypeName=OffCampusEquipmentRequestDocType" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+  </http>
+</request>
+<request><http url="/kr-dev/kr/scripts/lookup.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/dwr/call/plaincall/__System.pageLoaded.dwr" version="1.1" contents="callCount=1 windowName=iframeportlet c0-scriptName=__System c0-methodName=pageLoaded c0-id=0 batchId=0 instanceId=0 page=%2Fkr-dev%2Fkew%2FDocumentSearch.do%3FdocFormKey%3D88888888%26returnLocation%3Dhttp%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do%26hideReturnLink%3Dtrue%26documentTypeName%3DOffCampusEquipmentRequestDocType scriptSessionId=XtzLQ5JdrdSY5Sk2OlNkh68ZIhk/HEaZIhk-AFYSggszx " content_type="text/plain; charset=UTF-8" method="POST"/></request>
+<request><http url="/kr-dev/dwr/interface/DocumentTypeService.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/my_cp_inf.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/cal.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/buttonsmall_cancel.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kew/images/tinybutton-detailedsearch.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kew/images/tinybutton-superusersearch.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kew/images/tinybutton-clearsavedsearch.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/searchicon.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/book_open.png" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/buttonsmall_search.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/buttonsmall_clear.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/th-back1.gif" version="1.1" method="GET"/></request>
+
+<request subst="true">
+  <http url="/kr-dev/kr/lookup.do" version="1.1" contents="backLocation=http%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do&amp;formKey=88888888&amp;lookupableImplServiceName=documentSearchCriteriaBoLookupable&amp;businessObjectClassName=org.kuali.rice.kew.impl.document.search.DocumentSearchCriteriaBo&amp;conversionFields=&amp;hideReturnLink=Yes&amp;suppressActions=No&amp;multipleValues=No&amp;lookupAnchor=&amp;readOnlyFields=&amp;referencesToRefresh=&amp;hasReturnableRow=No&amp;docNum=&amp;showMaintenanceLinks=Yes&amp;headerBarEnabled=Yes&amp;fieldNameToFocusOnAfterSubmit=&amp;savedSearchToLoadAndExecute=&amp;documentTypeName=OffCampusEquipmentRequestDocType&amp;initiatorPrincipalName=&amp;documentId=&amp;rangeLowerBoundKeyPrefix_dateCreated=07%2F01%2F2013&amp;dateCreated=&amp;documentAttribute.inventoryNumber=&amp;documentAttribute.equipmentInventory.department=&amp;saveName=&amp;isAdvancedSearch=NO&amp;superUserSearch=NO&amp;resetSavedSearch=NO&amp;methodToCall.search.x=0&amp;methodToCall.search.y=0&amp;tabStatesSize=10&amp;actionEditablePropertiesGuid=37fd0632-7a5f-42c7-8589-4ff42d367475&amp;oldDocTypeFieldName=OffCampusEquipmentRequestDocType" content_type="application/x-www-form-urlencoded" method="POST">
+          <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+  </http>
+</request>
+
+<thinktime random="true" value="3"/>
+<request><http url="/kr-dev/dwr/call/plaincall/__System.pageLoaded.dwr" version="1.1" contents="callCount=1 windowName=iframeportlet c0-scriptName=__System c0-methodName=pageLoaded c0-id=0 batchId=0 instanceId=0 page=%2Fkr-dev%2Fkr%2Flookup.do scriptSessionId=XtzLQ5JdrdSY5Sk2OlNkh68ZIhk/UtbZIhk-DvMyfqtki " content_type="text/plain; charset=UTF-8" method="POST"/></request>
+<request><http url="/kr-dev/kr/images/my_route_log.gif" version="1.1" method="GET"/></request>
+<request subst="true">
+    <dyn_variable name="redir" re="Location: (.*)"/>
+    <http url="/kr-dev/kew/DocHandler.do?command=displayDocSearchView&amp;docId=%%_document_number%%" version="1.1" method="GET">
+              <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+    </http>
+</request>
+<thinktime random="true" value="5"/>
+<request subst="true">
+    <dyn_variable name="form_key" xpath="//input[@name='formKey']/@value"/>
+    <http url="%%_redir%%" version="1.1" method="GET">
+      <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+    </http>
+</request>
+
+<thinktime random="true" value="3"/>
+
+<request subst="true">
+  <http url="/kr-dev/kew/RouteLog.do?documentId=%%_document_number%%" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+  </http>
+</request>
+
+<request subst="true">
+  <http url="/ugaruss/kr-krad/maintenance" version="1.1" contents_from_file="/home/leo/tsung/data/tsung_recorder20140226-0148-3.bin" content_type="multipart/form-data; boundary=---------------------------14336055501989443157250755909" method="POST"/>
+</request>
+
+<request><http url="/ugaruss/logout.do" version="1.1" contents="imageField=Logout" content_type="application/x-www-form-urlencoded" method="POST"/></request>
+
+	</transaction>
+
+  <transaction name="routeoffcampusequipmentrequest2">
+
+<request>
+  <dyn_variable name="krsess" re="Set-Cookie: JSESSIONID=([A-Z0-9]*)"/>
+  <http url="http://ptriceapp02.stage.uga.edu/kr-dev/portal.do" version="1.1" method="GET"/>
+</request>
+<request><http url="/kr-dev/rice-portal/css/portal.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/fancybox/jquery.fancybox.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/rice/textpopout/popoutTextarea.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/jgrowl/jquery.jgrowl.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/jquery/jquery-1.8.3.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/scrollto/jquery.scrollTo-1.4.3-min.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/cookie/jquery.cookie.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/blockUI/jquery.blockUI.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/scripts/my_common.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/fancybox/jquery.fancybox.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/easing/jquery.easing-1.3.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/scripts/portal.initialize.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/jgrowl/jquery.jgrowl.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/scripts/easyXDM/easyXDM.js" version="1.1" method="GET"/></request>
+<thinktime random="true" value="3"/>
+<request><http url="/kr-dev/rice-portal/images/os-guy.gif" version="1.1" method="GET"/></request>
+<request><http url="/favicon.ico" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/portal.do" version="1.1" contents="__login_user=vswain" content_type="application/x-www-form-urlencoded" method="POST"/></request>
+<request><http url="/favicon.ico" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/icon-port-actionlist.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/icon-port-docsearch.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/headerback.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/logo-krice.png" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/left-red.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/right-red.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/left-tan.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/right-tan.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/head2-back.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/header2-left-focus.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/leftback-focus.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/bl-bevel-focus.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/chanhead-back.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/searchback.gif" version="1.1" method="GET"/></request>
+<request>
+  <dyn_variable name="ugasess" re="Set-Cookie: JSESSIONID=([A-Z0-9]*)"/>
+  <http url="/ugaruss/portal.do" version="1.1" method="GET"/>
+</request>
+<request><http url="/ugaruss/rice-portal/css/portal.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/fancybox/jquery.fancybox.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/textpopout/popoutTextarea.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jgrowl/jquery.jgrowl.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/cookie/jquery.cookie.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jquery/jquery-1.8.3.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/scrollto/jquery.scrollTo-1.4.3-min.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/blockUI/jquery.blockUI.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/kr/scripts/my_common.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/fancybox/jquery.fancybox.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/easing/jquery.easing-1.3.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/rice-portal/scripts/portal.initialize.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jgrowl/jquery.jgrowl.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/rice-portal/scripts/easyXDM/easyXDM.js" version="1.1" method="GET"/></request>
+
+<thinktime random="true" value="1"/>
+
+<request><http url="/ugaruss/rice-portal/images/os-guy.gif" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/portal.do" version="1.1" contents="__login_user=vswain" content_type="application/x-www-form-urlencoded" method="POST"/></request>
+
+<thinktime random="true" value="6"/>
+
+<request>
+    <http url="/ugaruss/portal.do?channelTitle=Off-Campus%20Equipment%20Request&amp;channelUrl=http://ptriceapp02.stage.uga.edu/ugaruss/kr-krad/maintenance?viewName=OffCampusEquipmentCreateNew&amp;methodToCall=start&amp;dataObjectClassName=edu.uga.busfin.ugaruss.bo.OffCampusEquipment&amp;returnLocation=http://ptriceapp02.stage.uga.edu/ugaruss/portal.do&amp;hideReturnLink=true" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+    </http>
+</request>
+<request><http url="/ugaruss/rice-portal/scripts/easyXDM/resize_intermediate.html?url=%2Fugaruss%2Fkr-krad%2Fmaintenance%3FviewName%3DOffCampusEquipmentCreateNew%26methodToCall%3Dstart%26dataObjectClassName%3Dedu.uga.busfin.ugaruss.bo.OffCampusEquipment%26returnLocation%3Dhttp%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do%26hideReturnLink%3Dtrue&amp;xdm_e=http%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do&amp;xdm_c=default1360&amp;xdm_p=4" version="1.1" method="GET"/></request>
+<request>
+    <dyn_variable name="docid" xpath="//div[@data-label='Document Number']/span[@class='uif-readOnlyContent']/text()"/>
+    <dyn_variable name="form_key" xpath="//input[@name='formKey']/@value"/>
+    <http url="/ugaruss/kr-krad/maintenance?viewName=OffCampusEquipmentCreateNew&amp;methodToCall=start&amp;dataObjectClassName=edu.uga.busfin.ugaruss.bo.OffCampusEquipment&amp;returnLocation=http://ptriceapp02.stage.uga.edu/ugaruss/portal.do&amp;hideReturnLink=true" version="1.1" method="GET">
+              <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+  </http>
+</request>
+          <setdynvars sourcetype="eval" code="fun({Pid,DynVars})->                            {ok,Val}=ts_dynvars:lookup(docid,DynVars),                             re:replace(Val, &quot;\\s+&quot;, &quot;&quot;, [global,{return,list}]) end.">
+        <var name="document_number"/>
+      </setdynvars>
+
+<thinktime random="true" value="6"/>
+
+<request><http url="/ugaruss/krad/css/global/fss-reset.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/css/global/fss-layout.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/css/global/fss-text.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jqueryUI/jquery-ui-1.9.2.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/datatables/jquery.dataTables.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/datatables/TableTools.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/menu/tabs.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/tooltip/jquery.bubblepopup.v2.3.1.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/prettify/prettify.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/css/global/base.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/css/kns/theme-kns.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jqueryUI/jquery-ui-1.9.2.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jqueryUI/jquery.ui.autocomplete.html.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/color/jquery.color.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/watermark/jquery.watermark.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/validate/jquery.validate.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/tooltip/jquery.bubblepopup.v2.3.1.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/menu/krad.navigationMenu.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/textpopout/krad.textareaPopout.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/dirtyform/jquery.dirtyform.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/menu/krad.tabMenu.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/datatables/jquery.dataTables.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/datatables/ZeroClipboard.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/datatables/TableTools.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/datatables/jquery.dataTables.rowGrouping.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jstree/jquery.jstree.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/json/jquery.json-2.2.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/infusion/infusion-1.4.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/validate/additional_validations.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jqform/jquery.form.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/infusion/infusion.reorderer.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/prettify/prettify.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/globalize/globalize.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/scripts/krad.message.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/scripts/krad.widget.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/scripts/krad.variables.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/scripts/krad.utility.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/scripts/krad.initialize.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/scripts/krad.request.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/easydrag/jquery.easydrag.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/scripts/krad.actions.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/scripts/krad.validate.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/scripts/krad.response.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/css/global/fss-reset-global.css" version="1.1" method="GET"/></request>
+
+<thinktime random="true" value="4"/>
+<request><http url="/ugaruss/krad/images/searchicon.gif" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/book_open.png" version="1.1" method="GET"/></request>
+<request subst="true">
+  <http url="/kr-dev/kew/RouteLog.do?documentId=%%_document_number%%" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+  </http>
+</request>
+<request><http url="/ugaruss/krad/images/kns/masthead1.png" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/css/kns/fonts/oswald-regular-webfont.woff" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/css/kuali.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/scripts/jscalendar-1.0/calendar-win2k-1.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/scripts/core.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/scripts/dhtml.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/scripts/jscalendar-1.0/calendar.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/scripts/jscalendar-1.0/lang/calendar-en.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/scripts/jscalendar-1.0/calendar-setup.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/dwr/engine.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/dwr/interface/PersonService.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/scripts/objectInfo.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/dwr/util.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tinybutton-refresh.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/pixel_clear.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/tab-topright.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/tab-topleft.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/tab-topleft1.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kew/images/tinybutton-show.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/tab-topright1.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tinybutton-show.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tinybutton-hide.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/tinybutton-hide.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/masthead1.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tab-back.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tab-bevel2.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tab-rightback.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tab-sideright1.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/th-back.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tab-bevel3.gif" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/h2_expand.png" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/kns/cal.gif" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/h3_expand-back-kns.png" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/h2_collapse.png" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/h3_collapse-back-kns.png" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tabfoot-left.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tabfoot-right.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tabfoot-back.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/tab-rightback1.gif" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/details_close.png" version="1.1" method="GET"/></request>
+<request subst="true">
+    <http url="/ugaruss/kr-krad/maintenance?methodToCall=performFieldQuery&amp;ajaxRequest=true&amp;ajaxReturnType=update-none&amp;formKey=%%_form_key%%&amp;queryFieldId=u137&amp;queryParameter.inventoryNumber=595534" version="1.1" method="GET">
+                <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+    </http>
+  </request>
+<request><http url="/ugaruss/krad/images/validation/error.png" version="1.1" method="GET"/></request>
+
+<thinktime random="true" value="3"/>
+
+<request><http url="/ugaruss/krad/images/loading.gif" version="1.1" method="GET"/></request>
+
+<thinktime random="true" value="3"/>
+
+<request subst="true">
+    <http url="/ugaruss/kr-krad/maintenance" version="1.1" contents_from_file="/home/leo/tsung/data/tsung_recorder20140226-0148-4.bin" content_type="multipart/form-data; boundary=---------------------------10916471491360836922885307504" method="POST">
+          <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+    </http>
+</request>
+<thinktime random="true" value="3"/>
+<request><http url="/ugaruss/logout.do" version="1.1" contents="imageField=Logout" content_type="application/x-www-form-urlencoded" method="POST"/></request>
+<thinktime random="true" value="3"/>
+
+<request>
+    <dyn_variable name="krsess" re="Set-Cookie: JSESSIONID=([A-Z0-9]*)"/>
+    <http url="http://ptriceapp02.stage.uga.edu/kr-dev/portal.do" version="1.1" method="GET"/>
+</request>
+<request><http url="/kr-dev/rice-portal/css/portal.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/fancybox/jquery.fancybox.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/rice/textpopout/popoutTextarea.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/jgrowl/jquery.jgrowl.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/jquery/jquery-1.8.3.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/scrollto/jquery.scrollTo-1.4.3-min.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/cookie/jquery.cookie.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/blockUI/jquery.blockUI.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/scripts/my_common.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/fancybox/jquery.fancybox.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/easing/jquery.easing-1.3.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/scripts/portal.initialize.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/jgrowl/jquery.jgrowl.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/scripts/easyXDM/easyXDM.js" version="1.1" method="GET"/></request>
+<thinktime random="true" value="3"/>
+<request><http url="/kr-dev/rice-portal/images/os-guy.gif" version="1.1" method="GET"/></request>
+<request><http url="/favicon.ico" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/portal.do" version="1.1" contents="__login_user=slthelen" content_type="application/x-www-form-urlencoded" method="POST"/></request>
+<request><http url="/favicon.ico" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/icon-port-actionlist.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/icon-port-docsearch.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/headerback.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/logo-krice.png" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/left-red.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/right-red.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/left-tan.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/right-tan.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/head2-back.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/header2-left-focus.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/leftback-focus.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/bl-bevel-focus.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/chanhead-back.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/searchback.gif" version="1.1" method="GET"/></request>
+<request>
+  <dyn_variable name="ugasess" re="Set-Cookie: JSESSIONID=([A-Z0-9]*)"/>
+  <http url="/ugaruss/portal.do" version="1.1" method="GET"/>
+</request>
+<request><http url="/ugaruss/rice-portal/css/portal.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/fancybox/jquery.fancybox.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/textpopout/popoutTextarea.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jgrowl/jquery.jgrowl.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/cookie/jquery.cookie.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jquery/jquery-1.8.3.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/scrollto/jquery.scrollTo-1.4.3-min.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/blockUI/jquery.blockUI.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/kr/scripts/my_common.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/fancybox/jquery.fancybox.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/easing/jquery.easing-1.3.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/rice-portal/scripts/portal.initialize.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jgrowl/jquery.jgrowl.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/rice-portal/scripts/easyXDM/easyXDM.js" version="1.1" method="GET"/></request>
+
+<thinktime random="true" value="1"/>
+
+<request><http url="/ugaruss/rice-portal/images/os-guy.gif" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/portal.do" version="1.1" contents="__login_user=slthelen" content_type="application/x-www-form-urlencoded" method="POST"/></request>
+<thinktime random="true" value="6"/>
+
+<request subst="true">
+  <http url="/kr-dev/kew/RouteLog.do?documentId=%%_document_number%%" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+  </http>
+</request>
+<request><http url="/ugaruss/krad/images/validation/normal-stripe.png" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/validation/info.png" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/validation/info-stripe.png" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kew/images/pixel_clear.gif" version="1.1" method="GET"/></request>
+<request subst="true"><http url="/kr-dev/dwr/call/plaincall/__System.pageLoaded.dwr" version="1.1" contents="callCount=1 windowName= c0-scriptName=__System c0-methodName=pageLoaded c0-id=0 batchId=0 instanceId=0 page=%2Fkr-dev%2Fkew%2FRouteLog.do%3FdocumentId%3D%%_document_number%% scriptSessionId=XtzLQ5JdrdSY5Sk2OlNkh68ZIhk/TG0ZIhk-LW8F3wHQ " content_type="text/plain; charset=UTF-8" method="POST"/></request>
+<request subst="true">
+  <http url="/ugaruss/portal.do?selectedTab=main" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+  </http>
+</request>
+<request subst="true">
+  <http url="/ugaruss/portal.do?channelTitle=Document%20Search:%20Off-Campus%20Equipment%20Request/Renew&amp;channelUrl=http://ptriceapp02.stage.uga.edu/kr-dev/kew/DocumentSearch.do?docFormKey=88888888&amp;returnLocation=http://ptriceapp02.stage.uga.edu/ugaruss/portal.do&amp;hideReturnLink=true&amp;documentTypeName=OffCampusEquipmentRequestDocType" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+  </http>
+</request>
+<request><http url="/kr-dev/rice-portal/scripts/easyXDM/resize_intermediate.html?url=%2Fkr-dev%2Fkew%2FDocumentSearch.do%3FdocFormKey%3D88888888%26returnLocation%3Dhttp%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do%26hideReturnLink%3Dtrue%26documentTypeName%3DOffCampusEquipmentRequestDocType&amp;xdm_e=http%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do&amp;xdm_c=default809&amp;xdm_p=4" version="1.1" method="GET"/></request>
+<request subst="true">
+  <http url="/kr-dev/kew/DocumentSearch.do?docFormKey=88888888&amp;returnLocation=http://ptriceapp02.stage.uga.edu/ugaruss/portal.do&amp;hideReturnLink=true&amp;documentTypeName=OffCampusEquipmentRequestDocType" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+  </http>
+</request>
+<request><http url="/kr-dev/kr/scripts/lookup.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/dwr/call/plaincall/__System.pageLoaded.dwr" version="1.1" contents="callCount=1 windowName=iframeportlet c0-scriptName=__System c0-methodName=pageLoaded c0-id=0 batchId=0 instanceId=0 page=%2Fkr-dev%2Fkew%2FDocumentSearch.do%3FdocFormKey%3D88888888%26returnLocation%3Dhttp%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do%26hideReturnLink%3Dtrue%26documentTypeName%3DOffCampusEquipmentRequestDocType scriptSessionId=XtzLQ5JdrdSY5Sk2OlNkh68ZIhk/HEaZIhk-AFYSggszx " content_type="text/plain; charset=UTF-8" method="POST"/></request>
+<request><http url="/kr-dev/dwr/interface/DocumentTypeService.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/my_cp_inf.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/cal.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/buttonsmall_cancel.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kew/images/tinybutton-detailedsearch.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kew/images/tinybutton-superusersearch.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kew/images/tinybutton-clearsavedsearch.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/searchicon.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/book_open.png" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/buttonsmall_search.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/buttonsmall_clear.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/th-back1.gif" version="1.1" method="GET"/></request>
+
+<request subst="true">
+  <http url="/kr-dev/kr/lookup.do" version="1.1" contents="backLocation=http%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do&amp;formKey=88888888&amp;lookupableImplServiceName=documentSearchCriteriaBoLookupable&amp;businessObjectClassName=org.kuali.rice.kew.impl.document.search.DocumentSearchCriteriaBo&amp;conversionFields=&amp;hideReturnLink=Yes&amp;suppressActions=No&amp;multipleValues=No&amp;lookupAnchor=&amp;readOnlyFields=&amp;referencesToRefresh=&amp;hasReturnableRow=No&amp;docNum=&amp;showMaintenanceLinks=Yes&amp;headerBarEnabled=Yes&amp;fieldNameToFocusOnAfterSubmit=&amp;savedSearchToLoadAndExecute=&amp;documentTypeName=OffCampusEquipmentRequestDocType&amp;initiatorPrincipalName=&amp;documentId=&amp;rangeLowerBoundKeyPrefix_dateCreated=07%2F01%2F2013&amp;dateCreated=&amp;documentAttribute.inventoryNumber=&amp;documentAttribute.equipmentInventory.department=&amp;saveName=&amp;isAdvancedSearch=NO&amp;superUserSearch=NO&amp;resetSavedSearch=NO&amp;methodToCall.search.x=0&amp;methodToCall.search.y=0&amp;tabStatesSize=10&amp;actionEditablePropertiesGuid=37fd0632-7a5f-42c7-8589-4ff42d367475&amp;oldDocTypeFieldName=OffCampusEquipmentRequestDocType" content_type="application/x-www-form-urlencoded" method="POST">
+          <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+  </http>
+</request>
+
+<thinktime random="true" value="3"/>
+<request><http url="/kr-dev/dwr/call/plaincall/__System.pageLoaded.dwr" version="1.1" contents="callCount=1 windowName=iframeportlet c0-scriptName=__System c0-methodName=pageLoaded c0-id=0 batchId=0 instanceId=0 page=%2Fkr-dev%2Fkr%2Flookup.do scriptSessionId=XtzLQ5JdrdSY5Sk2OlNkh68ZIhk/UtbZIhk-DvMyfqtki " content_type="text/plain; charset=UTF-8" method="POST"/></request>
+<request><http url="/kr-dev/kr/images/my_route_log.gif" version="1.1" method="GET"/></request>
+<request subst="true">
+    <dyn_variable name="redir" re="Location: (.*)"/>
+    <http url="/kr-dev/kew/DocHandler.do?command=displayDocSearchView&amp;docId=%%_document_number%%" version="1.1" method="GET">
+              <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+    </http>
+</request>
+<thinktime random="true" value="5"/>
+<request subst="true">
+    <dyn_variable name="form_key" xpath="//input[@name='formKey']/@value"/>
+    <http url="%%_redir%%" version="1.1" method="GET">
+      <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+    </http>
+</request>
+
+<thinktime random="true" value="3"/>
+
+<request subst="true">
+  <http url="/kr-dev/kew/RouteLog.do?documentId=%%_document_number%%" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+  </http>
+</request>
+
+<request subst="true">
+  <http url="/ugaruss/kr-krad/maintenance" version="1.1" contents_from_file="/home/leo/tsung/data/tsung_recorder20140226-0148-5.bin" content_type="multipart/form-data; boundary=---------------------------159651331219385491661721424325" method="POST">
+</http>
+</request>
+
+<request><http url="/ugaruss/logout.do" version="1.1" contents="imageField=Logout" content_type="application/x-www-form-urlencoded" method="POST"/></request>
+<thinktime random="true" value="3"/>
+
+<request>
+    <dyn_variable name="krsess" re="Set-Cookie: JSESSIONID=([A-Z0-9]*)"/>
+    <http url="http://ptriceapp02.stage.uga.edu/kr-dev/portal.do" version="1.1" method="GET"/>
+</request>
+<request><http url="/kr-dev/rice-portal/css/portal.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/fancybox/jquery.fancybox.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/rice/textpopout/popoutTextarea.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/jgrowl/jquery.jgrowl.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/jquery/jquery-1.8.3.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/scrollto/jquery.scrollTo-1.4.3-min.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/cookie/jquery.cookie.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/blockUI/jquery.blockUI.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/scripts/my_common.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/fancybox/jquery.fancybox.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/easing/jquery.easing-1.3.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/scripts/portal.initialize.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/jgrowl/jquery.jgrowl.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/scripts/easyXDM/easyXDM.js" version="1.1" method="GET"/></request>
+<thinktime random="true" value="3"/>
+<request><http url="/kr-dev/rice-portal/images/os-guy.gif" version="1.1" method="GET"/></request>
+<request><http url="/favicon.ico" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/portal.do" version="1.1" contents="__login_user=hschrams" content_type="application/x-www-form-urlencoded" method="POST"/></request>
+<request><http url="/favicon.ico" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/icon-port-actionlist.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/icon-port-docsearch.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/headerback.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/logo-krice.png" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/left-red.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/right-red.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/left-tan.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/right-tan.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/head2-back.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/header2-left-focus.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/leftback-focus.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/bl-bevel-focus.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/chanhead-back.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/searchback.gif" version="1.1" method="GET"/></request>
+<request>
+  <dyn_variable name="ugasess" re="Set-Cookie: JSESSIONID=([A-Z0-9]*)"/>
+  <http url="/ugaruss/portal.do" version="1.1" method="GET"/>
+</request>
+<request><http url="/ugaruss/rice-portal/css/portal.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/fancybox/jquery.fancybox.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/textpopout/popoutTextarea.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jgrowl/jquery.jgrowl.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/cookie/jquery.cookie.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jquery/jquery-1.8.3.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/scrollto/jquery.scrollTo-1.4.3-min.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/blockUI/jquery.blockUI.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/kr/scripts/my_common.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/fancybox/jquery.fancybox.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/easing/jquery.easing-1.3.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/rice-portal/scripts/portal.initialize.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jgrowl/jquery.jgrowl.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/rice-portal/scripts/easyXDM/easyXDM.js" version="1.1" method="GET"/></request>
+
+<thinktime random="true" value="1"/>
+
+<request><http url="/ugaruss/rice-portal/images/os-guy.gif" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/portal.do" version="1.1" contents="__login_user=hschrams" content_type="application/x-www-form-urlencoded" method="POST"/></request>
+<thinktime random="true" value="6"/>
+
+<request subst="true">
+  <http url="/kr-dev/kew/RouteLog.do?documentId=%%_document_number%%" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+  </http>
+</request>
+<request><http url="/ugaruss/krad/images/validation/normal-stripe.png" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/validation/info.png" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/validation/info-stripe.png" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kew/images/pixel_clear.gif" version="1.1" method="GET"/></request>
+<request subst="true"><http url="/kr-dev/dwr/call/plaincall/__System.pageLoaded.dwr" version="1.1" contents="callCount=1 windowName= c0-scriptName=__System c0-methodName=pageLoaded c0-id=0 batchId=0 instanceId=0 page=%2Fkr-dev%2Fkew%2FRouteLog.do%3FdocumentId%3D%%_document_number%% scriptSessionId=XtzLQ5JdrdSY5Sk2OlNkh68ZIhk/TG0ZIhk-LW8F3wHQ " content_type="text/plain; charset=UTF-8" method="POST"/></request>
+<request subst="true">
+  <http url="/ugaruss/portal.do?selectedTab=main" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+  </http>
+</request>
+<request subst="true">
+  <http url="/ugaruss/portal.do?channelTitle=Document%20Search:%20Off-Campus%20Equipment%20Request/Renew&amp;channelUrl=http://ptriceapp02.stage.uga.edu/kr-dev/kew/DocumentSearch.do?docFormKey=88888888&amp;returnLocation=http://ptriceapp02.stage.uga.edu/ugaruss/portal.do&amp;hideReturnLink=true&amp;documentTypeName=OffCampusEquipmentRequestDocType" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+  </http>
+</request>
+<request><http url="/kr-dev/rice-portal/scripts/easyXDM/resize_intermediate.html?url=%2Fkr-dev%2Fkew%2FDocumentSearch.do%3FdocFormKey%3D88888888%26returnLocation%3Dhttp%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do%26hideReturnLink%3Dtrue%26documentTypeName%3DOffCampusEquipmentRequestDocType&amp;xdm_e=http%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do&amp;xdm_c=default809&amp;xdm_p=4" version="1.1" method="GET"/></request>
+<request subst="true">
+  <http url="/kr-dev/kew/DocumentSearch.do?docFormKey=88888888&amp;returnLocation=http://ptriceapp02.stage.uga.edu/ugaruss/portal.do&amp;hideReturnLink=true&amp;documentTypeName=OffCampusEquipmentRequestDocType" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+  </http>
+</request>
+<request><http url="/kr-dev/kr/scripts/lookup.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/dwr/call/plaincall/__System.pageLoaded.dwr" version="1.1" contents="callCount=1 windowName=iframeportlet c0-scriptName=__System c0-methodName=pageLoaded c0-id=0 batchId=0 instanceId=0 page=%2Fkr-dev%2Fkew%2FDocumentSearch.do%3FdocFormKey%3D88888888%26returnLocation%3Dhttp%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do%26hideReturnLink%3Dtrue%26documentTypeName%3DOffCampusEquipmentRequestDocType scriptSessionId=XtzLQ5JdrdSY5Sk2OlNkh68ZIhk/HEaZIhk-AFYSggszx " content_type="text/plain; charset=UTF-8" method="POST"/></request>
+<request><http url="/kr-dev/dwr/interface/DocumentTypeService.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/my_cp_inf.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/cal.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/buttonsmall_cancel.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kew/images/tinybutton-detailedsearch.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kew/images/tinybutton-superusersearch.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kew/images/tinybutton-clearsavedsearch.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/searchicon.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/book_open.png" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/buttonsmall_search.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/buttonsmall_clear.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/th-back1.gif" version="1.1" method="GET"/></request>
+
+<request subst="true">
+  <http url="/kr-dev/kr/lookup.do" version="1.1" contents="backLocation=http%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do&amp;formKey=88888888&amp;lookupableImplServiceName=documentSearchCriteriaBoLookupable&amp;businessObjectClassName=org.kuali.rice.kew.impl.document.search.DocumentSearchCriteriaBo&amp;conversionFields=&amp;hideReturnLink=Yes&amp;suppressActions=No&amp;multipleValues=No&amp;lookupAnchor=&amp;readOnlyFields=&amp;referencesToRefresh=&amp;hasReturnableRow=No&amp;docNum=&amp;showMaintenanceLinks=Yes&amp;headerBarEnabled=Yes&amp;fieldNameToFocusOnAfterSubmit=&amp;savedSearchToLoadAndExecute=&amp;documentTypeName=OffCampusEquipmentRequestDocType&amp;initiatorPrincipalName=&amp;documentId=&amp;rangeLowerBoundKeyPrefix_dateCreated=07%2F01%2F2013&amp;dateCreated=&amp;documentAttribute.inventoryNumber=&amp;documentAttribute.equipmentInventory.department=&amp;saveName=&amp;isAdvancedSearch=NO&amp;superUserSearch=NO&amp;resetSavedSearch=NO&amp;methodToCall.search.x=0&amp;methodToCall.search.y=0&amp;tabStatesSize=10&amp;actionEditablePropertiesGuid=37fd0632-7a5f-42c7-8589-4ff42d367475&amp;oldDocTypeFieldName=OffCampusEquipmentRequestDocType" content_type="application/x-www-form-urlencoded" method="POST">
+          <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+  </http>
+</request>
+
+<thinktime random="true" value="3"/>
+<request><http url="/kr-dev/dwr/call/plaincall/__System.pageLoaded.dwr" version="1.1" contents="callCount=1 windowName=iframeportlet c0-scriptName=__System c0-methodName=pageLoaded c0-id=0 batchId=0 instanceId=0 page=%2Fkr-dev%2Fkr%2Flookup.do scriptSessionId=XtzLQ5JdrdSY5Sk2OlNkh68ZIhk/UtbZIhk-DvMyfqtki " content_type="text/plain; charset=UTF-8" method="POST"/></request>
+<request><http url="/kr-dev/kr/images/my_route_log.gif" version="1.1" method="GET"/></request>
+<request subst="true">
+    <dyn_variable name="redir" re="Location: (.*)"/>
+    <http url="/kr-dev/kew/DocHandler.do?command=displayDocSearchView&amp;docId=%%_document_number%%" version="1.1" method="GET">
+              <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+    </http>
+</request>
+<thinktime random="true" value="5"/>
+<request subst="true">
+    <dyn_variable name="form_key" xpath="//input[@name='formKey']/@value"/>
+    <http url="%%_redir%%" version="1.1" method="GET">
+      <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+    </http>
+</request>
+
+<thinktime random="true" value="3"/>
+
+<request subst="true">
+  <http url="/kr-dev/kew/RouteLog.do?documentId=%%_document_number%%" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+  </http>
+</request>
+
+<request subst="true">
+  <http url="/ugaruss/kr-krad/maintenance" version="1.1" contents_from_file="/home/leo/tsung/data/tsung_recorder20140226-0148-6.bin" content_type="multipart/form-data; boundary=---------------------------10789378913572187691559057218" method="POST"/>
+</request>
+
+<request><http url="/ugaruss/logout.do" version="1.1" contents="imageField=Logout" content_type="application/x-www-form-urlencoded" method="POST"/></request>
+
+
+<request>
+    <dyn_variable name="krsess" re="Set-Cookie: JSESSIONID=([A-Z0-9]*)"/>
+    <http url="http://ptriceapp02.stage.uga.edu/kr-dev/portal.do" version="1.1" method="GET"/>
+</request>
+<request><http url="/kr-dev/rice-portal/css/portal.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/fancybox/jquery.fancybox.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/rice/textpopout/popoutTextarea.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/jgrowl/jquery.jgrowl.css" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/jquery/jquery-1.8.3.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/scrollto/jquery.scrollTo-1.4.3-min.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/cookie/jquery.cookie.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/blockUI/jquery.blockUI.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/scripts/my_common.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/fancybox/jquery.fancybox.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/easing/jquery.easing-1.3.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/scripts/portal.initialize.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/krad/plugins/jgrowl/jquery.jgrowl.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/scripts/easyXDM/easyXDM.js" version="1.1" method="GET"/></request>
+<thinktime random="true" value="3"/>
+<request><http url="/kr-dev/rice-portal/images/os-guy.gif" version="1.1" method="GET"/></request>
+<request><http url="/favicon.ico" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/portal.do" version="1.1" contents="__login_user=slthelen" content_type="application/x-www-form-urlencoded" method="POST"/></request>
+<request><http url="/favicon.ico" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/icon-port-actionlist.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/icon-port-docsearch.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/headerback.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/logo-krice.png" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/left-red.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/right-red.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/left-tan.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/right-tan.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/head2-back.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/header2-left-focus.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/leftback-focus.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/bl-bevel-focus.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/chanhead-back.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/rice-portal/images/searchback.gif" version="1.1" method="GET"/></request>
+<request>
+  <dyn_variable name="ugasess" re="Set-Cookie: JSESSIONID=([A-Z0-9]*)"/>
+  <http url="/ugaruss/portal.do" version="1.1" method="GET"/>
+</request>
+<request><http url="/ugaruss/rice-portal/css/portal.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/fancybox/jquery.fancybox.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/rice/textpopout/popoutTextarea.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jgrowl/jquery.jgrowl.css" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/cookie/jquery.cookie.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jquery/jquery-1.8.3.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/scrollto/jquery.scrollTo-1.4.3-min.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/blockUI/jquery.blockUI.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/kr/scripts/my_common.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/fancybox/jquery.fancybox.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/easing/jquery.easing-1.3.pack.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/rice-portal/scripts/portal.initialize.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/plugins/jgrowl/jquery.jgrowl.js" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/rice-portal/scripts/easyXDM/easyXDM.js" version="1.1" method="GET"/></request>
+
+<thinktime random="true" value="1"/>
+
+<request><http url="/ugaruss/rice-portal/images/os-guy.gif" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/portal.do" version="1.1" contents="__login_user=slthelen" content_type="application/x-www-form-urlencoded" method="POST"/></request>
+<thinktime random="true" value="6"/>
+
+<request subst="true">
+  <http url="/kr-dev/kew/RouteLog.do?documentId=%%_document_number%%" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+  </http>
+</request>
+<request><http url="/ugaruss/krad/images/validation/normal-stripe.png" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/validation/info.png" version="1.1" method="GET"/></request>
+<request><http url="/ugaruss/krad/images/validation/info-stripe.png" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kew/images/pixel_clear.gif" version="1.1" method="GET"/></request>
+<request subst="true"><http url="/kr-dev/dwr/call/plaincall/__System.pageLoaded.dwr" version="1.1" contents="callCount=1 windowName= c0-scriptName=__System c0-methodName=pageLoaded c0-id=0 batchId=0 instanceId=0 page=%2Fkr-dev%2Fkew%2FRouteLog.do%3FdocumentId%3D%%_document_number%% scriptSessionId=XtzLQ5JdrdSY5Sk2OlNkh68ZIhk/TG0ZIhk-LW8F3wHQ " content_type="text/plain; charset=UTF-8" method="POST"/></request>
+<request subst="true">
+  <http url="/ugaruss/portal.do?selectedTab=main" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+  </http>
+</request>
+<request subst="true">
+  <http url="/ugaruss/portal.do?channelTitle=Document%20Search:%20Off-Campus%20Equipment%20Request/Renew&amp;channelUrl=http://ptriceapp02.stage.uga.edu/kr-dev/kew/DocumentSearch.do?docFormKey=88888888&amp;returnLocation=http://ptriceapp02.stage.uga.edu/ugaruss/portal.do&amp;hideReturnLink=true&amp;documentTypeName=OffCampusEquipmentRequestDocType" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+  </http>
+</request>
+<request><http url="/kr-dev/rice-portal/scripts/easyXDM/resize_intermediate.html?url=%2Fkr-dev%2Fkew%2FDocumentSearch.do%3FdocFormKey%3D88888888%26returnLocation%3Dhttp%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do%26hideReturnLink%3Dtrue%26documentTypeName%3DOffCampusEquipmentRequestDocType&amp;xdm_e=http%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do&amp;xdm_c=default809&amp;xdm_p=4" version="1.1" method="GET"/></request>
+<request subst="true">
+  <http url="/kr-dev/kew/DocumentSearch.do?docFormKey=88888888&amp;returnLocation=http://ptriceapp02.stage.uga.edu/ugaruss/portal.do&amp;hideReturnLink=true&amp;documentTypeName=OffCampusEquipmentRequestDocType" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+  </http>
+</request>
+<request><http url="/kr-dev/kr/scripts/lookup.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/dwr/call/plaincall/__System.pageLoaded.dwr" version="1.1" contents="callCount=1 windowName=iframeportlet c0-scriptName=__System c0-methodName=pageLoaded c0-id=0 batchId=0 instanceId=0 page=%2Fkr-dev%2Fkew%2FDocumentSearch.do%3FdocFormKey%3D88888888%26returnLocation%3Dhttp%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do%26hideReturnLink%3Dtrue%26documentTypeName%3DOffCampusEquipmentRequestDocType scriptSessionId=XtzLQ5JdrdSY5Sk2OlNkh68ZIhk/HEaZIhk-AFYSggszx " content_type="text/plain; charset=UTF-8" method="POST"/></request>
+<request><http url="/kr-dev/dwr/interface/DocumentTypeService.js" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/my_cp_inf.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/cal.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/buttonsmall_cancel.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kew/images/tinybutton-detailedsearch.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kew/images/tinybutton-superusersearch.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kew/images/tinybutton-clearsavedsearch.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/searchicon.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/book_open.png" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/buttonsmall_search.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/static/images/buttonsmall_clear.gif" version="1.1" method="GET"/></request>
+<request><http url="/kr-dev/kr/images/th-back1.gif" version="1.1" method="GET"/></request>
+
+<request subst="true">
+  <http url="/kr-dev/kr/lookup.do" version="1.1" contents="backLocation=http%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do&amp;formKey=88888888&amp;lookupableImplServiceName=documentSearchCriteriaBoLookupable&amp;businessObjectClassName=org.kuali.rice.kew.impl.document.search.DocumentSearchCriteriaBo&amp;conversionFields=&amp;hideReturnLink=Yes&amp;suppressActions=No&amp;multipleValues=No&amp;lookupAnchor=&amp;readOnlyFields=&amp;referencesToRefresh=&amp;hasReturnableRow=No&amp;docNum=&amp;showMaintenanceLinks=Yes&amp;headerBarEnabled=Yes&amp;fieldNameToFocusOnAfterSubmit=&amp;savedSearchToLoadAndExecute=&amp;documentTypeName=OffCampusEquipmentRequestDocType&amp;initiatorPrincipalName=&amp;documentId=&amp;rangeLowerBoundKeyPrefix_dateCreated=07%2F01%2F2013&amp;dateCreated=&amp;documentAttribute.inventoryNumber=&amp;documentAttribute.equipmentInventory.department=&amp;saveName=&amp;isAdvancedSearch=NO&amp;superUserSearch=NO&amp;resetSavedSearch=NO&amp;methodToCall.search.x=0&amp;methodToCall.search.y=0&amp;tabStatesSize=10&amp;actionEditablePropertiesGuid=37fd0632-7a5f-42c7-8589-4ff42d367475&amp;oldDocTypeFieldName=OffCampusEquipmentRequestDocType" content_type="application/x-www-form-urlencoded" method="POST">
+          <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+  </http>
+</request>
+
+<thinktime random="true" value="3"/>
+<request><http url="/kr-dev/dwr/call/plaincall/__System.pageLoaded.dwr" version="1.1" contents="callCount=1 windowName=iframeportlet c0-scriptName=__System c0-methodName=pageLoaded c0-id=0 batchId=0 instanceId=0 page=%2Fkr-dev%2Fkr%2Flookup.do scriptSessionId=XtzLQ5JdrdSY5Sk2OlNkh68ZIhk/UtbZIhk-DvMyfqtki " content_type="text/plain; charset=UTF-8" method="POST"/></request>
+<request><http url="/kr-dev/kr/images/my_route_log.gif" version="1.1" method="GET"/></request>
+<request subst="true">
+    <dyn_variable name="redir" re="Location: (.*)"/>
+    <http url="/kr-dev/kew/DocHandler.do?command=displayDocSearchView&amp;docId=%%_document_number%%" version="1.1" method="GET">
+              <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+    </http>
+</request>
+<thinktime random="true" value="5"/>
+<request subst="true">
+    <dyn_variable name="form_key" xpath="//input[@name='formKey']/@value"/>
+    <http url="%%_redir%%" version="1.1" method="GET">
+      <add_cookie key="JSESSIONID" value="%%_ugasess%%"/>
+    </http>
+</request>
+
+<thinktime random="true" value="3"/>
+
+<request subst="true">
+  <http url="/kr-dev/kew/RouteLog.do?documentId=%%_document_number%%" version="1.1" method="GET">
+          <add_cookie key="JSESSIONID" value="%%_krsess%%"/>
+  </http>
+</request>
+
+<request subst="true">
+  <http url="/ugaruss/kr-krad/maintenance" version="1.1" contents_from_file="/home/leo/tsung/data/tsung_recorder20140226-0148-7.bin" content_type="multipart/form-data; boundary=---------------------------1626685879952583961132544557" method="POST"/>
+</request>
+
+<request><http url="/ugaruss/logout.do" version="1.1" contents="imageField=Logout" content_type="application/x-www-form-urlencoded" method="POST"/></request>
+
+  </transaction>
+</session>
+</sessions>
+</tsung>

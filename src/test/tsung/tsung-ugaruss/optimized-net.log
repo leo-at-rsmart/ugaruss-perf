@@ -1,0 +1,37 @@
+Linux 2.6.32-279.19.1.el6.x86_64 (ptriceapp01.stage.uga.edu) 	03/01/2014 	_x86_64_	(2 CPU)
+
+08:10:46 PM     IFACE   rxpck/s   txpck/s    rxkB/s    txkB/s   rxcmp/s   txcmp/s  rxmcst/s
+08:18:16 PM        lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+08:18:16 PM      eth0     45.51     46.99     19.53     12.85      0.00      0.00      0.00
+
+08:18:16 PM     IFACE   rxpck/s   txpck/s    rxkB/s    txkB/s   rxcmp/s   txcmp/s  rxmcst/s
+08:25:46 PM        lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+08:25:46 PM      eth0    184.64    259.26     44.92    261.76      0.00      0.00      0.00
+
+08:25:46 PM     IFACE   rxpck/s   txpck/s    rxkB/s    txkB/s   rxcmp/s   txcmp/s  rxmcst/s
+08:33:16 PM        lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+08:33:16 PM      eth0    134.95    178.13     37.45    158.78      0.00      0.00      0.00
+
+08:33:16 PM     IFACE   rxpck/s   txpck/s    rxkB/s    txkB/s   rxcmp/s   txcmp/s  rxmcst/s
+08:40:46 PM        lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+08:40:46 PM      eth0    116.73    155.64     31.39    141.87      0.00      0.00      0.00
+
+08:40:46 PM     IFACE   rxpck/s   txpck/s    rxkB/s    txkB/s   rxcmp/s   txcmp/s  rxmcst/s
+08:48:16 PM        lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+08:48:16 PM      eth0    137.86    180.47     37.71    161.90      0.00      0.00      0.00
+
+08:48:16 PM     IFACE   rxpck/s   txpck/s    rxkB/s    txkB/s   rxcmp/s   txcmp/s  rxmcst/s
+08:55:46 PM        lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+08:55:46 PM      eth0    112.34    145.76     32.25    126.93      0.00      0.00      0.00
+
+08:55:46 PM     IFACE   rxpck/s   txpck/s    rxkB/s    txkB/s   rxcmp/s   txcmp/s  rxmcst/s
+09:03:16 PM        lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+09:03:16 PM      eth0    174.90    234.93     43.37    227.93      0.00      0.00      0.00
+
+09:03:16 PM     IFACE   rxpck/s   txpck/s    rxkB/s    txkB/s   rxcmp/s   txcmp/s  rxmcst/s
+09:10:46 PM        lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+09:10:46 PM      eth0     31.66     36.45      7.96     30.90      0.00      0.00      0.00
+
+08:57:05 PM     IFACE   rxpck/s   txpck/s    rxkB/s    txkB/s   rxcmp/s   txcmp/s  rxmcst/s
+09:04:35 PM        lo      0.00      0.00      0.00      0.00      0.00      0.00      0.00
+09:04:35 PM      eth0    166.69    222.11     41.82    213.69      0.00      0.00      0.00

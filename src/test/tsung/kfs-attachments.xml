@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<!DOCTYPE tsung SYSTEM "/opt/local/share/tsung/tsung-1.0.dtd">
+<tsung version="1.0" dumptraffic="true" loglevel="notice">
+  <clients>
+    <client use_controller_vm="true" host="localhost"/>
+  </clients>
+  <servers>
+    <server port="80" type="tcp" host="tst.kfs.uconn.edu"/>
+  </servers>
+  <load>
+    <arrivalphase phase="1" duration="1" unit="minute">
+      <users maxnumber="1" interarrival="1" unit="second"/>
+    </arrivalphase>
+  </load>
+  <options>
+    <option name="user_agent" type="ts_http">
+      <user_agent probability="100">
+        Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:8.0.1) Gecko/20100101 Firefox/8.0.1
+      </user_agent>
+    </option>
+  </options>
+  <sessions>
+    <session name="test" probability="100" type="ts_http">
+      <transaction name="attachments_search">
+        <request subst="false">
+          <dyn_variable name="redir" re="Location: (.*)" />
+          <http version="1.1" url="http://tst.kfs.uconn.edu/kfs-dev/portal.do" method="GET"/>
+        </request>
+        <request subst="true">
+          <dyn_variable name="lt" xpath="//input[@name='lt']/@value"/>
+          <dyn_variable name="execution" xpath="//input[@name='execution']/@value"/>
+          <http version="1.1" url="%%_redir%%" method="GET"/>
+        </request>
+        <request subst="true">
+          <dyn_variable name="ticket" re="Location: .*ticket=(.*)" />
+          <http version="1.1" content_type="application/x-www-form-urlencoded" contents="lt=%%_lt%%&amp;execution=%%_execution%%&amp;username=lep12004&amp;password=Entr0py0&amp;_eventId=submit" url="https://login.uconn.edu/cas/login?service=http%3A%2F%2Ftst.kfs.uconn.edu%2Fkfs-dev%2Fportal.do" method="POST"/>
+        </request>
+        <request subst="true">
+          <dyn_variable name="redir" re="Location: (.*)" />
+          <http version="1.1" url="http://tst.kfs.uconn.edu/kfs-dev/portal.do?ticket=%%_ticket%%" method="GET"/>
+        </request>
+        <request subst="true">
+          <http version="1.1" url="%%_redir%%" method="GET"/>
+        </request>
+
+        <request><http url='/kfs-dev/backdoorlogin.do' version='1.1'  contents='backdoorId=btp98001&amp;imageField=Login&amp;methodToCall=login' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+        <request><http url='/kfs-dev/index.jsp' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/portal.jsp' version='1.1' method='GET'></http></request>
+
+        <request>
+          <dyn_variable name="document_number" xpath="//*[contains(@href, 'DocHandler.do')]/text()" />
+          <http version="1.1" url="/kfs-dev/kr/lookup.do?methodToCall=search&amp;businessObjectClassName=org.kuali.rice.kew.docsearch.DocSearchCriteriaDTO&amp;docFormKey=88888888&amp;returnLocation=/kfs-dev/portal.do&amp;hideReturnLink=true&amp;backdoorId=btp98001&amp;docTypeFullName=DV&amp;fromDateCreated=01/26/2012" method="GET"/>
+        </request>
+        <request subst="true">
+          <http url='/kfs-dev/kew/DocHandler.do?command=displayDocSearchView&amp;docId=%%_document_number%%' version='1.1' method='GET' />
+        </request> 
+        
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ChartService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/AccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubAccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectTypeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/OriginationCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ProjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/CommodityCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ItemUnitOfMeasureService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/CommodityCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ChartService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/AccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubAccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectTypeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ProjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/OriginationCodeService.js' version='1.1' method='GET'></http></request>
+        <request subst="true"><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=%%_document_number%%' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+
+        <request><http url='/kfs-dev/disbursementVoucher.do' version='1.1'  contents_from_file='/home/ltuser/.tsung/tsung_recorder20120426-0213-1.bin' content_type='multipart/form-data; boundary=---------------------------19277021961952509530130060903' method='POST'></http></request>
+
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ChartService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/AccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubAccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectTypeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/OriginationCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ItemUnitOfMeasureService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/CommodityCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ProjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/CommodityCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ChartService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/AccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubAccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectTypeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ProjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/OriginationCodeService.js' version='1.1' method='GET'></http></request>
+        <request subst="true"><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=%%_document_number%%' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+
+        <request><http url='/kfs-dev/disbursementVoucher.do' version='1.1'  contents_from_file='/home/ltuser/.tsung/tsung_recorder20120426-0213-2.bin' content_type='multipart/form-data; boundary=---------------------------194272772210834546661108728549' method='POST'></http></request>
+
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ChartService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/AccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubAccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectTypeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/OriginationCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/CommodityCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ItemUnitOfMeasureService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ProjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/CommodityCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ChartService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/AccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubAccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectTypeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ProjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/OriginationCodeService.js' version='1.1' method='GET'></http></request>
+        <request subst="true"><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=%%_document_number%%' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+
+        <request><http url='/kfs-dev/disbursementVoucher.do' version='1.1'  contents_from_file='/home/ltuser/.tsung/tsung_recorder20120426-0213-3.bin' content_type='multipart/form-data; boundary=---------------------------68511802421187978011060806853' method='POST'></http></request>
+
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ChartService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/AccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubAccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/OriginationCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/CommodityCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ItemUnitOfMeasureService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ProjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectTypeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/CommodityCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ChartService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/AccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubAccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectTypeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ProjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/OriginationCodeService.js' version='1.1' method='GET'></http></request>
+        <request subst="true"><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=%%_document_number%%' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+
+        <request><http url='/kfs-dev/dwr/exec/PersonService.getPersonByPrincipalName.dwr' version='1.1'  contents='callCount=1&amp; c0-scriptName=PersonService&amp; c0-methodName=getPersonByPrincipalName&amp; c0-id=4055_1335431831033&amp; c0-param0=string:btp98001&amp; xml=true&amp; ' content_type='text/plain; charset=UTF-8' method='POST'></http></request>
+        <request><http url='/kfs-dev/disbursementVoucher.do' version='1.1'  contents_from_file='/home/ltuser/.tsung/tsung_recorder20120426-0213-4.bin' content_type='multipart/form-data; boundary=---------------------------5715409771948474082035308228' method='POST'></http></request>
+
+
+        <request><http url='/kfs-dev/dwr/interface/ChartService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/AccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubAccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/OriginationCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/CommodityCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ItemUnitOfMeasureService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ProjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectTypeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/CommodityCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ChartService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/AccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubAccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectTypeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ProjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/OriginationCodeService.js' version='1.1' method='GET'></http></request>
+        <request subst="true"><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=%%_document_number%%' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+
+        <request><http url='/kfs-dev/disbursementVoucher.do' version='1.1'  contents_from_file='/home/ltuser/.tsung/tsung_recorder20120426-0213-5.bin' content_type='multipart/form-data; boundary=---------------------------1583749331075260298824938981' method='POST'></http></request>
+
+      </transaction>
+    </session>
+  </sessions>
+</tsung>

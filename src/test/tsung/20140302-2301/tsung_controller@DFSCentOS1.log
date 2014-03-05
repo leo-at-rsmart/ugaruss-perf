@@ -1,0 +1,1801 @@
+
+=INFO REPORT==== 2-Mar-2014::23:01:34 ===
+    ts_config_server:(5:<0.44.0>) Config server started, logdir is "/home/leo/.tsung/log/20140302-2301"
+ 
+=INFO REPORT==== 2-Mar-2014::23:01:35 ===
+              ts_mon:(5:<0.43.0>) starting monitor, global 
+
+=INFO REPORT==== 2-Mar-2014::23:01:35 ===
+           ts_config:(5:<0.44.0>) Reading config file: test.xml
+
+=INFO REPORT==== 2-Mar-2014::23:01:35 ===
+      ts_config_http:(4:<0.44.0>) Get user agent: 100 "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36" 
+
+=INFO REPORT==== 2-Mar-2014::23:01:35 ===
+           ts_config:(5:<0.44.0>) Session name for id 1 is "offcampusequipmentrequest"
+
+=INFO REPORT==== 2-Mar-2014::23:01:35 ===
+    ts_config_server:(4:<0.44.0>) SYSINFO:Tsung version: 1.5.0
+
+=INFO REPORT==== 2-Mar-2014::23:01:35 ===
+    ts_config_server:(4:<0.44.0>) SYSINFO:Erlang version: Erlang R16B02 (erts-5.10.3) [source-b44b726] [64-bit] [smp:4:4] [async-threads:16] [kernel-poll:true]
+
+
+=INFO REPORT==== 2-Mar-2014::23:01:35 ===
+    ts_config_server:(4:<0.44.0>) SYSINFO:System architecture x86_64-unknown-linux-gnu
+
+=INFO REPORT==== 2-Mar-2014::23:01:35 ===
+    ts_config_server:(4:<0.44.0>) SYSINFO:Current path: /usr/lib64/erlang/lib/tsung-1.5.0/ebin/tsung.beam
+
+=INFO REPORT==== 2-Mar-2014::23:01:35 ===
+           ts_os_mon:(5:<0.41.0>) os_mon disabled
+=INFO REPORT==== 2-Mar-2014::23:01:35 ===
+              ts_mon:(5:<0.45.0>) Activate clients with text backend
+
+=INFO REPORT==== 2-Mar-2014::23:01:35 ===
+              ts_mon:(5:<0.45.0>) Starting tsung clients on hosts: [localhost]
+
+=INFO REPORT==== 2-Mar-2014::23:01:35 ===
+    ts_config_server:(5:<0.44.0>) Start a launcher on the controller beam localhost
+
+=INFO REPORT==== 2-Mar-2014::23:01:35 ===
+  ts_launcher_static:(5:<0.78.0>) Launch msg receive ("localhost")
+
+=INFO REPORT==== 2-Mar-2014::23:01:35 ===
+         ts_launcher:(5:<0.79.0>) Launch msg receive ("localhost")
+
+=INFO REPORT==== 2-Mar-2014::23:01:35 ===
+    ts_config_server:(5:<0.44.0>) All remote beams started, syncing 
+
+=INFO REPORT==== 2-Mar-2014::23:01:35 ===
+    ts_config_server:(5:<0.44.0>) New arrival phase 1 for client "localhost" (last ? true): will start 300 users
+
+=INFO REPORT==== 2-Mar-2014::23:01:35 ===
+    ts_config_server:(5:<0.44.0>) New arrival phase 2 for client "localhost" (last ? true): will start 120 users
+
+=INFO REPORT==== 2-Mar-2014::23:01:35 ===
+    ts_config_server:(5:<0.44.0>) New arrival phase 3 for client "localhost" (last ? true): will start 60 users
+
+=INFO REPORT==== 2-Mar-2014::23:01:35 ===
+    ts_config_server:(5:<0.44.0>) New arrival phase 4 for client "localhost" (last ? true): will start 150 users
+
+=INFO REPORT==== 2-Mar-2014::23:01:35 ===
+         ts_launcher:(5:<0.79.0>) Expected duration of first phase: 300.0 sec (300 users) 
+
+=INFO REPORT==== 2-Mar-2014::23:01:35 ===
+         ts_launcher:(5:<0.79.0>) Activate launcher (300 users) in 10952 msec 
+
+=INFO REPORT==== 2-Mar-2014::23:02:16 ===
+         ts_launcher:(5:<0.79.0>) Max number of concurrent clients reached, must start a new beam
+
+=INFO REPORT==== 2-Mar-2014::23:02:16 ===
+    ts_config_server:(0:<0.44.0>) Maximum number of concurrent users in a single VM reached and 'use_controller_vm' is true, can't start new beam !!! Check 'maxusers' value in <client> configuration.
+
+=INFO REPORT==== 2-Mar-2014::23:02:16 ===
+     ts_launcher_mgr:(5:<0.74.0>) Still 41 active client(s)
+
+=INFO REPORT==== 2-Mar-2014::23:02:18 ===
+           ts_search:(4:<0.115.0>) Dyn Var: no Match (varname=docid), 
+
+=INFO REPORT==== 2-Mar-2014::23:02:28 ===
+           ts_search:(4:<0.121.0>) Dyn Var: no Match (varname=docid), 
+
+=INFO REPORT==== 2-Mar-2014::23:02:30 ===
+           ts_search:(4:<0.127.0>) Dyn Var: no Match (varname=docid), 
+
+=INFO REPORT==== 2-Mar-2014::23:02:39 ===
+           ts_search:(4:<0.123.0>) Dyn Var: no Match (varname=docid), 
+
+=INFO REPORT==== 2-Mar-2014::23:02:39 ===
+           ts_search:(4:<0.119.0>) Dyn Var: no Match (varname=docid), 
+
+=INFO REPORT==== 2-Mar-2014::23:02:39 ===
+           ts_search:(4:<0.129.0>) Dyn Var: no Match (varname=docid), 
+
+=INFO REPORT==== 2-Mar-2014::23:02:39 ===
+           ts_search:(4:<0.117.0>) Dyn Var: no Match (varname=docid), 
+
+=INFO REPORT==== 2-Mar-2014::23:02:39 ===
+           ts_search:(4:<0.101.0>) Dyn Var: no Match (varname=docid), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:00 ===
+           ts_search:(4:<0.92.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:05 ===
+           ts_search:(4:<0.87.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:08 ===
+           ts_search:(4:<0.87.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:10 ===
+           ts_search:(4:<0.92.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:16 ===
+     ts_launcher_mgr:(5:<0.74.0>) Still 41 active client(s)
+
+=INFO REPORT==== 2-Mar-2014::23:03:26 ===
+           ts_search:(4:<0.121.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:27 ===
+           ts_search:(4:<0.121.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:40 ===
+           ts_search:(4:<0.93.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:48 ===
+           ts_search:(4:<0.98.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:49 ===
+           ts_search:(4:<0.94.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:51 ===
+           ts_search:(4:<0.98.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:52 ===
+           ts_search:(4:<0.93.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:54 ===
+           ts_search:(4:<0.115.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:54 ===
+           ts_search:(4:<0.121.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:56 ===
+           ts_search:(4:<0.105.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:56 ===
+           ts_search:(4:<0.112.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:56 ===
+           ts_search:(4:<0.115.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:56 ===
+           ts_search:(4:<0.88.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:57 ===
+           ts_search:(4:<0.105.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:57 ===
+           ts_search:(4:<0.88.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:58 ===
+           ts_search:(4:<0.121.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:59 ===
+           ts_search:(4:<0.94.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:59 ===
+           ts_search:(4:<0.120.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:59 ===
+           ts_search:(4:<0.96.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:03:59 ===
+           ts_search:(4:<0.107.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:00 ===
+           ts_search:(4:<0.127.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:00 ===
+           ts_search:(4:<0.112.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:00 ===
+           ts_search:(4:<0.120.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:01 ===
+           ts_search:(4:<0.128.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:04 ===
+           ts_search:(4:<0.111.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:04 ===
+           ts_search:(4:<0.127.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:04 ===
+           ts_search:(4:<0.96.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:04 ===
+           ts_search:(4:<0.122.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:04 ===
+           ts_search:(4:<0.107.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:05 ===
+           ts_search:(4:<0.122.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:05 ===
+           ts_search:(4:<0.102.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:05 ===
+           ts_client:(5:<0.120.0>) Stop in state wait_ack, reason= {badarg,
+                                                                    [{erlang,
+                                                                      '++',
+                                                                      [<<"0">>,
+                                                                       "HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:03:18 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                                                                      []},
+                                                                     {ts_http_common,
+                                                                      parse,2,
+                                                                      [{file,
+                                                                        "src/tsung/ts_http_common.erl"},
+                                                                       {line,
+                                                                        278}]},
+                                                                     {ts_client,
+                                                                      handle_data_msg,
+                                                                      2,
+                                                                      [{file,
+                                                                        "src/tsung/ts_client.erl"},
+                                                                       {line,
+                                                                        978}]},
+                                                                     {ts_client,
+                                                                      handle_info2,
+                                                                      3,
+                                                                      [{file,
+                                                                        "src/tsung/ts_client.erl"},
+                                                                       {line,
+                                                                        233}]},
+                                                                     {gen_fsm,
+                                                                      handle_msg,
+                                                                      7,
+                                                                      [{file,
+                                                                        "gen_fsm.erl"},
+                                                                       {line,
+                                                                        505}]},
+                                                                     {proc_lib,
+                                                                      init_p_do_apply,
+                                                                      3,
+                                                                      [{file,
+                                                                        "proc_lib.erl"},
+                                                                       {line,
+                                                                        239}]}]}
+
+=INFO REPORT==== 2-Mar-2014::23:04:05 ===
+           ts_client:(5:<0.120.0>) Pending transactions: [{tr_routeoffcampusequipmentrequest,
+                                                           {1393,819331,
+                                                            5039}}], compute transaction time
+
+=ERROR REPORT==== 2-Mar-2014::23:04:05 ===
+** State machine <0.120.0> terminating 
+** Last message in was {tcp,#Port<0.10796>,
+                            <<"HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:03:18 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n">>}
+** When State == wait_ack
+**      Data  == {state_rcv,#Port<0.10796>,
+                     {{0,0,0,0},0},
+                     undefined,0,10000,"ptriceapp02.stage.uga.edu",80,ts_tcp,
+                     {proto_opts,negociate,"/chat",10,600000,infinity,32768,
+                         32768,undefined,undefined},
+                     false,1,
+                     {ts_request,parse,false,[],[],
+                         {http_request,"/ugaruss/logout.do","1.1",
+                             "ptriceapp02.stage.uga.edu",undefined,[],post,
+                             "application/x-www-form-urlencoded",[],
+                             <<"imageField=Logout">>,0,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined},
+                         true,undefined,undefined,undefined},
+                     true,
+                     {1393,819445,810138},
+                     {1393,819331,3103},
+                     512,756,true,
+                     {1393,819445,810138},
+                     {1393,819445,522723},
+                     <<"0">>,<<>>,
+                     {http,0,0,-2,
+                         {none,none},
+                         false,false,
+                         {false,false},
+                         [],
+                         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36",
+                         [{cookie,"kualiSessionId",
+                              "c464ac55-d6b1-40e5-89ea-765b6efc0e17",
+                              undefined,undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/",undefined,undefined,undefined},
+                          {cookie,"JSESSIONID",
+                              "B1C3EA682D98EF2F1E958BFF4F7DBF73",undefined,
+                              undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/ugaruss/",undefined,undefined,
+                              undefined}]},
+                     0,33,524288,524288,
+                     [{form_key,<<>>},
+                      {redir,<<>>},
+                      {ugasess,<<"B1C3EA682D98EF2F1E958BFF4F7DBF73">>},
+                      {krsess,<<"C1595802AA0306A3A0505F01FE2ED874">>},
+                      {document_number,"8758"},
+                      {docid,[<<" 8758\r\n">>]},
+                      {tsung_userid,33}],
+                     ts_http,
+                     [{tr_routeoffcampusequipmentrequest,{1393,819331,5039}}],
+                     undefined,none}
+** Reason for termination = 
+** {badarg,[{erlang,'++',
+                    [<<"0">>,
+                     "HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:03:18 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                    []},
+            {ts_http_common,parse,2,
+                            [{file,"src/tsung/ts_http_common.erl"},
+                             {line,278}]},
+            {ts_client,handle_data_msg,2,
+                       [{file,"src/tsung/ts_client.erl"},{line,978}]},
+            {ts_client,handle_info2,3,
+                       [{file,"src/tsung/ts_client.erl"},{line,233}]},
+            {gen_fsm,handle_msg,7,[{file,"gen_fsm.erl"},{line,505}]},
+            {proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+
+=INFO REPORT==== 2-Mar-2014::23:04:08 ===
+           ts_search:(4:<0.101.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:08 ===
+           ts_search:(4:<0.119.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:08 ===
+           ts_search:(4:<0.118.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:08 ===
+           ts_search:(4:<0.99.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:10 ===
+           ts_search:(4:<0.99.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:11 ===
+           ts_search:(4:<0.101.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:11 ===
+           ts_search:(4:<0.102.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:12 ===
+           ts_search:(4:<0.128.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:12 ===
+           ts_search:(4:<0.119.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:13 ===
+           ts_search:(4:<0.90.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:13 ===
+           ts_search:(4:<0.95.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:13 ===
+           ts_search:(4:<0.114.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:14 ===
+           ts_search:(4:<0.117.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:14 ===
+           ts_search:(4:<0.124.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:14 ===
+           ts_search:(4:<0.95.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:14 ===
+           ts_search:(4:<0.90.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:15 ===
+           ts_search:(4:<0.116.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:16 ===
+           ts_search:(4:<0.113.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:16 ===
+           ts_search:(4:<0.113.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:16 ===
+           ts_search:(4:<0.117.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:16 ===
+           ts_search:(4:<0.129.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:16 ===
+     ts_launcher_mgr:(5:<0.74.0>) Still 40 active client(s)
+
+=INFO REPORT==== 2-Mar-2014::23:04:17 ===
+           ts_search:(4:<0.124.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:17 ===
+           ts_search:(4:<0.116.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:17 ===
+           ts_search:(4:<0.118.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:18 ===
+           ts_search:(4:<0.114.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:18 ===
+           ts_client:(5:<0.90.0>) Stop in state wait_ack, reason= {badarg,
+                                                                   [{erlang,
+                                                                     '++',
+                                                                     [<<"0">>,
+                                                                      "HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:03:31 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                                                                     []},
+                                                                    {ts_http_common,
+                                                                     parse,2,
+                                                                     [{file,
+                                                                       "src/tsung/ts_http_common.erl"},
+                                                                      {line,
+                                                                       278}]},
+                                                                    {ts_client,
+                                                                     handle_data_msg,
+                                                                     2,
+                                                                     [{file,
+                                                                       "src/tsung/ts_client.erl"},
+                                                                      {line,
+                                                                       978}]},
+                                                                    {ts_client,
+                                                                     handle_info2,
+                                                                     3,
+                                                                     [{file,
+                                                                       "src/tsung/ts_client.erl"},
+                                                                      {line,
+                                                                       233}]},
+                                                                    {gen_fsm,
+                                                                     handle_msg,
+                                                                     7,
+                                                                     [{file,
+                                                                       "gen_fsm.erl"},
+                                                                      {line,
+                                                                       505}]},
+                                                                    {proc_lib,
+                                                                     wake_up,
+                                                                     3,
+                                                                     [{file,
+                                                                       "proc_lib.erl"},
+                                                                      {line,
+                                                                       249}]}]}
+
+=INFO REPORT==== 2-Mar-2014::23:04:18 ===
+           ts_client:(5:<0.90.0>) Pending transactions: [{tr_routeoffcampusequipmentrequest,
+                                                          {1393,819310,
+                                                           918054}}], compute transaction time
+
+=ERROR REPORT==== 2-Mar-2014::23:04:18 ===
+** State machine <0.90.0> terminating 
+** Last message in was {tcp,#Port<0.11716>,
+                            <<"HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:03:31 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n">>}
+** When State == wait_ack
+**      Data  == {state_rcv,#Port<0.11716>,
+                     {{0,0,0,0},0},
+                     undefined,0,10000,"ptriceapp02.stage.uga.edu",80,ts_tcp,
+                     {proto_opts,negociate,"/chat",10,600000,infinity,32768,
+                         32768,undefined,undefined},
+                     false,1,
+                     {ts_request,parse,false,[],[],
+                         {http_request,"/ugaruss/logout.do","1.1",
+                             "ptriceapp02.stage.uga.edu",undefined,[],post,
+                             "application/x-www-form-urlencoded",[],
+                             <<"imageField=Logout">>,0,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined},
+                         true,undefined,undefined,undefined},
+                     true,
+                     {1393,819458,592927},
+                     {1393,819310,916201},
+                     512,756,true,
+                     {1393,819458,592927},
+                     {1393,819457,409262},
+                     <<"0">>,<<>>,
+                     {http,0,0,-2,
+                         {none,none},
+                         false,false,
+                         {false,false},
+                         [],
+                         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36",
+                         [{cookie,"kualiSessionId",
+                              "c6f434b7-b58b-4726-b3e1-8cc7d2dbbc61",
+                              undefined,undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/",undefined,undefined,undefined},
+                          {cookie,"JSESSIONID",
+                              "4A6B4DD7293A769B654FC062C75907BC",undefined,
+                              undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/ugaruss/",undefined,undefined,
+                              undefined}]},
+                     0,5,524288,524288,
+                     [{form_key,<<>>},
+                      {redir,<<>>},
+                      {ugasess,<<"4A6B4DD7293A769B654FC062C75907BC">>},
+                      {krsess,<<"CDE28E63B0DC323726C1A7F238C7B495">>},
+                      {document_number,"8736"},
+                      {docid,[<<" 8736\r\n">>]},
+                      {tsung_userid,5}],
+                     ts_http,
+                     [{tr_routeoffcampusequipmentrequest,
+                          {1393,819310,918054}}],
+                     undefined,none}
+** Reason for termination = 
+** {badarg,[{erlang,'++',
+                    [<<"0">>,
+                     "HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:03:31 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                    []},
+            {ts_http_common,parse,2,
+                            [{file,"src/tsung/ts_http_common.erl"},
+                             {line,278}]},
+            {ts_client,handle_data_msg,2,
+                       [{file,"src/tsung/ts_client.erl"},{line,978}]},
+            {ts_client,handle_info2,3,
+                       [{file,"src/tsung/ts_client.erl"},{line,233}]},
+            {gen_fsm,handle_msg,7,[{file,"gen_fsm.erl"},{line,505}]},
+            {proc_lib,wake_up,3,[{file,"proc_lib.erl"},{line,249}]}]}
+
+=INFO REPORT==== 2-Mar-2014::23:04:18 ===
+           ts_client:(5:<0.128.0>) Stop in state wait_ack, reason= {badarg,
+                                                                    [{erlang,
+                                                                      '++',
+                                                                      [<<"0">>,
+                                                                       "HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:03:31 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                                                                      []},
+                                                                     {ts_http_common,
+                                                                      parse,2,
+                                                                      [{file,
+                                                                        "src/tsung/ts_http_common.erl"},
+                                                                       {line,
+                                                                        278}]},
+                                                                     {ts_client,
+                                                                      handle_data_msg,
+                                                                      2,
+                                                                      [{file,
+                                                                        "src/tsung/ts_client.erl"},
+                                                                       {line,
+                                                                        978}]},
+                                                                     {ts_client,
+                                                                      handle_info2,
+                                                                      3,
+                                                                      [{file,
+                                                                        "src/tsung/ts_client.erl"},
+                                                                       {line,
+                                                                        233}]},
+                                                                     {gen_fsm,
+                                                                      handle_msg,
+                                                                      7,
+                                                                      [{file,
+                                                                        "gen_fsm.erl"},
+                                                                       {line,
+                                                                        505}]},
+                                                                     {proc_lib,
+                                                                      wake_up,
+                                                                      3,
+                                                                      [{file,
+                                                                        "proc_lib.erl"},
+                                                                       {line,
+                                                                        249}]}]}
+
+=INFO REPORT==== 2-Mar-2014::23:04:18 ===
+           ts_client:(5:<0.128.0>) Pending transactions: [{tr_routeoffcampusequipmentrequest,
+                                                           {1393,819336,
+                                                            514076}}], compute transaction time
+
+=ERROR REPORT==== 2-Mar-2014::23:04:18 ===
+** State machine <0.128.0> terminating 
+** Last message in was {tcp,#Port<0.11723>,
+                            <<"HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:03:31 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n">>}
+** When State == wait_ack
+**      Data  == {state_rcv,#Port<0.11723>,
+                     {{0,0,0,0},0},
+                     undefined,0,10000,"ptriceapp02.stage.uga.edu",80,ts_tcp,
+                     {proto_opts,negociate,"/chat",10,600000,infinity,32768,
+                         32768,undefined,undefined},
+                     false,1,
+                     {ts_request,parse,false,[],[],
+                         {http_request,"/ugaruss/logout.do","1.1",
+                             "ptriceapp02.stage.uga.edu",undefined,[],post,
+                             "application/x-www-form-urlencoded",[],
+                             <<"imageField=Logout">>,0,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined},
+                         true,undefined,undefined,undefined},
+                     true,
+                     {1393,819458,622884},
+                     {1393,819336,512396},
+                     512,756,true,
+                     {1393,819458,622884},
+                     {1393,819457,314937},
+                     <<"0">>,<<>>,
+                     {http,0,0,-2,
+                         {none,none},
+                         false,false,
+                         {false,false},
+                         [],
+                         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36",
+                         [{cookie,"kualiSessionId",
+                              "5db6b904-e75f-498d-a65b-4d68ac6e74f3",
+                              undefined,undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/",undefined,undefined,undefined},
+                          {cookie,"JSESSIONID",
+                              "C8BBB5701550AB9D1DA810A9B3AB10B6",undefined,
+                              undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/ugaruss/",undefined,undefined,
+                              undefined}]},
+                     0,40,524288,524288,
+                     [{form_key,<<>>},
+                      {redir,<<>>},
+                      {ugasess,<<"C8BBB5701550AB9D1DA810A9B3AB10B6">>},
+                      {krsess,<<"7E0A3DADF8B2071E9346EF245408B66D">>},
+                      {document_number,"8760"},
+                      {docid,[<<" 8760\r\n">>]},
+                      {tsung_userid,40}],
+                     ts_http,
+                     [{tr_routeoffcampusequipmentrequest,
+                          {1393,819336,514076}}],
+                     undefined,none}
+** Reason for termination = 
+** {badarg,[{erlang,'++',
+                    [<<"0">>,
+                     "HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:03:31 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                    []},
+            {ts_http_common,parse,2,
+                            [{file,"src/tsung/ts_http_common.erl"},
+                             {line,278}]},
+            {ts_client,handle_data_msg,2,
+                       [{file,"src/tsung/ts_client.erl"},{line,978}]},
+            {ts_client,handle_info2,3,
+                       [{file,"src/tsung/ts_client.erl"},{line,233}]},
+            {gen_fsm,handle_msg,7,[{file,"gen_fsm.erl"},{line,505}]},
+            {proc_lib,wake_up,3,[{file,"proc_lib.erl"},{line,249}]}]}
+
+=INFO REPORT==== 2-Mar-2014::23:04:18 ===
+           ts_search:(4:<0.125.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:19 ===
+           ts_search:(4:<0.111.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:19 ===
+           ts_client:(5:<0.124.0>) Stop in state wait_ack, reason= {badarg,
+                                                                    [{erlang,
+                                                                      '++',
+                                                                      [<<"0">>,
+                                                                       "HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:03:32 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                                                                      []},
+                                                                     {ts_http_common,
+                                                                      parse,2,
+                                                                      [{file,
+                                                                        "src/tsung/ts_http_common.erl"},
+                                                                       {line,
+                                                                        278}]},
+                                                                     {ts_client,
+                                                                      handle_data_msg,
+                                                                      2,
+                                                                      [{file,
+                                                                        "src/tsung/ts_client.erl"},
+                                                                       {line,
+                                                                        978}]},
+                                                                     {ts_client,
+                                                                      handle_info2,
+                                                                      3,
+                                                                      [{file,
+                                                                        "src/tsung/ts_client.erl"},
+                                                                       {line,
+                                                                        233}]},
+                                                                     {gen_fsm,
+                                                                      handle_msg,
+                                                                      7,
+                                                                      [{file,
+                                                                        "gen_fsm.erl"},
+                                                                       {line,
+                                                                        505}]},
+                                                                     {proc_lib,
+                                                                      wake_up,
+                                                                      3,
+                                                                      [{file,
+                                                                        "proc_lib.erl"},
+                                                                       {line,
+                                                                        249}]}]}
+
+=INFO REPORT==== 2-Mar-2014::23:04:19 ===
+           ts_client:(5:<0.124.0>) Pending transactions: [{tr_routeoffcampusequipmentrequest,
+                                                           {1393,819333,
+                                                            192337}}], compute transaction time
+
+=ERROR REPORT==== 2-Mar-2014::23:04:19 ===
+** State machine <0.124.0> terminating 
+** Last message in was {tcp,#Port<0.11830>,
+                            <<"HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:03:32 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n">>}
+** When State == wait_ack
+**      Data  == {state_rcv,#Port<0.11830>,
+                     {{0,0,0,0},0},
+                     undefined,0,10000,"ptriceapp02.stage.uga.edu",80,ts_tcp,
+                     {proto_opts,negociate,"/chat",10,600000,infinity,32768,
+                         32768,undefined,undefined},
+                     false,1,
+                     {ts_request,parse,false,[],[],
+                         {http_request,"/ugaruss/logout.do","1.1",
+                             "ptriceapp02.stage.uga.edu",undefined,[],post,
+                             "application/x-www-form-urlencoded",[],
+                             <<"imageField=Logout">>,0,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined},
+                         true,undefined,undefined,undefined},
+                     true,
+                     {1393,819459,865627},
+                     {1393,819333,190279},
+                     512,756,true,
+                     {1393,819459,865627},
+                     {1393,819459,559365},
+                     <<"0">>,<<>>,
+                     {http,0,0,-2,
+                         {none,none},
+                         false,false,
+                         {false,false},
+                         [],
+                         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36",
+                         [{cookie,"kualiSessionId",
+                              "49d8c194-1f88-4ce6-955f-431d5417ae49",
+                              undefined,undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/",undefined,undefined,undefined},
+                          {cookie,"JSESSIONID",
+                              "B5E33DFD5FD76464AE0553CA671905FD",undefined,
+                              undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/ugaruss/",undefined,undefined,
+                              undefined}]},
+                     0,37,524288,524288,
+                     [{form_key,<<>>},
+                      {redir,<<>>},
+                      {ugasess,<<"B5E33DFD5FD76464AE0553CA671905FD">>},
+                      {krsess,<<"AE07BC3354045560A06EF17E459D6007">>},
+                      {document_number,"8752"},
+                      {docid,[<<" 8752\r\n">>]},
+                      {tsung_userid,37}],
+                     ts_http,
+                     [{tr_routeoffcampusequipmentrequest,
+                          {1393,819333,192337}}],
+                     undefined,none}
+** Reason for termination = 
+** {badarg,[{erlang,'++',
+                    [<<"0">>,
+                     "HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:03:32 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                    []},
+            {ts_http_common,parse,2,
+                            [{file,"src/tsung/ts_http_common.erl"},
+                             {line,278}]},
+            {ts_client,handle_data_msg,2,
+                       [{file,"src/tsung/ts_client.erl"},{line,978}]},
+            {ts_client,handle_info2,3,
+                       [{file,"src/tsung/ts_client.erl"},{line,233}]},
+            {gen_fsm,handle_msg,7,[{file,"gen_fsm.erl"},{line,505}]},
+            {proc_lib,wake_up,3,[{file,"proc_lib.erl"},{line,249}]}]}
+
+=INFO REPORT==== 2-Mar-2014::23:04:20 ===
+           ts_search:(4:<0.125.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:20 ===
+           ts_search:(4:<0.110.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:22 ===
+           ts_search:(4:<0.108.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:22 ===
+           ts_search:(4:<0.103.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:24 ===
+           ts_search:(4:<0.100.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:24 ===
+           ts_search:(4:<0.91.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:25 ===
+           ts_search:(4:<0.129.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:28 ===
+           ts_search:(4:<0.109.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:29 ===
+           ts_search:(4:<0.108.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:30 ===
+           ts_search:(4:<0.100.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:30 ===
+           ts_search:(4:<0.123.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:30 ===
+           ts_search:(4:<0.115.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:31 ===
+           ts_search:(4:<0.115.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:32 ===
+           ts_search:(4:<0.103.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:33 ===
+           ts_search:(4:<0.91.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:34 ===
+           ts_client:(5:<0.100.0>) Stop in state wait_ack, reason= {badarg,
+                                                                    [{erlang,
+                                                                      '++',
+                                                                      [<<"0">>,
+                                                                       "HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:03:46 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                                                                      []},
+                                                                     {ts_http_common,
+                                                                      parse,2,
+                                                                      [{file,
+                                                                        "src/tsung/ts_http_common.erl"},
+                                                                       {line,
+                                                                        278}]},
+                                                                     {ts_client,
+                                                                      handle_data_msg,
+                                                                      2,
+                                                                      [{file,
+                                                                        "src/tsung/ts_client.erl"},
+                                                                       {line,
+                                                                        978}]},
+                                                                     {ts_client,
+                                                                      handle_info2,
+                                                                      3,
+                                                                      [{file,
+                                                                        "src/tsung/ts_client.erl"},
+                                                                       {line,
+                                                                        233}]},
+                                                                     {gen_fsm,
+                                                                      handle_msg,
+                                                                      7,
+                                                                      [{file,
+                                                                        "gen_fsm.erl"},
+                                                                       {line,
+                                                                        505}]},
+                                                                     {proc_lib,
+                                                                      wake_up,
+                                                                      3,
+                                                                      [{file,
+                                                                        "proc_lib.erl"},
+                                                                       {line,
+                                                                        249}]}]}
+
+=INFO REPORT==== 2-Mar-2014::23:04:34 ===
+           ts_client:(5:<0.100.0>) Pending transactions: [{tr_routeoffcampusequipmentrequest,
+                                                           {1393,819318,
+                                                            94018}}], compute transaction time
+
+=ERROR REPORT==== 2-Mar-2014::23:04:34 ===
+** State machine <0.100.0> terminating 
+** Last message in was {tcp,#Port<0.12871>,
+                            <<"HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:03:46 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n">>}
+** When State == wait_ack
+**      Data  == {state_rcv,#Port<0.12871>,
+                     {{0,0,0,0},0},
+                     undefined,0,10000,"ptriceapp02.stage.uga.edu",80,ts_tcp,
+                     {proto_opts,negociate,"/chat",10,600000,infinity,32768,
+                         32768,undefined,undefined},
+                     false,1,
+                     {ts_request,parse,false,[],[],
+                         {http_request,"/ugaruss/logout.do","1.1",
+                             "ptriceapp02.stage.uga.edu",undefined,[],post,
+                             "application/x-www-form-urlencoded",[],
+                             <<"imageField=Logout">>,0,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined},
+                         true,undefined,undefined,undefined},
+                     true,
+                     {1393,819474,127300},
+                     {1393,819318,91382},
+                     512,756,true,
+                     {1393,819474,127300},
+                     {1393,819473,125129},
+                     <<"0">>,<<>>,
+                     {http,0,0,-2,
+                         {none,none},
+                         false,false,
+                         {false,false},
+                         [],
+                         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36",
+                         [{cookie,"kualiSessionId",
+                              "a1d45f63-b90a-41d3-8a1b-1c145b083a66",
+                              undefined,undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/",undefined,undefined,undefined},
+                          {cookie,"JSESSIONID",
+                              "6A4B1F81B68296C412912931B85595EF",undefined,
+                              undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/ugaruss/",undefined,undefined,
+                              undefined}]},
+                     0,14,524288,524288,
+                     [{form_key,<<>>},
+                      {redir,<<>>},
+                      {ugasess,<<"6A4B1F81B68296C412912931B85595EF">>},
+                      {krsess,<<"ED674C8C2797CEF8E9C0D3536B32BA7E">>},
+                      {document_number,"8751"},
+                      {docid,[<<" 8751\r\n">>]},
+                      {tsung_userid,14}],
+                     ts_http,
+                     [{tr_routeoffcampusequipmentrequest,{1393,819318,94018}}],
+                     undefined,none}
+** Reason for termination = 
+** {badarg,[{erlang,'++',
+                    [<<"0">>,
+                     "HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:03:46 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                    []},
+            {ts_http_common,parse,2,
+                            [{file,"src/tsung/ts_http_common.erl"},
+                             {line,278}]},
+            {ts_client,handle_data_msg,2,
+                       [{file,"src/tsung/ts_client.erl"},{line,978}]},
+            {ts_client,handle_info2,3,
+                       [{file,"src/tsung/ts_client.erl"},{line,233}]},
+            {gen_fsm,handle_msg,7,[{file,"gen_fsm.erl"},{line,505}]},
+            {proc_lib,wake_up,3,[{file,"proc_lib.erl"},{line,249}]}]}
+
+=INFO REPORT==== 2-Mar-2014::23:04:34 ===
+           ts_client:(5:<0.91.0>) Stop in state wait_ack, reason= {badarg,
+                                                                   [{erlang,
+                                                                     '++',
+                                                                     [<<"0">>,
+                                                                      "HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:03:46 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                                                                     []},
+                                                                    {ts_http_common,
+                                                                     parse,2,
+                                                                     [{file,
+                                                                       "src/tsung/ts_http_common.erl"},
+                                                                      {line,
+                                                                       278}]},
+                                                                    {ts_client,
+                                                                     handle_data_msg,
+                                                                     2,
+                                                                     [{file,
+                                                                       "src/tsung/ts_client.erl"},
+                                                                      {line,
+                                                                       978}]},
+                                                                    {ts_client,
+                                                                     handle_info2,
+                                                                     3,
+                                                                     [{file,
+                                                                       "src/tsung/ts_client.erl"},
+                                                                      {line,
+                                                                       233}]},
+                                                                    {gen_fsm,
+                                                                     handle_msg,
+                                                                     7,
+                                                                     [{file,
+                                                                       "gen_fsm.erl"},
+                                                                      {line,
+                                                                       505}]},
+                                                                    {proc_lib,
+                                                                     wake_up,
+                                                                     3,
+                                                                     [{file,
+                                                                       "proc_lib.erl"},
+                                                                      {line,
+                                                                       249}]}]}
+
+=INFO REPORT==== 2-Mar-2014::23:04:34 ===
+           ts_client:(5:<0.91.0>) Pending transactions: [{tr_routeoffcampusequipmentrequest,
+                                                          {1393,819311,
+                                                           812041}}], compute transaction time
+
+=ERROR REPORT==== 2-Mar-2014::23:04:34 ===
+** State machine <0.91.0> terminating 
+** Last message in was {tcp,#Port<0.12872>,
+                            <<"HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:03:46 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n">>}
+** When State == wait_ack
+**      Data  == {state_rcv,#Port<0.12872>,
+                     {{0,0,0,0},0},
+                     undefined,0,10000,"ptriceapp02.stage.uga.edu",80,ts_tcp,
+                     {proto_opts,negociate,"/chat",10,600000,infinity,32768,
+                         32768,undefined,undefined},
+                     false,1,
+                     {ts_request,parse,false,[],[],
+                         {http_request,"/ugaruss/logout.do","1.1",
+                             "ptriceapp02.stage.uga.edu",undefined,[],post,
+                             "application/x-www-form-urlencoded",[],
+                             <<"imageField=Logout">>,0,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined},
+                         true,undefined,undefined,undefined},
+                     true,
+                     {1393,819474,131753},
+                     {1393,819311,810164},
+                     512,756,true,
+                     {1393,819474,131753},
+                     {1393,819473,556221},
+                     <<"0">>,<<>>,
+                     {http,0,0,-2,
+                         {none,none},
+                         false,false,
+                         {false,false},
+                         [],
+                         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36",
+                         [{cookie,"kualiSessionId",
+                              "edf16239-3d2c-4da0-8c16-83f07c7af755",
+                              undefined,undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/",undefined,undefined,undefined},
+                          {cookie,"JSESSIONID",
+                              "1191C9FCAE1452B8FA2EA08AB9AA6B07",undefined,
+                              undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/ugaruss/",undefined,undefined,
+                              undefined}]},
+                     0,6,524288,524288,
+                     [{form_key,<<>>},
+                      {redir,<<>>},
+                      {ugasess,<<"1191C9FCAE1452B8FA2EA08AB9AA6B07">>},
+                      {krsess,<<"FEAB9DB28641CC978B597D4E52FC13ED">>},
+                      {document_number,"8742"},
+                      {docid,[<<" 8742\r\n">>]},
+                      {tsung_userid,6}],
+                     ts_http,
+                     [{tr_routeoffcampusequipmentrequest,
+                          {1393,819311,812041}}],
+                     undefined,none}
+** Reason for termination = 
+** {badarg,[{erlang,'++',
+                    [<<"0">>,
+                     "HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:03:46 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                    []},
+            {ts_http_common,parse,2,
+                            [{file,"src/tsung/ts_http_common.erl"},
+                             {line,278}]},
+            {ts_client,handle_data_msg,2,
+                       [{file,"src/tsung/ts_client.erl"},{line,978}]},
+            {ts_client,handle_info2,3,
+                       [{file,"src/tsung/ts_client.erl"},{line,233}]},
+            {gen_fsm,handle_msg,7,[{file,"gen_fsm.erl"},{line,505}]},
+            {proc_lib,wake_up,3,[{file,"proc_lib.erl"},{line,249}]}]}
+
+=INFO REPORT==== 2-Mar-2014::23:04:34 ===
+           ts_search:(4:<0.127.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:38 ===
+           ts_search:(4:<0.127.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:38 ===
+           ts_search:(4:<0.123.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:39 ===
+           ts_search:(4:<0.110.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:40 ===
+           ts_search:(4:<0.119.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:40 ===
+           ts_search:(4:<0.101.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:42 ===
+           ts_client:(5:<0.123.0>) Stop in state wait_ack, reason= {badarg,
+                                                                    [{erlang,
+                                                                      '++',
+                                                                      [<<"0">>,
+                                                                       "HTTP/1.1 200 OK\r\nDate: Mon, 03 Mar 2014 04:03:54 GMT\r\nServer: Apache-Coyote/1.1\r\nContent-Type: text/html;charset=ISO-8859-1\r\nContent-Language: en-US\r\nConnection: close\r\nTransfer-Encoding: chunked\r\n\r\n1e86\r\n\r\n<!DOCTYPE HTML>\r\n<html lang=\"en\">\r\n<head>\r\n<meta charset=\"UTF-8\">\r\n<title>\r\nKuali :: Incident Report\r\n</title>\r\n<link href=\"/ugaruss/krad/css/global/fss-reset.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/css/global/fss-layout.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/css/global/fss-text.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/jqueryUI/jquery-ui-1.9.2.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/jgrowl/jquery.jgrowl.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/rice/datatables/jquery.dataTables.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/rice/datatables/TableTools.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/fancybox/jquery.fancybox.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/rice/textpopout/popoutTextarea.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/rice/menu/tabs.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/tooltip/jquery.bubblepopup.v2.3.1.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/prettify/prettify.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/css/global/base.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/css/kns/theme-kns.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/jquery/jquery-1.8.3.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/jqueryUI/jquery-ui-1.9.2.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/jqueryUI/jquery.ui.autocomplete.html.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/color/jquery.color.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/cookie/jquery.cookie.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/jgrowl/jquery.jgrowl.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/blockUI/jquery.blockUI.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/watermark/jquery.watermark.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/validate/jquery.validate.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/tooltip/jquery.bubblepopup.v2.3.1.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/rice/menu/krad.navigationMenu.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/rice/textpopout/krad.textareaPopout.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/dirtyform/jquery.dirtyform.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/scrollto/jquery.scrollTo-1.4.3-min.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/rice/menu/krad.tabMenu.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/rice/datatables/jquery.dataTables.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/rice/datatables/ZeroClipboard.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/rice/datatables/TableTools.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/rice/datatables/jquery.dataTables.rowGrouping.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/jstree/jquery.jstree.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/validate/additional_validations.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/jqform/jquery.form.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/fancybox/jquery.fancybox.pack.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/easydrag/jquery.easydrag.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/easing/jquery.easing-1.3.pack.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/json/jquery.json-2.2.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/infusion/infusion-1.4.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/infusion/infusion.reorderer.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/prettify/prettify.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/globalize/globalize.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.variables.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.message.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.widget.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.utility.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.initialize.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.request.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.response.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.actions.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.validate.js\"></script>\r\n<!-- preload script (server variables) -->\r\n<script type=\"text/javascript\">\r\nsetGrowlDefaults({position:'top-right',sticky:false,life:7000});setBlockUIDefaults({fadeIn:400,fadeOut:800,blockingImage:'http://ptriceapp02.stage.uga.edu/ugaruss/krad/images/loading.gif'}, 'navigation');setBlockUIDefaults({fadeIn:400,fadeOut:8"],
+                                                                      []},
+                                                                     {ts_http_common,
+                                                                      parse,2,
+                                                                      [{file,
+                                                                        "src/tsung/ts_http_common.erl"},
+                                                                       {line,
+                                                                        278}]},
+                                                                     {ts_client,
+                                                                      handle_data_msg,
+                                                                      2,
+                                                                      [{file,
+                                                                        "src/tsung/ts_client.erl"},
+                                                                       {line,
+                                                                        978}]},
+                                                                     {ts_client,
+                                                                      handle_info2,
+                                                                      3,
+                                                                      [{file,
+                                                                        "src/tsung/ts_client.erl"},
+                                                                       {line,
+                                                                        233}]},
+                                                                     {gen_fsm,
+                                                                      handle_msg,
+                                                                      7,
+                                                                      [{file,
+                                                                        "gen_fsm.erl"},
+                                                                       {line,
+                                                                        505}]},
+                                                                     {proc_lib,
+                                                                      wake_up,
+                                                                      3,
+                                                                      [{file,
+                                                                        "proc_lib.erl"},
+                                                                       {line,
+                                                                        249}]}]}
+
+=INFO REPORT==== 2-Mar-2014::23:04:42 ===
+           ts_client:(5:<0.123.0>) Pending transactions: [{tr_routeoffcampusequipmentrequest,
+                                                           {1393,819332,
+                                                            897271}}], compute transaction time
+
+=ERROR REPORT==== 2-Mar-2014::23:04:42 ===
+** State machine <0.123.0> terminating 
+** Last message in was {tcp,#Port<0.13590>,
+                            <<"HTTP/1.1 200 OK\r\nDate: Mon, 03 Mar 2014 04:03:54 GMT\r\nServer: Apache-Coyote/1.1\r\nContent-Type: text/html;charset=ISO-8859-1\r\nContent-Language: en-US\r\nConnection: close\r\nTransfer-Encoding: chunked\r\n\r\n1e86\r\n\r\n<!DOCTYPE HTML>\r\n<html lang=\"en\">\r\n<head>\r\n<meta charset=\"UTF-8\">\r\n<title>\r\nKuali :: Incident Report\r\n</title>\r\n<link href=\"/ugaruss/krad/css/global/fss-reset.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/css/global/fss-layout.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/css/global/fss-text.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/jqueryUI/jquery-ui-1.9.2.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/jgrowl/jquery.jgrowl.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/rice/datatables/jquery.dataTables.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/rice/datatables/TableTools.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/fancybox/jquery.fancybox.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/rice/textpopout/popoutTextarea.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/rice/menu/tabs.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/tooltip/jquery.bubblepopup.v2.3.1.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/prettify/prettify.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/css/global/base.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/css/kns/theme-kns.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/jquery/jquery-1.8.3.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/jqueryUI/jquery-ui-1.9.2.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/jqueryUI/jquery.ui.autocomplete.html.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/color/jquery.color.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/cookie/jquery.cookie.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/jgrowl/jquery.jgrowl.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/blockUI/jquery.blockUI.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/watermark/jquery.watermark.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/validate/jquery.validate.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/tooltip/jquery.bubblepopup.v2.3.1.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/rice/menu/krad.navigationMenu.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/rice/textpopout/krad.textareaPopout.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/dirtyform/jquery.dirtyform.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/scrollto/jquery.scrollTo-1.4.3-min.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/rice/menu/krad.tabMenu.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/rice/datatables/jquery.dataTables.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/rice/datatables/ZeroClipboard.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/rice/datatables/TableTools.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/rice/datatables/jquery.dataTables.rowGrouping.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/jstree/jquery.jstree.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/validate/additional_validations.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/jqform/jquery.form.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/fancybox/jquery.fancybox.pack.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/easydrag/jquery.easydrag.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/easing/jquery.easing-1.3.pack.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/json/jquery.json-2.2.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/infusion/infusion-1.4.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/infusion/infusion.reorderer.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/prettify/prettify.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/globalize/globalize.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.variables.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.message.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.widget.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.utility.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.initialize.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.request.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.response.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.actions.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.validate.js\"></script>\r\n<!-- preload script (server variables) -->\r\n<script type=\"text/javascript\">\r\nsetGrowlDefaults({position:'top-right',sticky:false,life:7000});setBlockUIDefaults({fadeIn:400,fadeOut:800,blockingImage:'http://ptriceapp02.stage.uga.edu/ugaruss/krad/images/loading.gif'}, 'navigation');setBlockUIDefaults({fadeIn:400,fadeOut:8">>}
+** When State == wait_ack
+**      Data  == {state_rcv,#Port<0.13590>,
+                     {{0,0,0,0},0},
+                     undefined,0,10000,"ptriceapp02.stage.uga.edu",80,ts_tcp,
+                     {proto_opts,negociate,"/chat",10,600000,infinity,32768,
+                         32768,undefined,undefined},
+                     false,1,
+                     {ts_request,parse,true,[],[],
+                         {http_request,"/ugaruss/kr-krad/maintenance","1.1",
+                             "ptriceapp02.stage.uga.edu",undefined,[],post,
+                             "multipart/form-data; boundary=---------------------------18274299073033275552047522554",
+                             [],
+                             <<"-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"viewId\"\r\n\r\nOffCampusEquipment-MaintenanceView\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"formKey\"\r\n\r\n%%_form_key%%\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"view.applyDirtyCheck\"\r\n\r\ntrue\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"renderedInLightBox\"\r\n\r\nfalse\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"document.documentHeader.documentDescription\"\r\n\r\nCreate Off-Campus Equipment Authorization\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"document.documentHeader.explanation\"\r\n\r\n\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"document.documentHeader.organizationDocumentNumber\"\r\n\r\n\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"document.newMaintainableObject.dataObject.purpose\"\r\n\r\nTesting\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"document.newMaintainableObject.dataObject.requestedDate\"\r\n\r\n04/21/2014\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"document.newMaintainableObject.dataObject.expireDate\"\r\n\r\n05/31/2014\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"document.newMaintainableObject.dataObject.sensitiveData\"\r\n\r\nno\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"newCollectionLines['document.notes'].noteText\"\r\n\r\n\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"attachmentFile\"; filename=\"\"\r\nContent-Type: application/octet-stream\r\n\r\n\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"newCollectionLines['document.adHocRoutePersons'].actionRequested\"\r\n\r\nA\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"newCollectionLines['document.adHocRoutePersons'].name\"\r\n\r\n\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"newCollectionLines['document.adHocRoutePersons'].id\"\r\n\r\n\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"newCollectionLines['document.adHocRouteWorkgroups'].actionRequested\"\r\n\r\nA\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"newCollectionLines['document.adHocRouteWorkgroups'].recipientNamespaceCode\"\r\n\r\n\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"newCollectionLines['document.adHocRouteWorkgroups'].recipientName\"\r\n\r\n\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"newCollectionLines['document.adHocRouteWorkgroups'].id\"\r\n\r\n\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"view.currentPageId\"\r\n\r\nu100001\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"view.currentPage.header.headerText\"\r\n\r\n\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"formHistory.historyParameterString\"\r\n\r\nnull%5E%24%5Enull%5E%24%5EHome%5E%24%5Ehttp%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fportal.do%5E%24%5Enull%24%5E%24OffCampusEquipment-MaintenanceView%5E%24%5Enull%5E%24%5EOff-Campus+Equipment+Maintenance%5E%24%5Ehttp%3A%2F%2Fptriceapp02.stage.uga.edu%2Fugaruss%2Fkr-krad%2Fmaintenance%3FmethodToCall%3DdocHandler%26command%3DdisplayDocSearchView%26docId%3D5923%26dataObjectClassName%3Dedu.uga.busfin.ugaruss.bo.OffCampusEquipment%26formKey%3D60e601f7-5958-40da-8a8a-9a812543d2aa%26showHome%3Dfalse%5E%24%5E60e601f7-5958-40da-8a8a-9a812543d2aa\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"methodToCall\"\r\n\r\napprove\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"showHistory\"\r\n\r\nfalse\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"focusId\"\r\n\r\nu100019\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"showHome\"\r\n\r\nfalse\r\n-----------------------------18274299073033275552047522554\r\nContent-Disposition: form-data; name=\"jumpToId\"\r\n\r\nu100019\r\n-----------------------------18274299073033275552047522554--\r\n">>,
+                             0,undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined},
+                         false,undefined,undefined,undefined},
+                     true,
+                     {1393,819482,136961},
+                     {1393,819332,894436},
+                     513,756,true,
+                     {1393,819482,136961},
+                     {1393,819482,125369},
+                     <<"0">>,<<>>,
+                     {http,0,0,-2,
+                         {none,none},
+                         false,false,
+                         {false,false},
+                         [],
+                         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36",
+                         [{cookie,"kualiSessionId",
+                              "16aadbf4-2b17-4940-83ed-3592b61a78fd",
+                              undefined,undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/",undefined,undefined,undefined},
+                          {cookie,"JSESSIONID",
+                              "5E15DDEB0FB3638BC4ADF811CC19AD82",undefined,
+                              undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/ugaruss/",undefined,undefined,
+                              undefined}]},
+                     0,36,524288,524288,
+                     [{form_key,<<>>},
+                      {redir,<<>>},
+                      {ugasess,<<"5E15DDEB0FB3638BC4ADF811CC19AD82">>},
+                      {krsess,<<"6E9B7174B03FCABCF759A29DD5BE2F84">>},
+                      {document_number,[]},
+                      {docid,<<>>},
+                      {tsung_userid,36}],
+                     ts_http,
+                     [{tr_routeoffcampusequipmentrequest,
+                          {1393,819332,897271}}],
+                     undefined,none}
+** Reason for termination = 
+** {badarg,[{erlang,'++',
+                    [<<"0">>,
+                     "HTTP/1.1 200 OK\r\nDate: Mon, 03 Mar 2014 04:03:54 GMT\r\nServer: Apache-Coyote/1.1\r\nContent-Type: text/html;charset=ISO-8859-1\r\nContent-Language: en-US\r\nConnection: close\r\nTransfer-Encoding: chunked\r\n\r\n1e86\r\n\r\n<!DOCTYPE HTML>\r\n<html lang=\"en\">\r\n<head>\r\n<meta charset=\"UTF-8\">\r\n<title>\r\nKuali :: Incident Report\r\n</title>\r\n<link href=\"/ugaruss/krad/css/global/fss-reset.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/css/global/fss-layout.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/css/global/fss-text.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/jqueryUI/jquery-ui-1.9.2.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/jgrowl/jquery.jgrowl.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/rice/datatables/jquery.dataTables.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/rice/datatables/TableTools.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/fancybox/jquery.fancybox.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/rice/textpopout/popoutTextarea.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/rice/menu/tabs.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/tooltip/jquery.bubblepopup.v2.3.1.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/plugins/prettify/prettify.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/css/global/base.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"/ugaruss/krad/css/kns/theme-kns.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/jquery/jquery-1.8.3.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/jqueryUI/jquery-ui-1.9.2.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/jqueryUI/jquery.ui.autocomplete.html.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/color/jquery.color.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/cookie/jquery.cookie.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/jgrowl/jquery.jgrowl.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/blockUI/jquery.blockUI.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/watermark/jquery.watermark.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/validate/jquery.validate.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/tooltip/jquery.bubblepopup.v2.3.1.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/rice/menu/krad.navigationMenu.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/rice/textpopout/krad.textareaPopout.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/dirtyform/jquery.dirtyform.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/scrollto/jquery.scrollTo-1.4.3-min.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/rice/menu/krad.tabMenu.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/rice/datatables/jquery.dataTables.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/rice/datatables/ZeroClipboard.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/rice/datatables/TableTools.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/rice/datatables/jquery.dataTables.rowGrouping.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/jstree/jquery.jstree.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/validate/additional_validations.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/jqform/jquery.form.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/fancybox/jquery.fancybox.pack.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/easydrag/jquery.easydrag.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/easing/jquery.easing-1.3.pack.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/json/jquery.json-2.2.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/infusion/infusion-1.4.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/infusion/infusion.reorderer.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/prettify/prettify.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/plugins/globalize/globalize.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.variables.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.message.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.widget.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.utility.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.initialize.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.request.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.response.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.actions.js\"></script>\r\n<script type=\"text/javascript\"\r\nsrc=\"/ugaruss/krad/scripts/krad.validate.js\"></script>\r\n<!-- preload script (server variables) -->\r\n<script type=\"text/javascript\">\r\nsetGrowlDefaults({position:'top-right',sticky:false,life:7000});setBlockUIDefaults({fadeIn:400,fadeOut:800,blockingImage:'http://ptriceapp02.stage.uga.edu/ugaruss/krad/images/loading.gif'}, 'navigation');setBlockUIDefaults({fadeIn:400,fadeOut:8"],
+                    []},
+            {ts_http_common,parse,2,
+                            [{file,"src/tsung/ts_http_common.erl"},
+                             {line,278}]},
+            {ts_client,handle_data_msg,2,
+                       [{file,"src/tsung/ts_client.erl"},{line,978}]},
+            {ts_client,handle_info2,3,
+                       [{file,"src/tsung/ts_client.erl"},{line,233}]},
+            {gen_fsm,handle_msg,7,[{file,"gen_fsm.erl"},{line,505}]},
+            {proc_lib,wake_up,3,[{file,"proc_lib.erl"},{line,249}]}]}
+
+=INFO REPORT==== 2-Mar-2014::23:04:44 ===
+           ts_search:(4:<0.119.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:44 ===
+           ts_search:(4:<0.101.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:46 ===
+           ts_search:(4:<0.109.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:46 ===
+           ts_search:(4:<0.117.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:47 ===
+           ts_search:(4:<0.129.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:48 ===
+           ts_search:(4:<0.117.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:04:58 ===
+           ts_search:(4:<0.129.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:05:16 ===
+     ts_launcher_mgr:(5:<0.74.0>) Still 34 active client(s)
+
+=INFO REPORT==== 2-Mar-2014::23:05:27 ===
+           ts_search:(4:<0.89.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:05:31 ===
+           ts_search:(4:<0.89.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:05:35 ===
+           ts_search:(4:<0.87.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:05:39 ===
+           ts_search:(4:<0.121.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:05:40 ===
+           ts_search:(4:<0.121.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:05:42 ===
+           ts_search:(4:<0.87.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:05:50 ===
+           ts_search:(4:<0.111.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:05:53 ===
+           ts_search:(4:<0.111.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:06:16 ===
+     ts_launcher_mgr:(5:<0.74.0>) Still 32 active client(s)
+
+=INFO REPORT==== 2-Mar-2014::23:06:52 ===
+           ts_search:(4:<0.119.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:06:57 ===
+           ts_search:(4:<0.119.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:06:58 ===
+           ts_search:(4:<0.105.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:06:59 ===
+           ts_search:(4:<0.105.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:07 ===
+           ts_search:(4:<0.107.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:07 ===
+           ts_search:(4:<0.116.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:07 ===
+           ts_search:(4:<0.94.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:07 ===
+           ts_search:(4:<0.127.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:07 ===
+           ts_search:(4:<0.92.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:07 ===
+           ts_search:(4:<0.93.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:07 ===
+           ts_search:(4:<0.96.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:07 ===
+           ts_search:(4:<0.93.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:08 ===
+           ts_search:(4:<0.107.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:09 ===
+           ts_search:(4:<0.116.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:11 ===
+           ts_search:(4:<0.92.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:11 ===
+           ts_search:(4:<0.94.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:14 ===
+           ts_search:(4:<0.96.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:16 ===
+     ts_launcher_mgr:(5:<0.74.0>) Still 32 active client(s)
+
+=INFO REPORT==== 2-Mar-2014::23:07:18 ===
+           ts_search:(4:<0.127.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:23 ===
+           ts_search:(4:<0.88.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:24 ===
+           ts_search:(4:<0.88.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:41 ===
+           ts_search:(4:<0.115.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:41 ===
+           ts_search:(4:<0.114.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:41 ===
+           ts_search:(4:<0.98.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:41 ===
+           ts_search:(4:<0.99.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:41 ===
+           ts_search:(4:<0.102.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:41 ===
+           ts_search:(4:<0.84.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:41 ===
+           ts_client:(5:<0.107.0>) Stop in state wait_ack, reason= {badarg,
+                                                                    [{erlang,
+                                                                      '++',
+                                                                      [<<"0">>,
+                                                                       "HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:06:54 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                                                                      []},
+                                                                     {ts_http_common,
+                                                                      parse,2,
+                                                                      [{file,
+                                                                        "src/tsung/ts_http_common.erl"},
+                                                                       {line,
+                                                                        278}]},
+                                                                     {ts_client,
+                                                                      handle_data_msg,
+                                                                      2,
+                                                                      [{file,
+                                                                        "src/tsung/ts_client.erl"},
+                                                                       {line,
+                                                                        978}]},
+                                                                     {ts_client,
+                                                                      handle_info2,
+                                                                      3,
+                                                                      [{file,
+                                                                        "src/tsung/ts_client.erl"},
+                                                                       {line,
+                                                                        233}]},
+                                                                     {gen_fsm,
+                                                                      handle_msg,
+                                                                      7,
+                                                                      [{file,
+                                                                        "gen_fsm.erl"},
+                                                                       {line,
+                                                                        505}]},
+                                                                     {proc_lib,
+                                                                      wake_up,
+                                                                      3,
+                                                                      [{file,
+                                                                        "proc_lib.erl"},
+                                                                       {line,
+                                                                        249}]}]}
+
+=INFO REPORT==== 2-Mar-2014::23:07:41 ===
+           ts_client:(5:<0.107.0>) Pending transactions: [{tr_routeoffcampusequipmentrequest2,
+                                                           {1393,819490,
+                                                            933059}}], compute transaction time
+
+=ERROR REPORT==== 2-Mar-2014::23:07:41 ===
+** State machine <0.107.0> terminating 
+** Last message in was {tcp,#Port<0.23665>,
+                            <<"HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:06:54 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n">>}
+** When State == wait_ack
+**      Data  == {state_rcv,#Port<0.23665>,
+                     {{0,0,0,0},0},
+                     undefined,0,10000,"ptriceapp02.stage.uga.edu",80,ts_tcp,
+                     {proto_opts,negociate,"/chat",10,600000,infinity,32768,
+                         32768,undefined,undefined},
+                     false,1,
+                     {ts_request,parse,false,[],[],
+                         {http_request,"/ugaruss/logout.do","1.1",
+                             "ptriceapp02.stage.uga.edu",undefined,[],post,
+                             "application/x-www-form-urlencoded",[],
+                             <<"imageField=Logout">>,0,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined},
+                         false,undefined,undefined,undefined},
+                     true,
+                     {1393,819661,577078},
+                     {1393,819326,592971},
+                     89,756,true,
+                     {1393,819661,577078},
+                     {1393,819632,807568},
+                     <<"0">>,<<>>,
+                     {http,0,0,-2,
+                         {none,none},
+                         false,false,
+                         {false,false},
+                         [],
+                         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36",
+                         [{cookie,"kualiSessionId",
+                              "687c7cc8-0686-4a22-8e76-5a4442de13e3",
+                              undefined,undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/",undefined,undefined,undefined},
+                          {cookie,"JSESSIONID",
+                              "6F006FB3F7033CEE1FF9FF10533FA13A",undefined,
+                              undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/ugaruss/",undefined,undefined,
+                              undefined}]},
+                     0,20,524288,524288,
+                     [{form_key,<<>>},
+                      {redir,<<>>},
+                      {ugasess,<<"6F006FB3F7033CEE1FF9FF10533FA13A">>},
+                      {krsess,<<"B15D11FBB752FC5C4D7D1F61DD807212">>},
+                      {document_number,"8779"},
+                      {docid,[<<" 8779\r\n">>]},
+                      {tsung_userid,20}],
+                     ts_http,
+                     [{tr_routeoffcampusequipmentrequest2,
+                          {1393,819490,933059}}],
+                     undefined,none}
+** Reason for termination = 
+** {badarg,[{erlang,'++',
+                    [<<"0">>,
+                     "HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:06:54 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                    []},
+            {ts_http_common,parse,2,
+                            [{file,"src/tsung/ts_http_common.erl"},
+                             {line,278}]},
+            {ts_client,handle_data_msg,2,
+                       [{file,"src/tsung/ts_client.erl"},{line,978}]},
+            {ts_client,handle_info2,3,
+                       [{file,"src/tsung/ts_client.erl"},{line,233}]},
+            {gen_fsm,handle_msg,7,[{file,"gen_fsm.erl"},{line,505}]},
+            {proc_lib,wake_up,3,[{file,"proc_lib.erl"},{line,249}]}]}
+
+=INFO REPORT==== 2-Mar-2014::23:07:41 ===
+           ts_client:(5:<0.88.0>) Stop in state wait_ack, reason= {badarg,
+                                                                   [{erlang,
+                                                                     '++',
+                                                                     [<<"0">>,
+                                                                      "HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:06:54 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                                                                     []},
+                                                                    {ts_http_common,
+                                                                     parse,2,
+                                                                     [{file,
+                                                                       "src/tsung/ts_http_common.erl"},
+                                                                      {line,
+                                                                       278}]},
+                                                                    {ts_client,
+                                                                     handle_data_msg,
+                                                                     2,
+                                                                     [{file,
+                                                                       "src/tsung/ts_client.erl"},
+                                                                      {line,
+                                                                       978}]},
+                                                                    {ts_client,
+                                                                     handle_info2,
+                                                                     3,
+                                                                     [{file,
+                                                                       "src/tsung/ts_client.erl"},
+                                                                      {line,
+                                                                       233}]},
+                                                                    {gen_fsm,
+                                                                     handle_msg,
+                                                                     7,
+                                                                     [{file,
+                                                                       "gen_fsm.erl"},
+                                                                      {line,
+                                                                       505}]},
+                                                                    {proc_lib,
+                                                                     wake_up,
+                                                                     3,
+                                                                     [{file,
+                                                                       "proc_lib.erl"},
+                                                                      {line,
+                                                                       249}]}]}
+
+=INFO REPORT==== 2-Mar-2014::23:07:41 ===
+           ts_client:(5:<0.88.0>) Pending transactions: [{tr_routeoffcampusequipmentrequest2,
+                                                          {1393,819482,
+                                                           645043}}], compute transaction time
+
+=ERROR REPORT==== 2-Mar-2014::23:07:41 ===
+** State machine <0.88.0> terminating 
+** Last message in was {tcp,#Port<0.23669>,
+                            <<"HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:06:54 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n">>}
+** When State == wait_ack
+**      Data  == {state_rcv,#Port<0.23669>,
+                     {{0,0,0,0},0},
+                     undefined,0,10000,"ptriceapp02.stage.uga.edu",80,ts_tcp,
+                     {proto_opts,negociate,"/chat",10,600000,infinity,32768,
+                         32768,undefined,undefined},
+                     false,1,
+                     {ts_request,parse,false,[],[],
+                         {http_request,"/ugaruss/logout.do","1.1",
+                             "ptriceapp02.stage.uga.edu",undefined,[],post,
+                             "application/x-www-form-urlencoded",[],
+                             <<"imageField=Logout">>,0,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined},
+                         false,undefined,undefined,undefined},
+                     true,
+                     {1393,819661,612951},
+                     {1393,819310,532165},
+                     89,756,true,
+                     {1393,819661,612951},
+                     {1393,819653,938956},
+                     <<"0">>,<<>>,
+                     {http,0,0,-2,
+                         {none,none},
+                         false,false,
+                         {false,false},
+                         [],
+                         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36",
+                         [{cookie,"kualiSessionId",
+                              "b1e04fe2-15b0-4390-8e1b-43b051d626c4",
+                              undefined,undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/",undefined,undefined,undefined},
+                          {cookie,"JSESSIONID",
+                              "C689BCE1FCC5B2DCF8584804A4B1A599",undefined,
+                              undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/ugaruss/",undefined,undefined,
+                              undefined}]},
+                     0,3,524288,524288,
+                     [{form_key,<<>>},
+                      {redir,<<>>},
+                      {ugasess,<<"C689BCE1FCC5B2DCF8584804A4B1A599">>},
+                      {krsess,<<"BC1FCA401979D2A5762CD7E65291CDE5">>},
+                      {document_number,"8777"},
+                      {docid,[<<" 8777\r\n">>]},
+                      {tsung_userid,3}],
+                     ts_http,
+                     [{tr_routeoffcampusequipmentrequest2,
+                          {1393,819482,645043}}],
+                     undefined,none}
+** Reason for termination = 
+** {badarg,[{erlang,'++',
+                    [<<"0">>,
+                     "HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:06:54 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                    []},
+            {ts_http_common,parse,2,
+                            [{file,"src/tsung/ts_http_common.erl"},
+                             {line,278}]},
+            {ts_client,handle_data_msg,2,
+                       [{file,"src/tsung/ts_client.erl"},{line,978}]},
+            {ts_client,handle_info2,3,
+                       [{file,"src/tsung/ts_client.erl"},{line,233}]},
+            {gen_fsm,handle_msg,7,[{file,"gen_fsm.erl"},{line,505}]},
+            {proc_lib,wake_up,3,[{file,"proc_lib.erl"},{line,249}]}]}
+
+=INFO REPORT==== 2-Mar-2014::23:07:43 ===
+           ts_search:(4:<0.84.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:43 ===
+           ts_search:(4:<0.114.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:45 ===
+           ts_search:(4:<0.115.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:47 ===
+           ts_search:(4:<0.101.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:48 ===
+           ts_search:(4:<0.98.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:48 ===
+           ts_search:(4:<0.101.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:49 ===
+           ts_search:(4:<0.99.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:50 ===
+           ts_search:(4:<0.117.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:50 ===
+           ts_client:(5:<0.84.0>) Stop in state wait_ack, reason= {badarg,
+                                                                   [{erlang,
+                                                                     '++',
+                                                                     [<<"0">>,
+                                                                      "HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:07:03 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                                                                     []},
+                                                                    {ts_http_common,
+                                                                     parse,2,
+                                                                     [{file,
+                                                                       "src/tsung/ts_http_common.erl"},
+                                                                      {line,
+                                                                       278}]},
+                                                                    {ts_client,
+                                                                     handle_data_msg,
+                                                                     2,
+                                                                     [{file,
+                                                                       "src/tsung/ts_client.erl"},
+                                                                      {line,
+                                                                       978}]},
+                                                                    {ts_client,
+                                                                     handle_info2,
+                                                                     3,
+                                                                     [{file,
+                                                                       "src/tsung/ts_client.erl"},
+                                                                      {line,
+                                                                       233}]},
+                                                                    {gen_fsm,
+                                                                     handle_msg,
+                                                                     7,
+                                                                     [{file,
+                                                                       "gen_fsm.erl"},
+                                                                      {line,
+                                                                       505}]},
+                                                                    {proc_lib,
+                                                                     wake_up,
+                                                                     3,
+                                                                     [{file,
+                                                                       "proc_lib.erl"},
+                                                                      {line,
+                                                                       249}]}]}
+
+=INFO REPORT==== 2-Mar-2014::23:07:50 ===
+           ts_client:(5:<0.84.0>) Pending transactions: [{tr_routeoffcampusequipmentrequest2,
+                                                          {1393,819493,
+                                                           537153}}], compute transaction time
+
+=ERROR REPORT==== 2-Mar-2014::23:07:50 ===
+** State machine <0.84.0> terminating 
+** Last message in was {tcp,#Port<0.23978>,
+                            <<"HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:07:03 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n">>}
+** When State == wait_ack
+**      Data  == {state_rcv,#Port<0.23978>,
+                     {{0,0,0,0},0},
+                     undefined,0,10000,"ptriceapp02.stage.uga.edu",80,ts_tcp,
+                     {proto_opts,negociate,"/chat",10,600000,infinity,32768,
+                         32768,undefined,undefined},
+                     false,1,
+                     {ts_request,parse,false,[],[],
+                         {http_request,"/ugaruss/logout.do","1.1",
+                             "ptriceapp02.stage.uga.edu",undefined,[],post,
+                             "application/x-www-form-urlencoded",[],
+                             <<"imageField=Logout">>,0,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined},
+                         false,undefined,undefined,undefined},
+                     true,
+                     {1393,819670,164561},
+                     {1393,819306,540123},
+                     89,756,true,
+                     {1393,819670,164561},
+                     {1393,819666,401826},
+                     <<"0">>,<<>>,
+                     {http,0,0,-2,
+                         {none,none},
+                         false,false,
+                         {false,false},
+                         [],
+                         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36",
+                         [{cookie,"kualiSessionId",
+                              "8aff025c-857c-4d20-aff1-f31e8b6213f1",
+                              undefined,undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/",undefined,undefined,undefined},
+                          {cookie,"JSESSIONID",
+                              "3555D71902BDE72B7175158157AA2459",undefined,
+                              undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/ugaruss/",undefined,undefined,
+                              undefined}]},
+                     0,1,524288,524288,
+                     [{form_key,<<>>},
+                      {redir,<<>>},
+                      {ugasess,<<"3555D71902BDE72B7175158157AA2459">>},
+                      {krsess,<<"B0290C104AD75332A945D79A4E787D18">>},
+                      {document_number,"8784"},
+                      {docid,[<<" 8784\r\n">>]},
+                      {tsung_userid,1}],
+                     ts_http,
+                     [{tr_routeoffcampusequipmentrequest2,
+                          {1393,819493,537153}}],
+                     undefined,none}
+** Reason for termination = 
+** {badarg,[{erlang,'++',
+                    [<<"0">>,
+                     "HTTP/1.1 302 Found\r\nDate: Mon, 03 Mar 2014 04:07:03 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                    []},
+            {ts_http_common,parse,2,
+                            [{file,"src/tsung/ts_http_common.erl"},
+                             {line,278}]},
+            {ts_client,handle_data_msg,2,
+                       [{file,"src/tsung/ts_client.erl"},{line,978}]},
+            {ts_client,handle_info2,3,
+                       [{file,"src/tsung/ts_client.erl"},{line,233}]},
+            {gen_fsm,handle_msg,7,[{file,"gen_fsm.erl"},{line,505}]},
+            {proc_lib,wake_up,3,[{file,"proc_lib.erl"},{line,249}]}]}
+
+=INFO REPORT==== 2-Mar-2014::23:07:50 ===
+           ts_search:(4:<0.102.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:51 ===
+           ts_search:(4:<0.117.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:56 ===
+           ts_search:(4:<0.113.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:07:56 ===
+           ts_search:(4:<0.113.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:08:02 ===
+           ts_search:(4:<0.95.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:08:05 ===
+           ts_search:(4:<0.95.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:08:16 ===
+     ts_launcher_mgr:(5:<0.74.0>) Still 26 active client(s)
+
+=INFO REPORT==== 2-Mar-2014::23:08:41 ===
+           ts_search:(4:<0.103.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:08:42 ===
+           ts_search:(4:<0.103.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:08:53 ===
+           ts_search:(4:<0.122.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:08:58 ===
+           ts_search:(4:<0.122.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:09:16 ===
+     ts_launcher_mgr:(5:<0.74.0>) Still 20 active client(s)
+
+=INFO REPORT==== 2-Mar-2014::23:09:47 ===
+           ts_search:(4:<0.129.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:09:50 ===
+           ts_search:(4:<0.129.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:09:50 ===
+           ts_search:(4:<0.112.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:09:50 ===
+           ts_search:(4:<0.125.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:09:52 ===
+           ts_search:(4:<0.125.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:09:53 ===
+           ts_search:(4:<0.104.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:09:59 ===
+           ts_search:(4:<0.104.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:09:59 ===
+           ts_search:(4:<0.112.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:10:16 ===
+     ts_launcher_mgr:(5:<0.74.0>) Still 13 active client(s)
+
+=INFO REPORT==== 2-Mar-2014::23:11:07 ===
+           ts_search:(4:<0.118.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:11:07 ===
+           ts_search:(4:<0.108.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:11:07 ===
+           ts_search:(4:<0.109.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:11:08 ===
+           ts_search:(4:<0.118.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:11:09 ===
+           ts_search:(4:<0.110.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 2-Mar-2014::23:11:11 ===
+           ts_search:(4:<0.109.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:11:11 ===
+           ts_search:(4:<0.110.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:11:16 ===
+           ts_search:(4:<0.108.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 2-Mar-2014::23:11:16 ===
+     ts_launcher_mgr:(5:<0.74.0>) Still 9 active client(s)
+
+=INFO REPORT==== 2-Mar-2014::23:12:16 ===
+     ts_launcher_mgr:(5:<0.74.0>) Still 6 active client(s)
+
+=INFO REPORT==== 2-Mar-2014::23:13:16 ===
+     ts_launcher_mgr:(5:<0.74.0>) Still 3 active client(s)
+
+=INFO REPORT==== 2-Mar-2014::23:14:16 ===
+     ts_launcher_mgr:(5:<0.74.0>) No more active users tsung_controller@DFSCentOS1 "47890"
+
+=INFO REPORT==== 2-Mar-2014::23:14:16 ===
+              ts_mon:(5:<0.45.0>) stopping monitor (normal)

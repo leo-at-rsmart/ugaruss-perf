@@ -1,0 +1,1016 @@
+
+=INFO REPORT==== 1-Mar-2014::20:19:32 ===
+    ts_config_server:(5:<0.44.0>) Config server started, logdir is "/home/leo/.tsung/log/20140301-2019"
+ 
+=INFO REPORT==== 1-Mar-2014::20:19:32 ===
+              ts_mon:(5:<0.43.0>) starting monitor, global 
+
+=INFO REPORT==== 1-Mar-2014::20:19:32 ===
+           ts_config:(5:<0.44.0>) Reading config file: test.xml
+
+=INFO REPORT==== 1-Mar-2014::20:19:33 ===
+      ts_config_http:(4:<0.44.0>) Get user agent: 100 "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36" 
+
+=INFO REPORT==== 1-Mar-2014::20:19:33 ===
+           ts_config:(5:<0.44.0>) Session name for id 1 is "offcampusequipmentrequest"
+
+=INFO REPORT==== 1-Mar-2014::20:19:33 ===
+    ts_config_server:(4:<0.44.0>) SYSINFO:Tsung version: 1.5.0
+
+=INFO REPORT==== 1-Mar-2014::20:19:33 ===
+    ts_config_server:(4:<0.44.0>) SYSINFO:Erlang version: Erlang R16B02 (erts-5.10.3) [source-b44b726] [64-bit] [smp:4:4] [async-threads:16] [kernel-poll:true]
+
+
+=INFO REPORT==== 1-Mar-2014::20:19:33 ===
+    ts_config_server:(4:<0.44.0>) SYSINFO:System architecture x86_64-unknown-linux-gnu
+
+=INFO REPORT==== 1-Mar-2014::20:19:33 ===
+    ts_config_server:(4:<0.44.0>) SYSINFO:Current path: /usr/lib64/erlang/lib/tsung-1.5.0/ebin/tsung.beam
+
+=INFO REPORT==== 1-Mar-2014::20:19:33 ===
+           ts_os_mon:(5:<0.41.0>) os_mon disabled
+=INFO REPORT==== 1-Mar-2014::20:19:33 ===
+              ts_mon:(5:<0.45.0>) Activate clients with text backend
+
+=INFO REPORT==== 1-Mar-2014::20:19:33 ===
+              ts_mon:(5:<0.45.0>) Starting tsung clients on hosts: [localhost]
+
+=INFO REPORT==== 1-Mar-2014::20:19:33 ===
+    ts_config_server:(5:<0.44.0>) Start a launcher on the controller beam localhost
+
+=INFO REPORT==== 1-Mar-2014::20:19:33 ===
+  ts_launcher_static:(5:<0.79.0>) Launch msg receive ("localhost")
+
+=INFO REPORT==== 1-Mar-2014::20:19:33 ===
+         ts_launcher:(5:<0.80.0>) Launch msg receive ("localhost")
+
+=INFO REPORT==== 1-Mar-2014::20:19:33 ===
+    ts_config_server:(5:<0.44.0>) All remote beams started, syncing 
+
+=INFO REPORT==== 1-Mar-2014::20:19:33 ===
+    ts_config_server:(5:<0.44.0>) New arrival phase 1 for client "localhost" (last ? true): will start 10 users
+
+=INFO REPORT==== 1-Mar-2014::20:19:33 ===
+    ts_config_server:(5:<0.44.0>) New arrival phase 2 for client "localhost" (last ? true): will start 40 users
+
+=INFO REPORT==== 1-Mar-2014::20:19:33 ===
+         ts_launcher:(5:<0.80.0>) Expected duration of first phase: 120.0 sec (10 users) 
+
+=INFO REPORT==== 1-Mar-2014::20:19:33 ===
+         ts_launcher:(5:<0.80.0>) Activate launcher (10 users) in 10739 msec 
+
+=INFO REPORT==== 1-Mar-2014::20:19:50 ===
+         ts_launcher:(4:<0.80.0>) Need to wait 113.223 sec before changing phase, going to sleep
+
+=INFO REPORT==== 1-Mar-2014::20:20:27 ===
+           ts_search:(4:<0.89.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:20:32 ===
+           ts_search:(4:<0.93.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:20:32 ===
+           ts_search:(4:<0.93.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:20:37 ===
+           ts_search:(4:<0.89.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:20:43 ===
+           ts_search:(4:<0.88.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:20:49 ===
+           ts_search:(4:<0.91.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:20:49 ===
+           ts_search:(4:<0.90.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:20:49 ===
+           ts_search:(4:<0.90.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:20:50 ===
+           ts_search:(4:<0.92.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:20:51 ===
+           ts_search:(4:<0.95.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:20:52 ===
+           ts_search:(4:<0.96.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:20:53 ===
+           ts_search:(4:<0.96.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:20:55 ===
+           ts_search:(4:<0.92.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:20:56 ===
+           ts_client:(5:<0.92.0>) Stop in state wait_ack, reason= {badarg,
+                                                                   [{erlang,
+                                                                     '++',
+                                                                     [<<"0">>,
+                                                                      "HTTP/1.1 302 Found\r\nDate: Sun, 02 Mar 2014 01:20:09 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                                                                     []},
+                                                                    {ts_http_common,
+                                                                     parse,2,
+                                                                     [{file,
+                                                                       "src/tsung/ts_http_common.erl"},
+                                                                      {line,
+                                                                       278}]},
+                                                                    {ts_client,
+                                                                     handle_data_msg,
+                                                                     2,
+                                                                     [{file,
+                                                                       "src/tsung/ts_client.erl"},
+                                                                      {line,
+                                                                       978}]},
+                                                                    {ts_client,
+                                                                     handle_info2,
+                                                                     3,
+                                                                     [{file,
+                                                                       "src/tsung/ts_client.erl"},
+                                                                      {line,
+                                                                       233}]},
+                                                                    {gen_fsm,
+                                                                     handle_msg,
+                                                                     7,
+                                                                     [{file,
+                                                                       "gen_fsm.erl"},
+                                                                      {line,
+                                                                       505}]},
+                                                                    {proc_lib,
+                                                                     init_p_do_apply,
+                                                                     3,
+                                                                     [{file,
+                                                                       "proc_lib.erl"},
+                                                                      {line,
+                                                                       239}]}]}
+
+=INFO REPORT==== 1-Mar-2014::20:20:56 ===
+           ts_client:(5:<0.92.0>) Pending transactions: [{tr_routeoffcampusequipmentrequest,
+                                                          {1393,723187,
+                                                           758636}}], compute transaction time
+
+=ERROR REPORT==== 1-Mar-2014::20:20:56 ===
+** State machine <0.92.0> terminating 
+** Last message in was {tcp,#Port<0.3427>,
+                            <<"HTTP/1.1 302 Found\r\nDate: Sun, 02 Mar 2014 01:20:09 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n">>}
+** When State == wait_ack
+**      Data  == {state_rcv,#Port<0.3427>,
+                     {{0,0,0,0},0},
+                     undefined,0,10000,"ptriceapp02.stage.uga.edu",80,ts_tcp,
+                     {proto_opts,negociate,"/chat",10,600000,infinity,32768,
+                         32768,undefined,undefined},
+                     false,1,
+                     {ts_request,parse,false,[],[],
+                         {http_request,"/ugaruss/logout.do","1.1",
+                             "ptriceapp02.stage.uga.edu",undefined,[],post,
+                             "application/x-www-form-urlencoded",[],
+                             <<"imageField=Logout">>,0,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined},
+                         true,undefined,undefined,undefined},
+                     true,
+                     {1393,723256,323629},
+                     {1393,723187,756468},
+                     512,756,true,
+                     {1393,723256,323629},
+                     {1393,723256,48799},
+                     <<"0">>,<<>>,
+                     {http,0,0,-2,
+                         {none,none},
+                         false,false,
+                         {false,false},
+                         [],
+                         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36",
+                         [{cookie,"kualiSessionId",
+                              "3785a377-037a-4750-b1a7-f5220647ac42",
+                              undefined,undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/",undefined,undefined,undefined},
+                          {cookie,"JSESSIONID",
+                              "C33BB57AADB9114287AFDA8BC52AB1FA",undefined,
+                              undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/ugaruss/",undefined,undefined,
+                              undefined}]},
+                     0,6,524288,524288,
+                     [{form_key,<<>>},
+                      {redir,<<>>},
+                      {ugasess,<<"C33BB57AADB9114287AFDA8BC52AB1FA">>},
+                      {krsess,<<"D1A4EC0B46F8537BEF071D9308404D82">>},
+                      {document_number,"8405"},
+                      {docid,[<<" 8405\r\n">>]},
+                      {tsung_userid,6}],
+                     ts_http,
+                     [{tr_routeoffcampusequipmentrequest,
+                          {1393,723187,758636}}],
+                     undefined,full}
+** Reason for termination = 
+** {badarg,[{erlang,'++',
+                    [<<"0">>,
+                     "HTTP/1.1 302 Found\r\nDate: Sun, 02 Mar 2014 01:20:09 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                    []},
+            {ts_http_common,parse,2,
+                            [{file,"src/tsung/ts_http_common.erl"},
+                             {line,278}]},
+            {ts_client,handle_data_msg,2,
+                       [{file,"src/tsung/ts_client.erl"},{line,978}]},
+            {ts_client,handle_info2,3,
+                       [{file,"src/tsung/ts_client.erl"},{line,233}]},
+            {gen_fsm,handle_msg,7,[{file,"gen_fsm.erl"},{line,505}]},
+            {proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+
+=INFO REPORT==== 1-Mar-2014::20:20:57 ===
+           ts_search:(4:<0.91.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:21:00 ===
+           ts_search:(4:<0.95.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:21:03 ===
+           ts_search:(4:<0.88.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:21:03 ===
+           ts_search:(4:<0.94.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:21:05 ===
+           ts_search:(4:<0.94.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:21:43 ===
+         ts_launcher:(5:<0.80.0>) Waking up
+
+=INFO REPORT==== 1-Mar-2014::20:21:43 ===
+         ts_launcher:(5:<0.80.0>) Start a new arrival phase (40 users, 1.6666666666666667e-5); expected duration=9.0e3 sec
+
+=INFO REPORT==== 1-Mar-2014::20:22:32 ===
+           ts_search:(4:<0.109.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:22:34 ===
+           ts_search:(4:<0.93.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:22:35 ===
+           ts_search:(4:<0.93.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:22:36 ===
+           ts_client:(5:<0.93.0>) Stop in state wait_ack, reason= {badarg,
+                                                                   [{erlang,
+                                                                     '++',
+                                                                     [<<"0">>,
+                                                                      "HTTP/1.1 302 Found\r\nDate: Sun, 02 Mar 2014 01:21:49 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                                                                     []},
+                                                                    {ts_http_common,
+                                                                     parse,2,
+                                                                     [{file,
+                                                                       "src/tsung/ts_http_common.erl"},
+                                                                      {line,
+                                                                       278}]},
+                                                                    {ts_client,
+                                                                     handle_data_msg,
+                                                                     2,
+                                                                     [{file,
+                                                                       "src/tsung/ts_client.erl"},
+                                                                      {line,
+                                                                       978}]},
+                                                                    {ts_client,
+                                                                     handle_info2,
+                                                                     3,
+                                                                     [{file,
+                                                                       "src/tsung/ts_client.erl"},
+                                                                      {line,
+                                                                       233}]},
+                                                                    {gen_fsm,
+                                                                     handle_msg,
+                                                                     7,
+                                                                     [{file,
+                                                                       "gen_fsm.erl"},
+                                                                      {line,
+                                                                       505}]},
+                                                                    {proc_lib,
+                                                                     wake_up,
+                                                                     3,
+                                                                     [{file,
+                                                                       "proc_lib.erl"},
+                                                                      {line,
+                                                                       249}]}]}
+
+=INFO REPORT==== 1-Mar-2014::20:22:36 ===
+           ts_client:(5:<0.93.0>) Pending transactions: [{tr_routeoffcampusequipmentrequest2,
+                                                          {1393,723260,
+                                                           854270}}], compute transaction time
+
+=ERROR REPORT==== 1-Mar-2014::20:22:36 ===
+** State machine <0.93.0> terminating 
+** Last message in was {tcp,#Port<0.6795>,
+                            <<"HTTP/1.1 302 Found\r\nDate: Sun, 02 Mar 2014 01:21:49 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n">>}
+** When State == wait_ack
+**      Data  == {state_rcv,#Port<0.6795>,
+                     {{0,0,0,0},0},
+                     undefined,0,10000,"ptriceapp02.stage.uga.edu",80,ts_tcp,
+                     {proto_opts,negociate,"/chat",10,600000,infinity,32768,
+                         32768,undefined,undefined},
+                     false,1,
+                     {ts_request,parse,false,[],[],
+                         {http_request,"/ugaruss/logout.do","1.1",
+                             "ptriceapp02.stage.uga.edu",undefined,[],post,
+                             "application/x-www-form-urlencoded",[],
+                             <<"imageField=Logout">>,0,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined},
+                         false,undefined,undefined,undefined},
+                     true,
+                     {1393,723356,473250},
+                     {1393,723188,207889},
+                     89,756,true,
+                     {1393,723356,473250},
+                     {1393,723356,269070},
+                     <<"0">>,<<>>,
+                     {http,0,0,-2,
+                         {none,none},
+                         false,false,
+                         {false,false},
+                         [],
+                         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36",
+                         [{cookie,"kualiSessionId",
+                              "ed2840ea-c382-41ce-aa9a-4f341010a6db",
+                              undefined,undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/",undefined,undefined,undefined},
+                          {cookie,"JSESSIONID",
+                              "EB1757112540A0B62F99F92DDD8D0A27",undefined,
+                              undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/ugaruss/",undefined,undefined,
+                              undefined}]},
+                     0,7,524288,524288,
+                     [{form_key,<<>>},
+                      {redir,<<>>},
+                      {ugasess,<<"EB1757112540A0B62F99F92DDD8D0A27">>},
+                      {krsess,<<"8FEC554B89D73825FF3264F901642E67">>},
+                      {document_number,"8409"},
+                      {docid,[<<" 8409\r\n">>]},
+                      {tsung_userid,7}],
+                     ts_http,
+                     [{tr_routeoffcampusequipmentrequest2,
+                          {1393,723260,854270}}],
+                     undefined,full}
+** Reason for termination = 
+** {badarg,[{erlang,'++',
+                    [<<"0">>,
+                     "HTTP/1.1 302 Found\r\nDate: Sun, 02 Mar 2014 01:21:49 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                    []},
+            {ts_http_common,parse,2,
+                            [{file,"src/tsung/ts_http_common.erl"},
+                             {line,278}]},
+            {ts_client,handle_data_msg,2,
+                       [{file,"src/tsung/ts_client.erl"},{line,978}]},
+            {ts_client,handle_info2,3,
+                       [{file,"src/tsung/ts_client.erl"},{line,233}]},
+            {gen_fsm,handle_msg,7,[{file,"gen_fsm.erl"},{line,505}]},
+            {proc_lib,wake_up,3,[{file,"proc_lib.erl"},{line,249}]}]}
+
+=INFO REPORT==== 1-Mar-2014::20:22:43 ===
+           ts_search:(4:<0.94.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:22:43 ===
+           ts_search:(4:<0.88.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:22:44 ===
+           ts_search:(4:<0.88.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:22:46 ===
+           ts_search:(4:<0.90.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:22:47 ===
+           ts_search:(4:<0.90.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:22:47 ===
+           ts_search:(4:<0.94.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:22:49 ===
+           ts_search:(4:<0.109.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:22:51 ===
+           ts_client:(5:<0.94.0>) Stop in state wait_ack, reason= {badarg,
+                                                                   [{erlang,
+                                                                     '++',
+                                                                     [<<"0">>,
+                                                                      "HTTP/1.1 302 Found\r\nDate: Sun, 02 Mar 2014 01:22:05 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                                                                     []},
+                                                                    {ts_http_common,
+                                                                     parse,2,
+                                                                     [{file,
+                                                                       "src/tsung/ts_http_common.erl"},
+                                                                      {line,
+                                                                       278}]},
+                                                                    {ts_client,
+                                                                     handle_data_msg,
+                                                                     2,
+                                                                     [{file,
+                                                                       "src/tsung/ts_client.erl"},
+                                                                      {line,
+                                                                       978}]},
+                                                                    {ts_client,
+                                                                     handle_info2,
+                                                                     3,
+                                                                     [{file,
+                                                                       "src/tsung/ts_client.erl"},
+                                                                      {line,
+                                                                       233}]},
+                                                                    {gen_fsm,
+                                                                     handle_msg,
+                                                                     7,
+                                                                     [{file,
+                                                                       "gen_fsm.erl"},
+                                                                      {line,
+                                                                       505}]},
+                                                                    {proc_lib,
+                                                                     wake_up,
+                                                                     3,
+                                                                     [{file,
+                                                                       "proc_lib.erl"},
+                                                                      {line,
+                                                                       249}]}]}
+
+=INFO REPORT==== 1-Mar-2014::20:22:51 ===
+           ts_client:(5:<0.94.0>) Pending transactions: [{tr_routeoffcampusequipmentrequest2,
+                                                          {1393,723301,
+                                                           621975}}], compute transaction time
+
+=ERROR REPORT==== 1-Mar-2014::20:22:51 ===
+** State machine <0.94.0> terminating 
+** Last message in was {tcp,#Port<0.7162>,
+                            <<"HTTP/1.1 302 Found\r\nDate: Sun, 02 Mar 2014 01:22:05 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n">>}
+** When State == wait_ack
+**      Data  == {state_rcv,#Port<0.7162>,
+                     {{0,0,0,0},0},
+                     undefined,0,10000,"ptriceapp02.stage.uga.edu",80,ts_tcp,
+                     {proto_opts,negociate,"/chat",10,600000,infinity,32768,
+                         32768,undefined,undefined},
+                     false,1,
+                     {ts_request,parse,false,[],[],
+                         {http_request,"/ugaruss/logout.do","1.1",
+                             "ptriceapp02.stage.uga.edu",undefined,[],post,
+                             "application/x-www-form-urlencoded",[],
+                             <<"imageField=Logout">>,0,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined},
+                         false,undefined,undefined,undefined},
+                     true,
+                     {1393,723371,282833},
+                     {1393,723188,349491},
+                     89,756,true,
+                     {1393,723371,282833},
+                     {1393,723371,130521},
+                     <<"0">>,<<>>,
+                     {http,0,0,-2,
+                         {none,none},
+                         false,false,
+                         {false,false},
+                         [],
+                         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36",
+                         [{cookie,"kualiSessionId",
+                              "fe40cd79-fa96-4d06-aca2-eac96398c448",
+                              undefined,undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/",undefined,undefined,undefined},
+                          {cookie,"JSESSIONID",
+                              "090298E5C06CB3EB01D89CAAAB0F728B",undefined,
+                              undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/ugaruss/",undefined,undefined,
+                              undefined}]},
+                     0,8,524288,524288,
+                     [{form_key,<<>>},
+                      {redir,<<>>},
+                      {ugasess,<<"090298E5C06CB3EB01D89CAAAB0F728B">>},
+                      {krsess,<<"0B0B5EBBE43950CDC686024283D5978B">>},
+                      {document_number,"8413"},
+                      {docid,[<<" 8413\r\n">>]},
+                      {tsung_userid,8}],
+                     ts_http,
+                     [{tr_routeoffcampusequipmentrequest2,
+                          {1393,723301,621975}}],
+                     undefined,full}
+** Reason for termination = 
+** {badarg,[{erlang,'++',
+                    [<<"0">>,
+                     "HTTP/1.1 302 Found\r\nDate: Sun, 02 Mar 2014 01:22:05 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                    []},
+            {ts_http_common,parse,2,
+                            [{file,"src/tsung/ts_http_common.erl"},
+                             {line,278}]},
+            {ts_client,handle_data_msg,2,
+                       [{file,"src/tsung/ts_client.erl"},{line,978}]},
+            {ts_client,handle_info2,3,
+                       [{file,"src/tsung/ts_client.erl"},{line,233}]},
+            {gen_fsm,handle_msg,7,[{file,"gen_fsm.erl"},{line,505}]},
+            {proc_lib,wake_up,3,[{file,"proc_lib.erl"},{line,249}]}]}
+
+=INFO REPORT==== 1-Mar-2014::20:22:52 ===
+           ts_search:(4:<0.85.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:22:53 ===
+           ts_search:(4:<0.85.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:23:02 ===
+           ts_search:(4:<0.91.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:23:03 ===
+           ts_search:(4:<0.113.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:23:06 ===
+           ts_search:(4:<0.91.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:23:11 ===
+           ts_search:(4:<0.113.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:23:12 ===
+           ts_search:(4:<0.95.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:23:15 ===
+           ts_search:(4:<0.95.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:23:25 ===
+           ts_search:(4:<0.96.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:23:36 ===
+           ts_search:(4:<0.96.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:24:49 ===
+           ts_search:(4:<0.113.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:24:58 ===
+           ts_search:(4:<0.113.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:25:08 ===
+           ts_search:(4:<0.127.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:25:13 ===
+           ts_search:(4:<0.127.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:27:20 ===
+           ts_search:(4:<0.138.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:27:22 ===
+           ts_search:(4:<0.138.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:28:10 ===
+           ts_search:(4:<0.144.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:28:20 ===
+           ts_search:(4:<0.144.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:30:07 ===
+           ts_search:(4:<0.144.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:30:08 ===
+           ts_search:(4:<0.144.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:30:10 ===
+           ts_client:(5:<0.144.0>) Stop in state wait_ack, reason= {badarg,
+                                                                    [{erlang,
+                                                                      '++',
+                                                                      [<<"0">>,
+                                                                       "HTTP/1.1 302 Found\r\nDate: Sun, 02 Mar 2014 01:29:23 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                                                                      []},
+                                                                     {ts_http_common,
+                                                                      parse,2,
+                                                                      [{file,
+                                                                        "src/tsung/ts_http_common.erl"},
+                                                                       {line,
+                                                                        278}]},
+                                                                     {ts_client,
+                                                                      handle_data_msg,
+                                                                      2,
+                                                                      [{file,
+                                                                        "src/tsung/ts_client.erl"},
+                                                                       {line,
+                                                                        978}]},
+                                                                     {ts_client,
+                                                                      handle_info2,
+                                                                      3,
+                                                                      [{file,
+                                                                        "src/tsung/ts_client.erl"},
+                                                                       {line,
+                                                                        233}]},
+                                                                     {gen_fsm,
+                                                                      handle_msg,
+                                                                      7,
+                                                                      [{file,
+                                                                        "gen_fsm.erl"},
+                                                                       {line,
+                                                                        505}]},
+                                                                     {proc_lib,
+                                                                      wake_up,
+                                                                      3,
+                                                                      [{file,
+                                                                        "proc_lib.erl"},
+                                                                       {line,
+                                                                        249}]}]}
+
+=INFO REPORT==== 1-Mar-2014::20:30:10 ===
+           ts_client:(5:<0.144.0>) Pending transactions: [{tr_routeoffcampusequipmentrequest2,
+                                                           {1393,723722,
+                                                            44709}}], compute transaction time
+
+=ERROR REPORT==== 1-Mar-2014::20:30:10 ===
+** State machine <0.144.0> terminating 
+** Last message in was {tcp,#Port<0.11011>,
+                            <<"HTTP/1.1 302 Found\r\nDate: Sun, 02 Mar 2014 01:29:23 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n">>}
+** When State == wait_ack
+**      Data  == {state_rcv,#Port<0.11011>,
+                     {{0,0,0,0},0},
+                     undefined,0,10000,"ptriceapp02.stage.uga.edu",80,ts_tcp,
+                     {proto_opts,negociate,"/chat",10,600000,infinity,32768,
+                         32768,undefined,undefined},
+                     false,1,
+                     {ts_request,parse,false,[],[],
+                         {http_request,"/ugaruss/logout.do","1.1",
+                             "ptriceapp02.stage.uga.edu",undefined,[],post,
+                             "application/x-www-form-urlencoded",[],
+                             <<"imageField=Logout">>,0,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined,undefined,undefined,undefined,
+                             undefined},
+                         false,undefined,undefined,undefined},
+                     true,
+                     {1393,723810,461699},
+                     {1393,723617,388400},
+                     89,756,true,
+                     {1393,723810,461699},
+                     {1393,723810,323465},
+                     <<"0">>,<<>>,
+                     {http,0,0,-2,
+                         {none,none},
+                         false,false,
+                         {false,false},
+                         [],
+                         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36",
+                         [{cookie,"kualiSessionId",
+                              "3e9caef6-713b-403c-8509-0810d896885d",
+                              undefined,undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/",undefined,undefined,undefined},
+                          {cookie,"JSESSIONID",
+                              "4EBC4D80A0A76D6086011EA6ECAE6AC9",undefined,
+                              undefined,undefined,undefined,
+                              ".ptriceapp02.stage.uga.edu",undefined,
+                              undefined,"/ugaruss/",undefined,undefined,
+                              undefined}]},
+                     0,15,524288,524288,
+                     [{form_key,<<>>},
+                      {redir,<<>>},
+                      {ugasess,<<"4EBC4D80A0A76D6086011EA6ECAE6AC9">>},
+                      {krsess,<<"C1889C1784AEC79ED06C3966EDD0D36D">>},
+                      {document_number,"8426"},
+                      {docid,[<<" 8426\r\n">>]},
+                      {tsung_userid,15}],
+                     ts_http,
+                     [{tr_routeoffcampusequipmentrequest2,
+                          {1393,723722,44709}}],
+                     undefined,full}
+** Reason for termination = 
+** {badarg,[{erlang,'++',
+                    [<<"0">>,
+                     "HTTP/1.1 302 Found\r\nDate: Sun, 02 Mar 2014 01:29:23 GMT\r\nServer: Apache-Coyote/1.1\r\nLocation: http://ptriceapp02.stage.uga.edu/ugaruss/portal.do\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Length: 0\r\nConnection: close\r\n\r\n"],
+                    []},
+            {ts_http_common,parse,2,
+                            [{file,"src/tsung/ts_http_common.erl"},
+                             {line,278}]},
+            {ts_client,handle_data_msg,2,
+                       [{file,"src/tsung/ts_client.erl"},{line,978}]},
+            {ts_client,handle_info2,3,
+                       [{file,"src/tsung/ts_client.erl"},{line,233}]},
+            {gen_fsm,handle_msg,7,[{file,"gen_fsm.erl"},{line,505}]},
+            {proc_lib,wake_up,3,[{file,"proc_lib.erl"},{line,249}]}]}
+
+=INFO REPORT==== 1-Mar-2014::20:30:46 ===
+           ts_search:(4:<0.161.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:30:48 ===
+           ts_search:(4:<0.161.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:31:01 ===
+           ts_search:(4:<0.167.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:31:03 ===
+           ts_search:(4:<0.167.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:31:56 ===
+           ts_search:(4:<0.168.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:31:56 ===
+           ts_search:(4:<0.168.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:32:08 ===
+           ts_search:(4:<0.159.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:32:16 ===
+           ts_search:(4:<0.159.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:32:50 ===
+           ts_search:(4:<0.167.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:32:53 ===
+           ts_search:(4:<0.161.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:33:02 ===
+           ts_search:(4:<0.161.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:33:07 ===
+           ts_search:(4:<0.167.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:33:36 ===
+           ts_search:(4:<0.172.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:33:37 ===
+           ts_search:(4:<0.172.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:36:06 ===
+           ts_search:(4:<0.197.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:36:07 ===
+           ts_search:(4:<0.197.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:36:46 ===
+           ts_search:(4:<0.202.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:36:52 ===
+           ts_search:(4:<0.202.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:37:00 ===
+           ts_search:(4:<0.208.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:37:09 ===
+           ts_search:(4:<0.208.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:38:39 ===
+           ts_search:(4:<0.200.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:38:41 ===
+           ts_search:(4:<0.200.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:38:55 ===
+           ts_search:(4:<0.202.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:39:05 ===
+           ts_search:(4:<0.202.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:39:11 ===
+           ts_search:(4:<0.208.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:39:12 ===
+           ts_search:(4:<0.221.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:39:14 ===
+           ts_search:(4:<0.221.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:39:16 ===
+           ts_search:(4:<0.208.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:40:49 ===
+           ts_search:(4:<0.221.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:40:50 ===
+           ts_search:(4:<0.221.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:41:06 ===
+           ts_search:(4:<0.235.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:41:23 ===
+           ts_search:(4:<0.235.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:43:07 ===
+           ts_search:(4:<0.235.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:43:11 ===
+           ts_search:(4:<0.235.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:44:35 ===
+           ts_search:(4:<0.260.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:44:42 ===
+           ts_search:(4:<0.260.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:45:32 ===
+           ts_search:(4:<0.264.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:45:46 ===
+           ts_search:(4:<0.264.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:45:52 ===
+           ts_search:(4:<0.267.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:46:01 ===
+           ts_search:(4:<0.267.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:46:29 ===
+           ts_search:(4:<0.260.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:46:36 ===
+           ts_search:(4:<0.260.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:47:07 ===
+           ts_search:(4:<0.277.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:47:08 ===
+           ts_search:(4:<0.277.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:48:08 ===
+           ts_search:(4:<0.264.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:48:08 ===
+           ts_search:(4:<0.267.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:48:14 ===
+           ts_search:(4:<0.264.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:48:28 ===
+           ts_search:(4:<0.267.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:48:29 ===
+           ts_search:(4:<0.287.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:48:32 ===
+           ts_search:(4:<0.287.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:48:54 ===
+           ts_search:(4:<0.274.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:48:56 ===
+           ts_search:(4:<0.274.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:49:46 ===
+           ts_search:(4:<0.295.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:49:51 ===
+           ts_search:(4:<0.295.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:50:17 ===
+           ts_search:(4:<0.287.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:50:17 ===
+           ts_search:(4:<0.287.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:51:00 ===
+           ts_search:(4:<0.295.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:51:00 ===
+           ts_search:(4:<0.295.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:52:44 ===
+           ts_search:(4:<0.314.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:52:48 ===
+           ts_search:(4:<0.314.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:53:30 ===
+           ts_search:(4:<0.321.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:53:32 ===
+           ts_search:(4:<0.321.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:55:21 ===
+           ts_search:(4:<0.321.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:55:21 ===
+           ts_search:(4:<0.321.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:56:02 ===
+           ts_search:(4:<0.338.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:56:09 ===
+           ts_search:(4:<0.338.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:57:58 ===
+           ts_search:(4:<0.346.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:58:04 ===
+           ts_search:(4:<0.338.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:58:04 ===
+           ts_search:(4:<0.338.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:58:07 ===
+           ts_search:(4:<0.346.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:59:45 ===
+           ts_search:(4:<0.361.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::20:59:49 ===
+           ts_search:(4:<0.361.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::20:59:59 ===
+           ts_search:(4:<0.364.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::21:00:05 ===
+           ts_search:(4:<0.364.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::21:00:49 ===
+           ts_search:(4:<0.371.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::21:00:59 ===
+           ts_search:(4:<0.371.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::21:01:38 ===
+           ts_search:(4:<0.377.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::21:01:42 ===
+         ts_launcher:(5:<0.80.0>) This was the last phase, wait for connected users to finish their session
+
+=INFO REPORT==== 1-Mar-2014::21:01:42 ===
+     ts_launcher_mgr:(5:<0.75.0>) Still 9 active client(s)
+
+=INFO REPORT==== 1-Mar-2014::21:01:47 ===
+           ts_search:(4:<0.377.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::21:01:51 ===
+           ts_search:(4:<0.379.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::21:01:58 ===
+           ts_search:(4:<0.379.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::21:01:59 ===
+           ts_search:(4:<0.382.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::21:02:00 ===
+           ts_search:(4:<0.382.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::21:02:05 ===
+           ts_search:(4:<0.361.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::21:02:06 ===
+           ts_search:(4:<0.361.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::21:02:23 ===
+           ts_search:(4:<0.385.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::21:02:25 ===
+           ts_search:(4:<0.385.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::21:02:29 ===
+           ts_search:(4:<0.378.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::21:02:29 ===
+           ts_search:(4:<0.378.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::21:02:33 ===
+           ts_search:(4:<0.387.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::21:02:42 ===
+     ts_launcher_mgr:(5:<0.75.0>) Still 9 active client(s)
+
+=INFO REPORT==== 1-Mar-2014::21:02:45 ===
+           ts_search:(4:<0.387.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::21:03:01 ===
+           ts_search:(4:<0.371.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::21:03:01 ===
+           ts_search:(4:<0.371.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::21:03:42 ===
+     ts_launcher_mgr:(5:<0.75.0>) Still 6 active client(s)
+
+=INFO REPORT==== 1-Mar-2014::21:03:45 ===
+           ts_search:(4:<0.377.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::21:03:48 ===
+           ts_search:(4:<0.377.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::21:03:52 ===
+           ts_search:(4:<0.382.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::21:03:59 ===
+           ts_search:(4:<0.385.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::21:03:59 ===
+           ts_search:(4:<0.385.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::21:04:07 ===
+           ts_search:(4:<0.382.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::21:04:38 ===
+           ts_search:(4:<0.387.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::21:04:39 ===
+           ts_search:(4:<0.387.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::21:04:42 ===
+     ts_launcher_mgr:(5:<0.75.0>) Still 3 active client(s)
+
+=INFO REPORT==== 1-Mar-2014::21:05:04 ===
+           ts_search:(4:<0.378.0>) Dyn Var (RE): no Match (varname=redir), 
+
+=INFO REPORT==== 1-Mar-2014::21:05:08 ===
+           ts_search:(4:<0.378.0>) Dyn Var: no Match (varname=form_key), 
+
+=INFO REPORT==== 1-Mar-2014::21:05:42 ===
+     ts_launcher_mgr:(5:<0.75.0>) No more active users tsung_controller@DFSCentOS1 "46404"
+
+=INFO REPORT==== 1-Mar-2014::21:05:42 ===
+              ts_mon:(5:<0.45.0>) stopping monitor (normal)

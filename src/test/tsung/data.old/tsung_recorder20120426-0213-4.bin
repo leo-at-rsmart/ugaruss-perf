@@ -1,0 +1,290 @@
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="tabStates(DocumentOverview)"
+
+OPEN
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.documentHeader.documentNumber"
+
+%%_document_number%%
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.documentHeader.documentDescription"
+
+Duplicating
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.documentHeader.explanation"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.documentHeader.organizationDocumentNumber"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.documentFundingSourceCode"
+
+INST
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="checkboxToReset"
+
+document.receivingDocumentRequiredIndicator
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.accountDistributionMethod"
+
+P
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="tabStates(Delivery)"
+
+OPEN
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.deliveryToName"
+
+Kristin M Allen
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.deliveryToPhoneNumber"
+
+860-486-0970
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.deliveryToEmailAddress"
+
+kristin.allen@uconn.edu
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.deliveryBuildingLine2Address"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.deliveryBuildingRoomNumber"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="tabStates(Vendor)"
+
+OPEN
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="tabStates(Items)"
+
+OPEN
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.item[0].itemQuantity"
+
+50.00
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.item[0].itemUnitOfMeasure.itemUnitOfMeasureDescription"
+
+Dozen
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.item[0].purchasingCommodityCode"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.item[0].commodityCode.commodityDescription"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="hideDetails"
+
+No
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.item[0].newSourceLine.chartOfAccountsCode"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.item[0].newSourceLine.accountNumber"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.item[0].newSourceLine.subAccountNumber"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.item[0].newSourceLine.financialObjectCode"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.item[0].newSourceLine.financialSubObjectCode"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.item[0].newSourceLine.projectCode"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.item[0].newSourceLine.organizationReferenceId"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.item[0].newSourceLine.accountLinePercent"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.item[0].newSourceLine.amount"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="tabStates(CapitalAsset)"
+
+CLOSE
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.capitalAssetSystemTypeCode"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.capitalAssetSystemStateCode"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="tabStates(PaymentInfo)"
+
+CLOSE
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="tabStates(AdditionalInstitutionalInfo)"
+
+OPEN
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.requestorPersonName"
+
+Kristin M Allen
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.requestorPersonPhoneNumber"
+
+860-486-0970
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.institutionContactName"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.requestorPersonEmailAddress"
+
+kristin.allen@uconn.edu
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.institutionContactPhoneNumber"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.requisitionOrganizationReference1Text"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.institutionContactEmailAddress"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.requisitionOrganizationReference2Text"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.requisitionOrganizationReference3Text"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="tabStates(AccountSummary)"
+
+CLOSE
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="tabStates(ViewRelatedDocuments)"
+
+CLOSE
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="tabStates(ViewPaymentHistory)"
+
+CLOSE
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="tabStates(NotesandAttachments)"
+
+OPEN
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="newNote.noteTypeCode"
+
+BO
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="newNote.noteText"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="attachmentFile"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.documentBusinessObject.boNote[0].adHocRouteRecipient.id"
+
+lep12004
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="document.documentBusinessObject.boNote[0].adHocRouteRecipient.name"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="methodToCall.sendNoteWorkflowNotification.line0.x"
+
+24
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="methodToCall.sendNoteWorkflowNotification.line0.y"
+
+5
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="tabStates(AdHocRecipients)"
+
+CLOSE
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="newAdHocRoutePerson.type"
+
+0
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="newAdHocRoutePerson.actionRequested"
+
+A
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="newAdHocRoutePerson.id"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="newAdHocRoutePerson.name"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="newAdHocRouteWorkgroup.type"
+
+1
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="newAdHocRouteWorkgroup.actionRequested"
+
+A
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="newAdHocRouteWorkgroup.recipientNamespaceCode"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="newAdHocRouteWorkgroup.recipientName"
+
+
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="tabStates(RouteLog)"
+
+CLOSE
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="tabStatesSize"
+
+40
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="returnToActionList"
+
+No
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="documentWebScope"
+
+session
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="formKey"
+
+7
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="docFormKey"
+
+7
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="docNum"
+
+%%_document_number%%
+-----------------------------5715409771948474082035308228
+Content-Disposition: form-data; name="actionEditablePropertiesGuid"
+
+05911A6B-DCF7-451C-04EF-62371233F441
+-----------------------------5715409771948474082035308228--

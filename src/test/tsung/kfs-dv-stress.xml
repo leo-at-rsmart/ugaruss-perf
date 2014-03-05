@@ -1,0 +1,371 @@
+<?xml version="1.0"?>
+<!DOCTYPE tsung SYSTEM "/opt/local/share/tsung/tsung-1.0.dtd">
+<tsung version="1.0" dumptraffic="true" loglevel="notice">
+  <clients>
+    <client use_controller_vm="true" host="localhost"/>
+  </clients>
+  <servers>
+    <server port="80" type="tcp" host="tst.kfs.uconn.edu"/>
+  </servers>
+  <load>
+    <arrivalphase phase="1" duration="120" unit="minute">
+      <users interarrival="12" unit="second"/>
+    </arrivalphase>
+  </load>
+  <options>
+    <option name="user_agent" type="ts_http">
+      <user_agent probability="100">
+        Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:8.0.1) Gecko/20100101
+        Firefox/8.0.1
+      </user_agent>
+    </option>
+    <option name="file_server" value="/home/ltuser/Open-Performance-Automation-Framework/config/import/kfs/users.csv" id="users"/>
+  </options>
+  <sessions>
+    <session name="disbursementVouchers" probability="100" type="ts_http">
+      <transaction name="login">
+        <request subst="false">
+          <dyn_variable name="redir" re="Location: (.*)" />
+          <http version="1.1" url="/kfs-dev/portal.do" method="GET"/>
+        </request>
+        <request subst="true">
+          <dyn_variable name="lt" xpath="//input[@name='lt']/@value"/>
+          <dyn_variable name="execution" xpath="//input[@name='execution']/@value"/>
+          <http version="1.1" url="%%_redir%%" method="GET"/>
+        </request>
+        <thinktime value="20" random="true"></thinktime>
+        <request subst="true">
+          <dyn_variable name="ticket" re="Location: .*ticket=(.*)" />
+          <dyn_variable name="myheader"
+                        re="Server:\(.*\)\r\n"/>
+          <http version="1.1" content_type="application/x-www-form-urlencoded" contents="lt=%%_lt%%&amp;execution=%%_execution%%&amp;username=lep12004&amp;password=Entr0py0&amp;_eventId=submit" url="https://login.uconn.edu/cas/login?service=http%3A%2F%2Ftst.kfs.uconn.edu%2Fkfs-dev%2Fportal.do" method="POST"/>
+        </request>
+        <request subst="true">
+          <dyn_variable name="redir" re="Location: (.*)" />
+          <http version="1.1" url="/kfs-dev/portal.do?ticket=%%_ticket%%" method="GET"/>
+        </request>
+        <request subst="true">
+          <http version="1.1" url="%%_redir%%" method="GET"/>
+        </request>
+      </transaction>
+      <thinktime value="20" random="true"></thinktime>
+      <transaction name="travel_expense">
+        <thinktime random='true' value='1'/>
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ChartService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/AccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubAccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectTypeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/OriginationCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/CommodityCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ItemUnitOfMeasureService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/scripts/module/purap/objectInfo.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ProjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/scripts/module/purap/objectInfo.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/CommodityCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ChartService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/AccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubAccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectTypeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ProjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/OriginationCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=11712' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='22'/>
+
+        <request><http url='/kfs-dev/portal.do?selectedTab=main' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='11'/>
+
+        <request>
+          <http url='/kfs-dev/portal.do?channelTitle=Disbursement%20Voucher&amp;channelUrl=financialDisbursementVoucher.do?methodToCall=docHandler&amp;command=initiate&amp;docTypeName=DV&amp;backdoorId=lep12004' version='1.1' method='GET' />
+        </request>
+        <request>
+          <dyn_variable name="document_number" xpath="//input[@name='document.documentHeader.documentNumber']/@value"/>
+          <http url='/kfs-dev/financialDisbursementVoucher.do?methodToCall=docHandler&amp;command=initiate&amp;docTypeName=DV&amp;backdoorId=lep12004' version='1.1' method='GET' />
+        </request>
+
+        <thinktime random='true' value='3'/>
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ChartService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/AccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubAccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/OriginationCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/BankService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/scripts/fp/objectInfo.js' version='1.1' if_modified_since='Wed, 18 Apr 2012 23:55:22 GMT' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ProjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectTypeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/static/images/tinybutton-importlines.gif' version='1.1' if_modified_since='Wed, 18 Apr 2012 23:55:22 GMT' method='GET'></http></request>
+        <request><http url='/kfs-dev/static/images/tinybutton-add1.gif' version='1.1' if_modified_since='Wed, 18 Apr 2012 23:55:22 GMT' method='GET'></http></request>
+        <request><http url='/kfs-dev/static/images/tinybutton-cancelimport.gif' version='1.1' if_modified_since='Wed, 18 Apr 2012 23:55:22 GMT' method='GET'></http></request>
+        <request><http url='/kfs-dev/kr/static/images/tinybutton-clear1.gif' version='1.1' if_modified_since='Wed, 18 Apr 2012 23:55:20 GMT' method='GET'></http></request>
+        <request><http url='/kfs-dev/static/images/tinybutton-calculate.gif' version='1.1' if_modified_since='Wed, 18 Apr 2012 23:55:22 GMT' method='GET'></http></request>
+        <request><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=11713' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='10'/>
+
+        <request subst="true"><http url='/kfs-dev/financialDisbursementVoucher.do' version='1.1'  contents_from_file='/home/ltuser/.tsung/tsung_recorder20120426-0213-6.bin' content_type='multipart/form-data; boundary=---------------------------59502863519624080131137623865' method='POST'></http></request>
+        <request subst="true"><http url='/kfs-dev/kr/lookup.do?businessObjectClassName=org.kuali.kfs.fp.businessobject.DisbursementPayee&amp;lookupAnchor=topOfForm&amp;conversionFields=payeeIdNumber%3Adocument.dvPayeeDetail.disbVchrPayeeIdNumber%2CpayeeTypeCode%3Adocument.dvPayeeDetail.disbursementVoucherPayeeTypeCode%2CpaymentReasonCode%3Adocument.dvPayeeDetail.disbVchrPaymentReasonCode&amp;docNum=%%_document_number%%&amp;returnLocation=http%3A%2F%2Ftst.kfs.uconn.edu%2Fkfs-dev%2FfinancialDisbursementVoucher.do&amp;methodToCall=start&amp;docFormKey=9' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/DocumentTypeService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='8'/>
+
+        <request subst="true"><http url='/kfs-dev/kr/lookup.do' version='1.1'  contents='methodToCall.search.x=0&amp;methodToCall.search.y=0&amp;backLocation=http%3A%2F%2Ftst.kfs.uconn.edu%2Fkfs-dev%2FfinancialDisbursementVoucher.do&amp;formKey=9&amp;lookupableImplServiceName=disbursementPayeeLookupable&amp;businessObjectClassName=org.kuali.kfs.fp.businessobject.DisbursementPayee&amp;conversionFields=payeeIdNumber%3Adocument.dvPayeeDetail.disbVchrPayeeIdNumber%2CpayeeTypeCode%3Adocument.dvPayeeDetail.disbursementVoucherPayeeTypeCode%2CpaymentReasonCode%3Adocument.dvPayeeDetail.disbVchrPaymentReasonCode&amp;hideReturnLink=No&amp;suppressActions=No&amp;multipleValues=No&amp;lookupAnchor=topOfForm&amp;readOnlyFields=&amp;referencesToRefresh=&amp;hasReturnableRow=No&amp;docNum=%%_document_number%%&amp;showMaintenanceLinks=No&amp;headerBarEnabled=Yes&amp;fieldNameToFocusOnAfterSubmit=&amp;paymentReasonCode=&amp;taxNumber=&amp;firstName=&amp;lastName=&amp;vendorName=*American*&amp;employeeId=&amp;vendorNumber=&amp;active=Y&amp;tabStatesSize=10&amp;actionEditablePropertiesGuid=2890D9E1-9F3E-3DD9-FCF7-19D13B0C5D10' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/DocumentTypeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/kr/static/images/errormark.gif' version='1.1' if_modified_since='Wed, 18 Apr 2012 23:55:22 GMT' method='GET'></http></request>
+
+        <thinktime random='true' value='7'/>
+
+        <request subst="true"><http url='/kfs-dev/kr/lookup.do' version='1.1'  contents='backLocation=http%3A%2F%2Ftst.kfs.uconn.edu%2Fkfs-dev%2FfinancialDisbursementVoucher.do&amp;formKey=9&amp;lookupableImplServiceName=disbursementPayeeLookupable&amp;businessObjectClassName=org.kuali.kfs.fp.businessobject.DisbursementPayee&amp;conversionFields=payeeIdNumber%3Adocument.dvPayeeDetail.disbVchrPayeeIdNumber%2CpayeeTypeCode%3Adocument.dvPayeeDetail.disbursementVoucherPayeeTypeCode%2CpaymentReasonCode%3Adocument.dvPayeeDetail.disbVchrPaymentReasonCode&amp;hideReturnLink=No&amp;suppressActions=No&amp;multipleValues=No&amp;lookupAnchor=topOfForm&amp;readOnlyFields=&amp;referencesToRefresh=&amp;hasReturnableRow=No&amp;docNum=%%_document_number%%&amp;showMaintenanceLinks=No&amp;headerBarEnabled=Yes&amp;fieldNameToFocusOnAfterSubmit=&amp;paymentReasonCode=T&amp;taxNumber=&amp;firstName=&amp;lastName=&amp;vendorName=*American*&amp;employeeId=&amp;vendorNumber=&amp;active=Y&amp;methodToCall.search.x=49&amp;methodToCall.search.y=9&amp;tabStatesSize=10&amp;actionEditablePropertiesGuid=78E870E0-CA1E-C172-66CC-2E10608F76EF' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+
+        <thinktime random='true' value='2'/>
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/DocumentTypeService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='18'/>
+
+        <request subst="true"><http url='/kfs-dev/kr/lookup.do' version='1.1'  contents='methodToCall.search.x=0&amp;methodToCall.search.y=0&amp;backLocation=http%3A%2F%2Ftst.kfs.uconn.edu%2Fkfs-dev%2FfinancialDisbursementVoucher.do&amp;formKey=9&amp;lookupableImplServiceName=disbursementPayeeLookupable&amp;businessObjectClassName=org.kuali.kfs.fp.businessobject.DisbursementPayee&amp;conversionFields=payeeIdNumber%3Adocument.dvPayeeDetail.disbVchrPayeeIdNumber%2CpayeeTypeCode%3Adocument.dvPayeeDetail.disbursementVoucherPayeeTypeCode%2CpaymentReasonCode%3Adocument.dvPayeeDetail.disbVchrPaymentReasonCode&amp;hideReturnLink=No&amp;suppressActions=No&amp;multipleValues=No&amp;lookupAnchor=topOfForm&amp;readOnlyFields=&amp;referencesToRefresh=&amp;hasReturnableRow=Yes&amp;docNum=%%_document_number%%&amp;showMaintenanceLinks=No&amp;headerBarEnabled=Yes&amp;fieldNameToFocusOnAfterSubmit=&amp;paymentReasonCode=T&amp;taxNumber=&amp;firstName=&amp;lastName=&amp;vendorName=*AAA*&amp;employeeId=&amp;vendorNumber=&amp;active=Y&amp;tabStatesSize=10&amp;actionEditablePropertiesGuid=EF0F0E3B-2917-63A9-C0BD-6021A6CD4D85' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/DocumentTypeService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='6'/>
+
+        <request subst="true"><http url='/kfs-dev/financialDisbursementVoucher.do?refreshCaller=disbursementPayeeLookupable&amp;document.dvPayeeDetail.disbVchrPaymentReasonCode=T&amp;methodToCall=refresh&amp;document.dvPayeeDetail.disbursementVoucherPayeeTypeCode=V&amp;docFormKey=9&amp;document.dvPayeeDetail.disbVchrPayeeIdNumber=14786-0&amp;anchor=topOfForm&amp;docNum=%%_document_number%%' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='5'/>
+
+        <request subst="true"><http url='/kfs-dev/kr/lookup.do?businessObjectClassName=org.kuali.kfs.vnd.businessobject.VendorAddress&amp;returnLocation=http%3A%2F%2Ftst.kfs.uconn.edu%2Fkfs-dev%2FfinancialDisbursementVoucher.do&amp;lookedUpCollectionName=vendorAddresses&amp;active=Y&amp;methodToCall=search&amp;vendorHeaderGeneratedIdentifier=14786&amp;conversionFields=&amp;vendorDetailAssignedIdentifier=0&amp;docNum=%%_document_number%%&amp;lookupAnchor=topOfForm&amp;suppressActions=true&amp;autoSearch=Yes&amp;docFormKey=12&amp;backLocation=http%3A%2F%2Ftst.kfs.uconn.edu%2Fkfs-dev%2FfinancialDisbursementVoucher.do' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/DocumentTypeService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='71'/>
+
+        <request subst="true"><http url='/kfs-dev/financialDisbursementVoucher.do?vendorAddressGeneratedIdentifier=282451&amp;refreshCaller=vendorAddressLookupable&amp;methodToCall=refresh&amp;docFormKey=12&amp;anchor=topOfForm&amp;docNum=%%_document_number%%' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='1'/>
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ChartService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/AccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubAccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/OriginationCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/BankService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ProjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectTypeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=11713' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='20'/>
+
+        <request><http url='/kfs-dev/dwr/exec/ChartService.getByPrimaryId.dwr' version='1.1'  contents='callCount=1
+                                                                                                        c0-scriptName=ChartService
+                                                                                                        c0-methodName=getByPrimaryId
+                                                                                                        c0-id=2822_1335432044686
+                                                                                                        c0-param0=string:UC
+                                                                                                        xml=true
+                                                                                                        ' content_type='text/plain; charset=UTF-8' method='POST'></http></request>
+
+        <thinktime random='true' value='3'/>
+
+        <request><http url='/kfs-dev/dwr/exec/AccountService.accountsCanCrossCharts.dwr' version='1.1'  contents='callCount=1
+                                                                                                                  c0-scriptName=AccountService
+                                                                                                                  c0-methodName=accountsCanCrossCharts
+                                                                                                                  c0-id=2627_1335432047817
+                                                                                                                  xml=true
+                                                                                                                  ' content_type='text/plain; charset=UTF-8' method='POST'></http></request>
+        <request subst="true"><http url='/kfs-dev/financialDisbursementVoucher.do' version='1.1'  contents_from_file='/home/ltuser/.tsung/tsung_recorder20120426-0213-7.bin' content_type='multipart/form-data; boundary=---------------------------9973898142020739063107554536' method='POST'></http></request>
+        <request><http url='/kfs-dev/kr/lookup.do?businessObjectClassName=org.kuali.kfs.coa.businessobject.Account&amp;returnLocation=http%3A%2F%2Ftst.kfs.uconn.edu%2Fkfs-dev%2FfinancialDisbursementVoucher.do&amp;referencesToRefresh=null&amp;methodToCall=start&amp;conversionFields=chartOfAccountsCode%3AnewSourceLine.chartOfAccountsCode%2CaccountNumber%3AnewSourceLine.accountNumber&amp;docNum=%%_document_number%%&amp;lookupAnchor=topOfForm&amp;docFormKey=14&amp;chartOfAccountsCode=UC' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/DocumentTypeService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='3'/>
+
+        <request><http url='/kfs-dev/kr/lookup.do' version='1.1'  contents='backLocation=http%3A%2F%2Ftst.kfs.uconn.edu%2Fkfs-dev%2FfinancialDisbursementVoucher.do&amp;formKey=14&amp;lookupableImplServiceName=securityAccountLookupable&amp;businessObjectClassName=org.kuali.kfs.coa.businessobject.Account&amp;conversionFields=chartOfAccountsCode%3AnewSourceLine.chartOfAccountsCode%2CaccountNumber%3AnewSourceLine.accountNumber&amp;hideReturnLink=No&amp;suppressActions=No&amp;multipleValues=No&amp;lookupAnchor=topOfForm&amp;readOnlyFields=&amp;referencesToRefresh=null&amp;hasReturnableRow=No&amp;docNum=%%_document_number%%&amp;showMaintenanceLinks=No&amp;headerBarEnabled=Yes&amp;fieldNameToFocusOnAfterSubmit=&amp;chartOfAccountsCode=UC&amp;accountNumber=&amp;accountName=&amp;extension.bankCode=&amp;extension.fundSID=&amp;organizationCode=&amp;accountTypeCode=&amp;subFundGroupCode=&amp;accountFiscalOfficerUser.principalName=&amp;accountFiscalOfficerSystemIdentifier=&amp;accountFiscalOfficerUser.name=&amp;closed=N&amp;methodToCall.search.x=48&amp;methodToCall.search.y=7&amp;tabStatesSize=12&amp;actionEditablePropertiesGuid=31B53890-1A4A-9765-5AAC-0104DC79E5E7' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+
+        <thinktime random='true' value='21'/>
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/DocumentTypeService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='17'/>
+
+        <request subst="true"><http url='/kfs-dev/financialDisbursementVoucher.do?newSourceLine.accountNumber=1013130&amp;newSourceLine.chartOfAccountsCode=UC&amp;refreshCaller=securityAccountLookupable&amp;referencesToRefresh=null&amp;methodToCall=refresh&amp;docFormKey=14&amp;anchor=topOfForm&amp;docNum=%%_document_number%%' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='1'/>
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ChartService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/AccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubAccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/OriginationCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/BankService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectTypeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ProjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=11713' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='11'/>
+
+        <request subst="true"><http url='/kfs-dev/financialDisbursementVoucher.do' version='1.1'  contents_from_file='/home/ltuser/.tsung/tsung_recorder20120426-0213-8.bin' content_type='multipart/form-data; boundary=---------------------------163533942516540016691777724115' method='POST'></http></request>
+
+        <thinktime random='true' value='2'/>
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ChartService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/AccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubAccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/OriginationCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/BankService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ProjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectTypeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=11713' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='4'/>
+
+        <request subst="true"><http url='/kfs-dev/financialDisbursementVoucher.do' version='1.1'  contents_from_file='/home/ltuser/.tsung/tsung_recorder20120426-0213-9.bin' content_type='multipart/form-data; boundary=---------------------------269220094340756291478446501' method='POST'></http></request>
+        <request><http url='/kfs-dev/kr/lookup.do?businessObjectClassName=org.kuali.kfs.coa.businessobject.ObjectCode&amp;returnLocation=http%3A%2F%2Ftst.kfs.uconn.edu%2Fkfs-dev%2FfinancialDisbursementVoucher.do&amp;referencesToRefresh=null&amp;methodToCall=start&amp;conversionFields=chartOfAccountsCode%3AnewSourceLine.chartOfAccountsCode%2CuniversityFiscalYear%3AnewSourceLine.postingYear%2CfinancialObjectCode%3AnewSourceLine.financialObjectCode&amp;universityFiscalYear=2012&amp;docNum=%%_document_number%%&amp;lookupAnchor=topOfForm&amp;docFormKey=16&amp;chartOfAccountsCode=UC' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/DocumentTypeService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='3'/>
+
+        <request><http url='/kfs-dev/kr/lookup.do' version='1.1'  contents='backLocation=http%3A%2F%2Ftst.kfs.uconn.edu%2Fkfs-dev%2FfinancialDisbursementVoucher.do&amp;formKey=16&amp;lookupableImplServiceName=securityLookupable&amp;businessObjectClassName=org.kuali.kfs.coa.businessobject.ObjectCode&amp;conversionFields=chartOfAccountsCode%3AnewSourceLine.chartOfAccountsCode%2CuniversityFiscalYear%3AnewSourceLine.postingYear%2CfinancialObjectCode%3AnewSourceLine.financialObjectCode&amp;hideReturnLink=No&amp;suppressActions=No&amp;multipleValues=No&amp;lookupAnchor=topOfForm&amp;readOnlyFields=&amp;referencesToRefresh=null&amp;hasReturnableRow=No&amp;docNum=%%_document_number%%&amp;showMaintenanceLinks=No&amp;headerBarEnabled=Yes&amp;fieldNameToFocusOnAfterSubmit=&amp;universityFiscalYear=2012&amp;chartOfAccountsCode=UC&amp;financialObjectCode=&amp;financialObjectCodeName=&amp;financialObjectCodeShortName=&amp;financialObjectLevelCode=&amp;financialObjectTypeCode=&amp;financialObjectSubTypeCode=&amp;historicalFinancialObjectCode=&amp;financialBudgetAggregationCd=&amp;active=Y&amp;methodToCall.search.x=51&amp;methodToCall.search.y=4&amp;tabStatesSize=13&amp;actionEditablePropertiesGuid=29707913-836E-0A3C-D08E-9BC288CDC9EA' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+
+        <thinktime random='true' value='2'/>
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/DocumentTypeService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='3'/>
+
+        <request><http url='/kfs-dev/financialDisbursementVoucher.do?newSourceLine.postingYear=2012&amp;newSourceLine.chartOfAccountsCode=UC&amp;refreshCaller=securityLookupable&amp;referencesToRefresh=null&amp;methodToCall=refresh&amp;newSourceLine.financialObjectCode=1100&amp;docFormKey=16&amp;anchor=topOfForm&amp;docNum=%%_document_number%%' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='1'/>
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ChartService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectTypeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/AccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubAccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/OriginationCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/BankService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ProjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=11713' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='4'/>
+
+        <request subst="true"><http url='/kfs-dev/financialDisbursementVoucher.do' version='1.1'  contents_from_file='/home/ltuser/.tsung/tsung_recorder20120426-0213-10.bin' content_type='multipart/form-data; boundary=---------------------------186454651713519341951581030105' method='POST'></http></request>
+
+        <thinktime random='true' value='2'/>
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubAccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ChartService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/AccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/OriginationCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/BankService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ProjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectTypeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=11713' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='9'/>
+
+        <request><http url='/kfs-dev/dwr/exec/ObjectCodeService.getByPrimaryId.dwr' version='1.1'  contents='callCount=1
+                                                                                                             c0-scriptName=ObjectCodeService
+                                                                                                             c0-methodName=getByPrimaryId
+                                                                                                             c0-id=3900_1335432140466
+                                                                                                             c0-param0=string:2012
+                                                                                                             c0-param1=string:UC
+                                                                                                             c0-param2=string:7600
+                                                                                                             xml=true
+                                                                                                             ' content_type='text/plain; charset=UTF-8' method='POST'></http></request>
+
+        <thinktime random='true' value='2'/>
+
+        <request subst="true"><http url='/kfs-dev/financialDisbursementVoucher.do' version='1.1'  contents_from_file='/home/ltuser/.tsung/tsung_recorder20120426-0213-11.bin' content_type='multipart/form-data; boundary=---------------------------155781040421463194511908194298' method='POST'></http></request>
+
+        <thinktime random='true' value='2'/>
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ChartService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/AccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubAccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/OriginationCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/BankService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectTypeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ProjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/static/images/tinybutton-balinquiry.gif' version='1.1' if_modified_since='Wed, 18 Apr 2012 23:55:20 GMT' method='GET'></http></request>
+        <request><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=11713' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='10'/>
+
+        <request subst="true"><http url='/kfs-dev/financialDisbursementVoucher.do' version='1.1'  contents_from_file='/home/ltuser/.tsung/tsung_recorder20120426-0213-12.bin' content_type='multipart/form-data; boundary=---------------------------500782188657821123753799505' method='POST'></http></request>
+
+        <thinktime random='true' value='2'/>
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ChartService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/AccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubAccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectTypeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/OriginationCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/BankService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ProjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=11713' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='12'/>
+
+        <request subst="true"><http url='/kfs-dev/financialDisbursementVoucher.do' version='1.1'  contents_from_file='/home/ltuser/.tsung/tsung_recorder20120426-0213-13.bin' content_type='multipart/form-data; boundary=---------------------------110224688212694067521816731566' method='POST'></http></request>
+
+        <thinktime random='true' value='4'/>
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ChartService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/AccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubAccountService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/OriginationCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/BankService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/static/images/icon-pdf.png' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ProjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/SubObjectCodeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/ObjectTypeService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=11713' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+      </transaction>
+    </session>
+  </sessions>
+</tsung>

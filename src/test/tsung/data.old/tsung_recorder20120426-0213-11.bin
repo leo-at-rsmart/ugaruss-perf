@@ -1,0 +1,531 @@
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="tabStates(DocumentOverview)"
+
+OPEN
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.documentHeader.documentNumber"
+
+%%_document_number%%
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.documentHeader.documentDescription"
+
+Travel Expense
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.documentHeader.explanation"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.documentHeader.organizationDocumentNumber"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.accountingPeriodCompositeString"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="tabStates(PaymentInformation)"
+
+OPEN
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvPayeeDetail.disbVchrPayeeLine1Addr"
+
+23 Laurel Street
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvPayeeDetail.disbVchrPayeeLine2Addr"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvPayeeDetail.disbVchrPayeeCityName"
+
+Manchester
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvPayeeDetail.disbVchrPayeeStateCode"
+
+CT
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvPayeeDetail.disbVchrPayeeCountryCode"
+
+US
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvPayeeDetail.disbVchrPayeeZipCode"
+
+06040
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.disbVchrCheckTotalAmount"
+
+0.00
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.disbursementVoucherDueDate"
+
+04/27/2012
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="checkboxToReset"
+
+document.disbVchrAttachmentCode
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="checkboxToReset"
+
+document.disbVchrSpecialHandlingCode
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="checkboxToReset"
+
+document.disbExcptAttachedIndicator
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.extension.invoiceNumber"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.extension.invoiceDate"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.extension.usage"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.extension.documentNumber"
+
+%%_document_number%%
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.disbVchrPaymentMethodCode"
+
+P
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.disbursementVoucherDocumentationLocationCode"
+
+F
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.disbVchrCheckStubText"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="tabStates(AccountingLines)"
+
+OPEN
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="hideDetails"
+
+No
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="sourceFile"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newSourceLine.chartOfAccountsCode"
+
+UC
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newSourceLine.chart.finChartOfAccountDescription"
+
+University of Connecticut
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newSourceLine.accountNumber"
+
+1013130
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newSourceLine.account.accountName"
+
+T F Unspecifd Storrs
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newSourceLine.subAccountNumber"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newSourceLine.financialObjectCode"
+
+7600
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newSourceLine.objectCode.financialObjectCodeName"
+
+Recruiting In-State Travel (Athletics)
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newSourceLine.financialSubObjectCode"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newSourceLine.projectCode"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newSourceLine.organizationReferenceId"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newSourceLine.amount"
+
+72.00
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newSourceLine.financialDocumentLineDescription"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="methodToCall.insertSourceLine.anchoraccountingSourceAnchor.x"
+
+26
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="methodToCall.insertSourceLine.anchoraccountingSourceAnchor.y"
+
+11
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="tabStates(ContactInformation)"
+
+OPEN
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.disbVchrContactPersonName"
+
+Leo Przybylski
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.disbVchrContactPhoneNumber"
+
+860-486-2462
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.disbVchrContactEmailId"
+
+leo.przybylski@uconn.edu
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="tabStates(SpecialHandling)"
+
+CLOSE
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvPayeeDetail.disbVchrSpecialHandlingPersonName"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvPayeeDetail.disbVchrSpecialHandlingCityName"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvPayeeDetail.disbVchrSpecialHandlingLine1Addr"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvPayeeDetail.disbVchrSpecialHandlingStateCode"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvPayeeDetail.disbVchrSpecialHandlingLine2Addr"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvPayeeDetail.disbVchrSpecialHandlingZipCode"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvPayeeDetail.disbVchrSpecialHandlingCountryCode"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="tabStates(NonresidentAlienTax)"
+
+CLOSE
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="tabStates(WireTransfer)"
+
+CLOSE
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvWireTransfer.disbursementVoucherAutomatedClearingHouseProfileNumber"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvWireTransfer.disbursementVoucherBankName"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvWireTransfer.disbVchrAdditionalWireText"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvWireTransfer.disbVchrBankRoutingNumber"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvWireTransfer.disbVchrAttentionLineText"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvWireTransfer.disbVchrBankCityName"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvWireTransfer.disbVchrCurrencyTypeCode"
+
+U
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvWireTransfer.disbVchrBankStateCode"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvWireTransfer.disbVchrCurrencyTypeName"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvWireTransfer.disbVchrBankCountryCode"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvWireTransfer.disbVchrPayeeAccountNumber"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvWireTransfer.disbursementVoucherPayeeAccountName"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="tabStates(ForeignDraft)"
+
+CLOSE
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvWireTransfer.disbursementVoucherForeignCurrencyTypeName"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="tabStates(NonEmployeeTravelExpense)"
+
+CLOSE
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvNonEmployeeTravel.disbVchrNonEmpTravelerName"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvNonEmployeeTravel.disbVchrServicePerformedDesc"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvNonEmployeeTravel.dvServicePerformedLocName"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvNonEmployeeTravel.dvServiceRegularEmprName"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvNonEmployeeTravel.disbVchrTravelFromCityName"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvNonEmployeeTravel.disbVchrTravelFromStateCode"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvNonEmployeeTravel.dvTravelFromCountryCode"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvNonEmployeeTravel.perDiemStartDateTime"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvNonEmployeeTravel.disbVchrTravelToCityName"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvNonEmployeeTravel.disbVchrTravelToStateCode"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvNonEmployeeTravel.disbVchrTravelToCountryCode"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvNonEmployeeTravel.perDiemEndDateTime"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvNonEmployeeTravel.disbVchrPerdiemCategoryName"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvNonEmployeeTravel.disbVchrAutoFromCityName"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvNonEmployeeTravel.disbVchrAutoFromStateCode"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvNonEmployeeTravel.disbVchrPerdiemRate"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvNonEmployeeTravel.disbVchrAutoToCityName"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvNonEmployeeTravel.disbVchrAutoToStateCode"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="checkboxToReset"
+
+document.dvNonEmployeeTravel.disbVchrAutoRoundTripCode
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvNonEmployeeTravel.disbVchrPerdiemActualAmount"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvNonEmployeeTravel.dvPersonalCarMileageAmount"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvNonEmployeeTravel.dvPerdiemChangeReasonText"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvNonEmployeeTravel.disbVchrPersonalCarAmount"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newNonEmployeeExpenseLine.disbVchrExpenseCode"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newNonEmployeeExpenseLine.disbVchrExpenseCompanyName"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newNonEmployeeExpenseLine.disbVchrExpenseAmount"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newPrePaidNonEmployeeExpenseLine.disbVchrPrePaidExpenseCode"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newPrePaidNonEmployeeExpenseLine.disbVchrPrePaidExpenseCompanyName"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newPrePaidNonEmployeeExpenseLine.disbVchrExpenseAmount"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="tabStates(PrePaidTravelExpenses)"
+
+CLOSE
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvPreConferenceDetail.dvConferenceDestinationName"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvPreConferenceDetail.disbVchrExpenseCode"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvPreConferenceDetail.disbVchrConferenceStartDate"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="document.dvPreConferenceDetail.disbVchrConferenceEndDate"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newPreConferenceRegistrantLine.dvConferenceRegistrantName"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newPreConferenceRegistrantLine.disbVchrPreConfDepartmentCd"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newPreConferenceRegistrantLine.dvPreConferenceRequestNumber"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newPreConferenceRegistrantLine.disbVchrExpenseAmount"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="tabStates(PreDisbursementProcessorStatus)"
+
+CLOSE
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="tabStates(GeneralLedgerPendingEntries)"
+
+CLOSE
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="tabStates(NotesandAttachments)"
+
+CLOSE
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newNote.noteTypeCode"
+
+DH
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newNote.noteText"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="attachmentFile"; filename=""
+Content-Type: application/octet-stream
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="tabStates(AdHocRecipients)"
+
+CLOSE
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newAdHocRoutePerson.type"
+
+0
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newAdHocRoutePerson.actionRequested"
+
+A
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newAdHocRoutePerson.id"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newAdHocRoutePerson.name"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newAdHocRouteWorkgroup.type"
+
+1
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newAdHocRouteWorkgroup.actionRequested"
+
+A
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newAdHocRouteWorkgroup.recipientNamespaceCode"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="newAdHocRouteWorkgroup.recipientName"
+
+
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="tabStates(RouteLog)"
+
+CLOSE
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="tabStatesSize"
+
+129
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="returnToActionList"
+
+No
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="documentWebScope"
+
+session
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="formKey"
+
+8
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="docFormKey"
+
+8
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="docNum"
+
+%%_document_number%%
+-----------------------------155781040421463194511908194298
+Content-Disposition: form-data; name="actionEditablePropertiesGuid"
+
+629E0EFB-4ABE-195C-50F4-A4A8C35041F6
+-----------------------------155781040421463194511908194298--

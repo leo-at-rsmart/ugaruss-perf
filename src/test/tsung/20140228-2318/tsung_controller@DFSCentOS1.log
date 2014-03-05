@@ -1,0 +1,81 @@
+
+=INFO REPORT==== 28-Feb-2014::23:18:45 ===
+    ts_config_server:(5:<0.44.0>) Config server started, logdir is "/home/leo/.tsung/log/20140228-2318"
+ 
+=INFO REPORT==== 28-Feb-2014::23:18:45 ===
+              ts_mon:(5:<0.43.0>) starting monitor, global 
+
+=INFO REPORT==== 28-Feb-2014::23:18:45 ===
+           ts_config:(5:<0.44.0>) Reading config file: test3.xml
+
+=INFO REPORT==== 28-Feb-2014::23:18:46 ===
+      ts_config_http:(4:<0.44.0>) Get user agent: 100 "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36" 
+
+=INFO REPORT==== 28-Feb-2014::23:18:46 ===
+           ts_config:(5:<0.44.0>) Session name for id 1 is "offcampusequipmentrequest"
+
+=INFO REPORT==== 28-Feb-2014::23:18:46 ===
+    ts_config_server:(4:<0.44.0>) SYSINFO:Tsung version: 1.5.0
+
+=INFO REPORT==== 28-Feb-2014::23:18:46 ===
+    ts_config_server:(4:<0.44.0>) SYSINFO:Erlang version: Erlang R16B02 (erts-5.10.3) [source-b44b726] [64-bit] [smp:4:4] [async-threads:16] [kernel-poll:true]
+
+
+=INFO REPORT==== 28-Feb-2014::23:18:46 ===
+    ts_config_server:(4:<0.44.0>) SYSINFO:System architecture x86_64-unknown-linux-gnu
+
+=INFO REPORT==== 28-Feb-2014::23:18:46 ===
+    ts_config_server:(4:<0.44.0>) SYSINFO:Current path: /usr/lib64/erlang/lib/tsung-1.5.0/ebin/tsung.beam
+
+=INFO REPORT==== 28-Feb-2014::23:18:46 ===
+           ts_os_mon:(5:<0.41.0>) os_mon disabled
+=INFO REPORT==== 28-Feb-2014::23:18:46 ===
+              ts_mon:(5:<0.45.0>) Activate clients with text backend
+
+=INFO REPORT==== 28-Feb-2014::23:18:46 ===
+              ts_mon:(5:<0.45.0>) Starting tsung clients on hosts: [localhost]
+
+=INFO REPORT==== 28-Feb-2014::23:18:46 ===
+    ts_config_server:(5:<0.44.0>) Start a launcher on the controller beam localhost
+
+=INFO REPORT==== 28-Feb-2014::23:18:46 ===
+  ts_launcher_static:(5:<0.79.0>) Launch msg receive ("localhost")
+
+=INFO REPORT==== 28-Feb-2014::23:18:46 ===
+         ts_launcher:(5:<0.80.0>) Launch msg receive ("localhost")
+
+=INFO REPORT==== 28-Feb-2014::23:18:46 ===
+    ts_config_server:(5:<0.44.0>) All remote beams started, syncing 
+
+=INFO REPORT==== 28-Feb-2014::23:18:46 ===
+    ts_config_server:(5:<0.44.0>) New arrival phase 1 for client "localhost" (last ? true): will start 1 users
+
+=INFO REPORT==== 28-Feb-2014::23:18:46 ===
+         ts_launcher:(5:<0.80.0>) Expected duration of first phase: 600.0 sec (1 users) 
+
+=INFO REPORT==== 28-Feb-2014::23:18:46 ===
+         ts_launcher:(5:<0.80.0>) Activate launcher (1 users) in 10454 msec 
+
+=INFO REPORT==== 28-Feb-2014::23:18:56 ===
+         ts_launcher:(5:<0.80.0>) This was the last phase, wait for connected users to finish their session
+
+=INFO REPORT==== 28-Feb-2014::23:18:56 ===
+     ts_launcher_mgr:(5:<0.75.0>) Still 1 active client(s)
+
+=INFO REPORT==== 28-Feb-2014::23:19:56 ===
+     ts_launcher_mgr:(5:<0.75.0>) Still 1 active client(s)
+
+=INFO REPORT==== 28-Feb-2014::23:20:56 ===
+     ts_launcher_mgr:(5:<0.75.0>) Still 1 active client(s)
+
+=INFO REPORT==== 28-Feb-2014::23:21:56 ===
+     ts_launcher_mgr:(5:<0.75.0>) Still 1 active client(s)
+
+=INFO REPORT==== 28-Feb-2014::23:22:56 ===
+     ts_launcher_mgr:(5:<0.75.0>) Still 1 active client(s)
+
+=INFO REPORT==== 28-Feb-2014::23:23:56 ===
+     ts_launcher_mgr:(5:<0.75.0>) No more active users tsung_controller@DFSCentOS1 "45319"
+
+=INFO REPORT==== 28-Feb-2014::23:23:56 ===
+              ts_mon:(5:<0.45.0>) stopping monitor (normal)

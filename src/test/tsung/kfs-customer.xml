@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<!DOCTYPE tsung SYSTEM "/opt/local/share/tsung/tsung-1.0.dtd">
+<tsung version="1.0" dumptraffic="true" loglevel="notice">
+  <clients>
+    <client use_controller_vm="true" host="localhost"/>
+  </clients>
+  <servers>
+    <server port="80" type="tcp" host="dev.kfs.uconn.edu"/>
+  </servers>
+  <load>
+    <arrivalphase phase="1" duration="120" unit="minute">
+      <users interarrival="12" unit="second"/>
+    </arrivalphase>
+  </load>
+  <options>
+    <option name="user_agent" type="ts_http">
+      <user_agent probability="100">
+        Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:8.0.1) Gecko/20100101
+        Firefox/8.0.1
+      </user_agent>
+    </option>
+    <option name="file_server" value="/home/ltuser/Open-Performance-Automation-Framework/config/import/kfs/users.csv" id="users"/>
+  </options>
+  <sessions>
+    <session name="customer" probability="100" type="ts_http">
+      <transaction name="customer_login">
+        <request subst="false">
+          <dyn_variable name="redir" re="Location: (.*)" />
+          <http version="1.1" url="http://tst.kfs.uconn.edu/kfs-dev/portal.do" method="GET"/>
+        </request>
+        <request subst="true">
+          <dyn_variable name="lt" xpath="//input[@name='lt']/@value"/>
+          <dyn_variable name="execution" xpath="//input[@name='execution']/@value"/>
+          <http version="1.1" url="%%_redir%%" method="GET"/>
+        </request>
+        <thinktime value="20" random="true"></thinktime>
+        <request subst="true">
+          <dyn_variable name="ticket" re="Location: .*ticket=(.*)" />
+          <http version="1.1" content_type="application/x-www-form-urlencoded" 
+                contents="" 
+                url="https://login.uconn.edu/cas/login?service=http%3A%2F%2Ftst.kfs.uconn.edu%2Fkfs-dev%2Fportal.do" method="POST"/>
+        </request>
+        <request subst="true">
+          <dyn_variable name="redir" re="Location: (.*)" />
+          <http version="1.1" url="http://tst.kfs.uconn.edu/kfs-dev/portal.do?ticket=%%_ticket%%" method="GET"/>
+        </request>
+        <request subst="true">
+          <http version="1.1" url="%%_redir%%" method="GET"/>
+        </request>
+      </transaction>
+      <transaction name="customer">
+        <request><http url='http://dev.kfs.uconn.edu/kfs-dev/' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/portal.jsp' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='5'/>
+
+        <request><http url='/kfs-dev/portal.do?channelTitle=Customer&amp;channelUrl=kr/lookup.do?methodToCall=start&amp;businessObjectClassName=org.kuali.kfs.module.ar.businessobject.Customer&amp;docFormKey=88888888&amp;returnLocation=http://dev.kfs.uconn.edu/kfs-dev/portal.do&amp;hideReturnLink=true&amp;backdoorId=admin' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/kr/lookup.do?methodToCall=start&amp;businessObjectClassName=org.kuali.kfs.module.ar.businessobject.Customer&amp;docFormKey=88888888&amp;returnLocation=http://dev.kfs.uconn.edu/kfs-dev/portal.do&amp;hideReturnLink=true&amp;backdoorId=admin' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/engine.js' version='1.1' if_modified_since='Fri, 27 Apr 2012 14:12:20 GMT' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/util.js' version='1.1' if_modified_since='Fri, 27 Apr 2012 14:12:20 GMT' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/DocumentTypeService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='10'/>
+
+        <request><http url='/kfs-dev/backdoorlogin.do' version='1.1'  contents='backdoorId=admin&amp;imageField=Login&amp;methodToCall=login' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+        <request><http url='/kfs-dev/index.jsp' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/portal.jsp' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='7'/>
+
+        <request><http url='/kfs-dev/portal.do?selectedTab=maintenance' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='2'/>
+
+        <request><http url='/kfs-dev/portal.do?channelTitle=Customer&amp;channelUrl=kr/lookup.do?methodToCall=start&amp;businessObjectClassName=org.kuali.kfs.module.ar.businessobject.Customer&amp;docFormKey=88888888&amp;returnLocation=http://dev.kfs.uconn.edu/kfs-dev/portal.do&amp;hideReturnLink=true&amp;backdoorId=admin' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/kr/lookup.do?methodToCall=start&amp;businessObjectClassName=org.kuali.kfs.module.ar.businessobject.Customer&amp;docFormKey=88888888&amp;returnLocation=http://dev.kfs.uconn.edu/kfs-dev/portal.do&amp;hideReturnLink=true&amp;backdoorId=admin' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/DocumentTypeService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='10'/>
+
+        <request><http url='/kfs-dev/kr/lookup.do' version='1.1'  contents='backLocation=http%3A%2F%2Fdev.kfs.uconn.edu%2Fkfs-dev%2Fportal.do&amp;formKey=88888888&amp;lookupableImplServiceName=customerLookupable&amp;businessObjectClassName=org.kuali.kfs.module.ar.businessobject.Customer&amp;conversionFields=&amp;hideReturnLink=Yes&amp;suppressActions=No&amp;multipleValues=No&amp;lookupAnchor=&amp;readOnlyFields=&amp;referencesToRefresh=&amp;hasReturnableRow=No&amp;docNum=&amp;showMaintenanceLinks=Yes&amp;headerBarEnabled=Yes&amp;fieldNameToFocusOnAfterSubmit=&amp;customerNumber=&amp;customerTypeCode=&amp;extension.customerAlias1=University+Customer&amp;extension.customerAlias2=&amp;customerName=&amp;customerPhoneNumber=&amp;customerTaxNbr=&amp;customerTaxTypeCode=&amp;active=Y&amp;customerAddresses.customerAddressName=&amp;customerAddresses.customerLine1StreetAddress=&amp;customerAddresses.customerLine2StreetAddress=&amp;customerAddresses.customerCityName=&amp;customerAddresses.customerStateCode=&amp;customerAddresses.customerZipCode=&amp;customerAddresses.customerAddressInternationalProvinceName=&amp;customerAddresses.customerEmailAddress=&amp;methodToCall.search.x=22&amp;methodToCall.search.y=5&amp;tabStatesSize=22&amp;actionEditablePropertiesGuid=78B95C7C-D9A3-E970-679D-65362EB5C956' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/DocumentTypeService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='7'/>
+
+        <request><http url='/kfs-dev/kr/maintenance.do?customerNumber=TES3774&amp;businessObjectClassName=org.kuali.kfs.module.ar.businessobject.Customer&amp;returnLocation=http%3A%2F%2Fdev.kfs.uconn.edu%2Fkfs-dev%2Fportal.do&amp;methodToCall=edit' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='2'/>
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='3'/>
+
+        <request><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=11339' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='7'/>
+
+        <request><http url='/kfs-dev/kr/maintenance.do' version='1.1'  contents_from_file='/Users/leo/.tsung/tsung_recorder20120427-0948-1.bin' content_type='multipart/form-data; boundary=---------------------------94345467917710241521479575244' method='POST'></http></request>
+        <request><http url='/kfs-dev/kr/questionPrompt.do?questionIndex=DocCancel&amp;questionErrorParameter=&amp;returnLocation=http%3A%2F%2Fdev.kfs.uconn.edu%2Fkfs-dev%2Fkr%2Fmaintenance.do&amp;context=&amp;caller=cancel&amp;questionType=confirmationQuestion&amp;showReasonField=false&amp;questionText=Are+you+sure+you+want+to+cancel%3F&amp;reason=&amp;methodToCall=start&amp;questionErrorKey=&amp;methodToCallPath=methodToCall.cancel.x&amp;questionErrorPropertyName=&amp;docNum=11339&amp;questionAnchor=topOfForm&amp;docFormKey=16' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/kr/static/images/buttonsmall_Yes.gif' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/kr/static/images/buttonsmall_No.gif' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='2'/>
+
+        <request><http url='/kfs-dev/kr/questionPrompt.do' version='1.1'  contents='formKey=16&amp;backLocation=http%3A%2F%2Fdev.kfs.uconn.edu%2Fkfs-dev%2Fkr%2Fmaintenance.do&amp;caller=cancel&amp;questionIndex=DocCancel&amp;formKey=16&amp;context=&amp;questionAnchor=topOfForm&amp;methodToCallPath=methodToCall.cancel.x&amp;docNum=11339&amp;methodToCall.processAnswer.button0.x=21&amp;methodToCall.processAnswer.button0.y=5&amp;tabStatesSize=-1&amp;actionEditablePropertiesGuid=E561B2F2-4E33-FD64-898F-64EF3A04D8B5' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
+        <request><http url='/kfs-dev/kr/maintenance.do?anchor=topOfForm&amp;refreshCaller=QuestionRefresh&amp;docNum=11339&amp;methodToCallAttribute=cancel&amp;methodToCall.cancel.x=present&amp;questionIndex=DocCancel&amp;docFormKey=16&amp;buttonClicked=0' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/portal.do' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/portal.do' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='2'/>
+
+        <request><http url='http://fxfeeds.mozilla.com/en-US/firefox/headlines.xml' version='1.1' if_modified_since='Sun, 22 Apr 2012 10:39:54 GMT' method='GET'></http></request>
+        <request><http url='/firefox/headlines.xml' version='1.1' if_modified_since='Fri, 20 Apr 2012 20:12:06 GMT' method='GET'></http></request>
+        <request><http url='http://newsrss.bbc.co.uk/rss/newsonline_world_edition/front_page/rss.xml' version='1.1' method='GET'></http></request>
+        <request><http url='http://feeds.bbci.co.uk/news/rss.xml?edition=int' version='1.1' if_modified_since='Fri, 27 Apr 2012 16:26:04 GMT' method='GET'></http></request>
+
+        <thinktime random='true' value='2'/>
+
+        <request><http url='http://dev.kfs.uconn.edu/kfs-dev/portal.do?channelTitle=Customer&amp;channelUrl=kr/lookup.do?methodToCall=start&amp;businessObjectClassName=org.kuali.kfs.module.ar.businessobject.Customer&amp;docFormKey=88888888&amp;returnLocation=http://dev.kfs.uconn.edu/kfs-dev/portal.do&amp;hideReturnLink=true&amp;backdoorId=admin' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/kr/lookup.do?methodToCall=start&amp;businessObjectClassName=org.kuali.kfs.module.ar.businessobject.Customer&amp;docFormKey=88888888&amp;returnLocation=http://dev.kfs.uconn.edu/kfs-dev/portal.do&amp;hideReturnLink=true&amp;backdoorId=admin' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/DocumentTypeService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='2'/>
+
+        <request><http url='/kfs-dev/kr/maintenance.do?businessObjectClassName=org.kuali.kfs.module.ar.businessobject.Customer&amp;methodToCall=start' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='1'/>
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='2'/>
+
+        <request><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=11340' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='70'/>
+
+        <request><http url='/kfs-dev/kr/maintenance.do' version='1.1'  contents_from_file='/Users/leo/.tsung/tsung_recorder20120427-0948-2.bin' content_type='multipart/form-data; boundary=---------------------------150797729521198788182049590396' method='POST'></http></request>
+
+        <thinktime random='true' value='1'/>
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='1'/>
+
+        <request><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=11340' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='5'/>
+
+        <request><http url='/kfs-dev/kr/maintenance.do' version='1.1'  contents_from_file='/Users/leo/.tsung/tsung_recorder20120427-0948-3.bin' content_type='multipart/form-data; boundary=---------------------------18280876926213018151154112991' method='POST'></http></request>
+
+        <thinktime random='true' value='1'/>
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='2'/>
+
+        <request><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=11340' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='3'/>
+
+        <request><http url='/kfs-dev/kr/maintenance.do' version='1.1'  contents_from_file='/Users/leo/.tsung/tsung_recorder20120427-0948-4.bin' content_type='multipart/form-data; boundary=---------------------------1104740033222122669889119397' method='POST'></http></request>
+
+        <thinktime random='true' value='1'/>
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='2'/>
+
+        <request><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=11340' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='3'/>
+
+        <request><http url='/kfs-dev/kr/maintenance.do' version='1.1'  contents_from_file='/Users/leo/.tsung/tsung_recorder20120427-0948-5.bin' content_type='multipart/form-data; boundary=---------------------------12384895531882410547944975825' method='POST'></http></request>
+
+        <thinktime random='true' value='2'/>
+
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='1'/>
+
+        <request><http url='/kfs-dev/kew/RouteLog.do?routeHeaderId=11340' version='1.1' method='GET'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='5'/>
+
+        <request><http url='/kfs-dev/kr/maintenance.do' version='1.1'  contents_from_file='/Users/leo/.tsung/tsung_recorder20120427-0948-6.bin' content_type='multipart/form-data; boundary=---------------------------156712121018667296621536830211' method='POST'></http></request>
+        <request><http url='/kfs-dev/dwr/interface/PersonService.js' version='1.1' method='GET'></http></request>
+
+        <thinktime random='true' value='59'/>
+
+        <request><http url='http://safebrowsing.clients.google.com/safebrowsing/downloads?client=navclient-auto-ffox&amp;appver=12.0&amp;pver=2.2&amp;wrkey=AKEgNisXzeZtUYtxCuFyWxCeOMHewndlEmUXHkLvkM6qwQLzVC9mi6OiO2OqmNE_Qw0TImrLBWg3LB3EkXzz-nzNEye5TUBiJQ==' version='1.1'  contents='goog-malware-shavar;a:68565-76829:s:59904-83131:mac
+                                                                                                                                                                                                                                                                                           goog-phish-shavar;a:202111-209422:s:94016-98407:mac
+                                                                                                                                                                                                                                                                                           ' content_type='text/plain' method='POST'></http></request>
+        <request><http url='http://safebrowsing-cache.google.com/safebrowsing/rd/ChNnb29nLW1hbHdhcmUtc2hhdmFyEAEYu4kFIMSJBSoGvUQBAP8AMgW7RAEAAw' version='1.1' method='GET'></http></request>
+        <request><http url='/safebrowsing/rd/ChNnb29nLW1hbHdhcmUtc2hhdmFyEAAYldgEIKjYBCoGISwBAP8AMgYVLAEA_w8' version='1.1' method='GET'></http></request>
+        <request><http url='/safebrowsing/rd/ChFnb29nLXBoaXNoLXNoYXZhchABGOGABiCAggYqGGmAAQD_________________________ADIGYYABAP8A' version='1.1' method='GET'></http></request>
+        <request><http url='/safebrowsing/rd/ChFnb29nLXBoaXNoLXNoYXZhchAAGI3kDCCg5AwqBhIyAwD_fzIFDTIDAB8' version='1.1' method='GET'></http></request>
+      </transaction>
+    </session>
+  </sessions>
+</tsung>

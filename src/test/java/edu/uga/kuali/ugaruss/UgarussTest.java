@@ -86,6 +86,9 @@ public class UgarussTest {
     protected static WebDriver driver;
     protected static Wait<WebDriver> wait;
     protected static Logger logger;
+    StopWatch stopWatch;
+    StopWatch testWatch;
+
     /*
       */          
 
@@ -105,15 +108,23 @@ public class UgarussTest {
         driver = new FirefoxDriver(dc);
         wait = new WebDriverWait(driver, 30);
         logger = LoggerFactory.getLogger(UgarussTest.class);
+        stopWatch = new LoggingStopWatch("AllTests");
     }
 
     @Before
-    public void setup() {
+    public void setup() { 
+        testWatch = new LoggingStopWatch("PerTest");
+    }
+
+    @After 
+    public void tearDown() {
+        testWatch.stop();
     }
 
     @AfterClass
     public static void quitDriver() {
         driver.quit();
+        stopWatch.stop();
     }    
 
     @Test

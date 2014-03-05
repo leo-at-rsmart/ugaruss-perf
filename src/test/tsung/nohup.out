@@ -1,0 +1,24 @@
+Starting Tsung
+"Log directory is: /home/leo/.tsung/log/20140302-1129"
+
+BREAK: (a)bort (c)ontinue (p)roc info (i)nfo (l)oaded
+       (v)ersion (k)ill (D)b-tables (d)istribution
+Starting Tsung
+"Log directory is: /home/leo/.tsung/log/20140302-1129"
+
+BREAK: (a)bort (c)ontinue (p)roc info (i)nfo (l)oaded
+       (v)ersion (k)ill (D)b-tables (d)istribution
+Starting Tsung
+"Log directory is: /home/leo/.tsung/log/20140302-1131"
+
+BREAK: (a)bort (c)ontinue (p)roc info (i)nfo (l)oaded
+       (v)ersion (k)ill (D)b-tables (d)istribution
+Starting Tsung
+"Log directory is: /home/leo/.tsung/log/20140302-1142"
+"Maximum number of concurrent users in a single VM reached and 'use_controller_vm' is true, can't start new beam !!! Check 'maxusers' value in <client> configuration.~n"
+Starting Tsung
+"Log directory is: /home/leo/.tsung/log/20140303-0016"
+Starting Tsung
+"Log directory is: /home/leo/.tsung/log/20140303-0127"
+Starting Tsung
+"Log directory is: /home/leo/.tsung/log/20140303-0323"

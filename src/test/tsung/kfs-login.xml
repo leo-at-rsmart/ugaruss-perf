@@ -1,0 +1,59 @@
+<?xml version='1.0'?>
+<!DOCTYPE tsung SYSTEM "/opt/local/share/tsung/tsung-1.0.dtd">
+<tsung version='1.0' dumptraffic='true' loglevel='notice'>
+  <clients>
+    <client use_controller_vm='true' host='localhost'/>
+  </clients>
+  <servers>
+    <server port='80' type='tcp' host='tst.kfs.uconn.edu'/>
+  </servers>
+  <load>
+    <arrivalphase phase='1' duration='1' unit='minute'>
+      <users interarrival='0.1' unit='second'/>
+    </arrivalphase>
+  </load>
+  <options>
+    <option name='user_agent' type='ts_http'>
+      <user_agent probability='100'>
+        Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:8.0.1) Gecko/20100101
+        Firefox/8.0.1
+      </user_agent>
+    </option>
+    <option name='file_server' value='/home/ltuser/Open-Performance-Automation-Framework/config/import/kfs/users.csv' id='users'/>
+  </options>
+  <sessions>
+    <session name='basic_auth' probability='100' type='ts_http'>
+      <setdynvars order='iter' delimiter=',' fileid='users' sourcetype='file'>
+        <var name='username'/>
+        <var name='user_password'/>
+      </setdynvars>
+      <transaction name='login'>
+        <request subst='false'>
+          <http version='1.1' url='/kfs-dev/' method='GET'/>
+        </request>
+        <request subst='false'>
+          <dyn_variable name='lt' xpath='//input[@name=&apos;lt&apos;]/@value'/>
+          <dyn_variable name='execution' xpath='//input[@name=&apos;execution&apos;]/@value'/>
+          <http version='1.1' url='https://login.uconn.edu/cas/login?service=http%3A%2F%2Ftst.kfs.uconn.edu%3A80%2Fkfs-dev%2Fportal.do' method='GET'/>
+        </request>
+        <request subst='true'>
+          <http version='1.1' content_type='application/x-www-form-urlencoded' contents='lt=%%_lt%%&amp;execution=%%_execution%%&amp;username=lep12004&amp;password=Entr0py0&amp;_eventId=submit' url='https://login.uconn.edu/cas/login?service=http%3A%2F%2Ftst.kfs.uconn.edu%3A80%2Fkfs-dev%2Fportal.do' method='POST'/>
+        </request>
+        <thinktime value='30' random='true'/>
+      </transaction>
+      <transaction name='role_lookup'>
+        <request subst='false'>
+          <http version='1.1' content_type='application/x-www-form-urlencoded' contents='methodToCall%3Dstart%26businessObjectClassName%3Dorg.kuali.rice.kim.bo.impl.RoleImpl%26docFormKey%3D88888888' url='http://tst.kr.uconn.edu:80/kr-dev/kr-dev/kr/lookup.do' method='POST'/>
+        </request>
+        <request subst='false'>
+          <http version='1.1' content_type='application/x-www-form-urlencoded' contents='methodToCall%3Dsearch%26lookupableImplServiceName%3DroleLookupable%26multipleValues%3DNo%26suppressActions%3DNo%26suppressActions%3DYes%26hasReturnableRow%3DNo%26showMaintenanceLinks%3DYes%26headerBarEnabled%3DYes%26hideReturnLink%3DYes%26businessObjectClassName%3Dorg.kuali.rice.kim.bo.impl.RoleImpl%26docFormKey%3D88888888' url='http://tst.kr.uconn.edu:80/kr-dev/kr-dev/kr/lookup.do' method='POST'/>
+        </request>
+      </transaction>
+      <transaction name='logout'>
+        <request subst='false'>
+          <http version='1.1' url='https://login.uconn.edu/cas/login?service=http%3A%2F%2Ftst.kfs.uconn.edu%3A80%2Fkfs-dev%2Fportal.do' method='GET'/>
+        </request>
+      </transaction>
+    </session>
+  </sessions>
+</tsung>
